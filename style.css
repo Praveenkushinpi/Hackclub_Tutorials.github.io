@@ -1,1 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+  }
+  /* keep the text at the bottom to make the images look better */
+  #tutorial-text-container {
+    width: 1000%;
+    margin-bottom: 20px;
+  }
 
+  #tutorial-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    white-space: pre-wrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: typing 3s steps(40, end), blink-caret 0.7s step-end infinite;
+  }
+
+  /* Typewriter animation to give it a story like feel */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+  /* buttons gives the feel of hackclub */
+  .choice-button {
+    background: linear-gradient(135deg, #ff6f61, #d91c5c);
+    color: white;
+    border: 2px solid #ff9ea6;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  /* hover to the button to make the website more interactive */
+  .choice-button:hover {
+    background: linear-gradient(135deg, #ff9ea6, #d91c5c);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .choice-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #d91c5c, #a10f3e);
+      }
