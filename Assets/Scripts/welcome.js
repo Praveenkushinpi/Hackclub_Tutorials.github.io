@@ -1,11 +1,26 @@
-// Sound playback
-const audio = new Audio();
+const tutorials = {
+  mainPage: {
+    text: "WELCOME TO THE INTERACTIVE TUTORIALS! SELECT A TUTORIAL TO BEGIN.",
+    choices: [
+      { text: "BOBA", next: "boba1_html1", script: "boba.js" },
+      { text: "FRAPS", next: "fraps1.1", script: "fraps.js" },
+      { text: "SPRIG", next: "sprig1.1", script: "sprig.js" },
+      { text: "BLOT", next: "blot1.1", script: "blot.js" },
+      { text: "100$ GRANT FOR PCB", next: "circuit1.1", script: "circuit.js" },
+    ],
+    background: "images/welcome.jpeg",
+    sound: "sounds/maintheme.mp3",
+  },
+};
+
+let currentTutorial = "mainPage";
+let audio = new Audio();
+
 function playSound(soundFile) {
   audio.src = soundFile;
   audio.play();
 }
 
-// Preload assets
 function preloadAssets(tutorials) {
   for (let key in tutorials) {
     const tutorial = tutorials[key];
@@ -20,9 +35,8 @@ function preloadAssets(tutorials) {
   }
 }
 
-// Update tutorial content
 function updateTutorial(tutorialKey) {
-  const tutorial = tutorials[tutorialKey] || bobaTutorials[tutorialKey];
+  const tutorial = tutorials[tutorialKey];
   if (!tutorial) {
     console.error(`Tutorial "${tutorialKey}" not found.`);
     return;
@@ -37,7 +51,7 @@ function updateTutorial(tutorialKey) {
   // Play associated sound
   if (tutorial.sound) playSound(tutorial.sound);
 
-  // Display tutorial text
+  // Display tutorial text with typing effect
   const tutorialText = document.getElementById("tutorial-text");
   tutorialText.textContent = "";
   let index = 0;
@@ -65,7 +79,6 @@ function updateTutorial(tutorialKey) {
   });
 }
 
-// Load a script dynamically
 function loadScript(scriptName, callback) {
   const script = document.createElement("script");
   script.src = scriptName;
@@ -73,28 +86,8 @@ function loadScript(scriptName, callback) {
   document.body.appendChild(script);
 }
 
-// Load saved state
 window.onload = () => {
   const savedTutorial = localStorage.getItem("currentTutorial") || "mainPage";
-  preloadAssets({ ...tutorials, ...bobaTutorials });
+  preloadAssets(tutorials);
   updateTutorial(savedTutorial);
 };
-
-// Tutorial data for the main page
-const tutorials = {
-  mainPage: {
-    text: "THIS IS A TUTORIAL MADE BY A MEMBER OF A HACKCLUB",
-    choices: [
-      { text: "BOBA", next: "boba1_html1", script: "boba.js" },
-      { text: "FRAPS", next: "fraps1.1", script: "fraps.js" },
-      { text: "SPRIG", next: "sprig1.1", script: "sprig.js" },
-      { text: "BLOT", next: "blot1.1", script: "blot.js" },
-      { text: "100$ GRANT FOR PCB", next: "circuit1.1", script: "circuit.js" },
-    ],
-    background: "images/welcome.jpeg",
-    sound: "sounds/maintheme.mp3",
-  },
-};
-
-// Initialize the tutorial system
-let currentTutorial = "mainPage";
