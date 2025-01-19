@@ -1,5 +1,4 @@
 bobaTutorials = {
-    // //
     boba1html1: {
         text: "is your boba submission is keep rejecting ? so you are at the right place this is very fun revision for you to learn or revise your html",
         choices: [
