@@ -1,1 +1,2 @@
 # Hackclub_Tutorials.github.io
+This is not completed yet , but most of the scripts are made like the tutorial scripts , but it only needed the website overview tutorial like How to submit your project in the each particular ysws website Pages Are also edit like most of the background stuff , which Is not completely made but Right now I a m confused in some colors and things it will be in my next Commit I will commit all those images or should I say pages in my next commit
