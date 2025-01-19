@@ -1,6 +1,6 @@
 const tutorials = {
   mainPage: {
-    text: "WELCOME TO THE INTERACTIVE TUTORIALS! SELECT A TUTORIAL TO BEGIN.",
+    text: "WELCOME TO THE HACKCLUB TUTORIALS! SELECT A TUTORIAL TO BEGIN.",
     choices: [
       { text: "BOBA", next: "boba1html1", script: "boba.js" },
       { text: "FRAPS", next: "fraps1.1", script: "fraps.js" },
