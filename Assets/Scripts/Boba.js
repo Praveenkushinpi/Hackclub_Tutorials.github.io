@@ -1,5 +1,4 @@
 bobaTutorials = {
-    // //
     boba1html1: {
         text: "is your boba submission is keep rejecting ? so you are at the right place this is very fun revision for you to learn or revise your html",
         choices: [
@@ -485,7 +484,7 @@ boba3_html8: {
           { text: "I want to try this magic myself!", next: "boba6.experiment" },
           { text: "Tell me more about how HTML and CSS work with JavaScript.", next: "boba6.html5" }
         ],
-        background: "Assets/"images",
+        background: "Assets/images",
         sound: "Assets/Sounds/magic-theme.mp3" 
       },
       boba6_reflect: {
@@ -503,7 +502,7 @@ choices: [
     { text: "now learn css", next: "boba7css1" },
     { text: "or java script", next: "Boba7js1" }
   ],
-  background: "Assets/"images",
+  background: "Assets/images",
   sound: "Assets/Sounds/reflective-theme.mp3"
 },
 
@@ -3309,7 +3308,7 @@ boba22js12: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/async_await.mp3"
-}
+},
 boba23js1: {
   text: "'In this part, we’ll dive into **Promises**. Promises represent the eventual completion or failure of an asynchronous operation.'",
   choices: [
@@ -3356,8 +3355,8 @@ boba23js5: {
   sound: "Assets/sounds/response_json.mp3"
 },
 boba23js6: {
-  2e **.catch()** method is used to handle errors that occur during the fetch process. It will catch any errors in the Promise chain and execute the code inside the callback.'",
-  choices: [b
+  text:"2e **.catch()** method is used to handle errors that occur during the fetch process. It will catch any errors in the Promise chain and execute the code inside the callback.'",
+  choices: [
     { text: "Can we handle multiple requests?", next: "boba23js7" },
     { text: "What’s a real-life API example?", next: "boba23js8" }
   ],
@@ -3415,7 +3414,7 @@ boba23js10: {
       { text: "Evenly spaced (`space-between`)", next: "boba24css4" },
       { text: "Grouped in the center (`center`)", next: "boba24css5" }
     ],
-    Background  "Assets/images ",
+    background:  "Assets/images",
     sound: "Assets/sounds/task.mp3"
   },
   boba24css3: {
@@ -3539,6 +3538,7 @@ boba24css11: {
   },
   boba24css17: {
     text: "The cupcake is bouncing! Great job. Now, let's add a bit more flair. How about we add an animation delay? This will make the animation start after a short delay.",
+   choices :[
     { text: "Apply the code!", next: "boba24css17" },
     { text: "Can we try something else?", next: "boba24css18" }
   ],
@@ -3693,7 +3693,7 @@ boba24css30: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/no_padding.mp3"
-} 
+} ,
 boba24css31: {
   text: "Welcome back! Now that we've covered the basiccs of CSS, it’s time to dive into sselectors! Selectors are essential tools for picking out the elements you want to style. In our bakery, selectors are like the ingredients you need to create different recipes.",
   choices: [
@@ -3801,7 +3801,7 @@ boba24css41: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/grouping_selectors.mp3"
-}
+},
 
 boba24css42: {
   text: "You’ve mastered selectors, and now it’s time to learn how to position your bakery treats using the Box Model! The Box Model will help you control the layout by adjusting the size and spacing of your bakery boxes. Ready to start decorating your boxes?",
@@ -3871,7 +3871,7 @@ boba24css51: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/box_model_complete.mp3"
-}
+},
 
 boba24css52: {
   text: "Awesome job mastering the Box Model! Now, let’s level up your bakery creations with positioning and layout in CSS. Positioning helps you control where elements go, and layout lets you arrange them perfectly on the page. Ready to take charge of your bakery space?",
@@ -3950,7 +3950,7 @@ boba24css59: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/coffee_break.mp3"
-}
+},
 
 boba24css60: {
   text: "Fantastic! You’ve mastered positioning and layout. Now, let’s talk typography! Typography is essential in making your bakery website readable and inviting. CSS allows you to control font size, style, line height, letter spacing, and more. Ready to make your text look as tasty as your baked goods?",
@@ -4079,7 +4079,7 @@ boba24css74: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/typography_adjustment.mp3"
-}
+},
 
 boba24css75: {
   text: "Amazing job with the typography! Now let’s focus on one of the most fun parts of CSS: **backgrounds**! Adding background colors, images, or even gradients can make your bakery website feel fresh and inviting. Are you ready to give your bakery background a makeover?",
@@ -4179,7 +4179,7 @@ boba24css85: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/background_celebration.mp3"
-}
+},
 boba24css86: {
   text: "Excellent! Now that your bakery website looks stunning, let’s add some **effects** to make it even more engaging! CSS effects can help you bring your content to life with transitions, animations, and hover effects. Are you ready to add some magic to your website?",
   choices: [
@@ -4288,7 +4288,7 @@ boba24css97: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/effects_celebration.mp3"
-}
+},
 boba24css86: {
   text: "Fantastic! Now that your bakery’s visuals are looking delicious, let’s spice them up with some **transitions** and **animations**. Transitions let you smoothly change between two states, while animations allow for more complex, multi-step changes. Ready to add some magic to your website?",
   choices: [
@@ -4397,7 +4397,7 @@ boba24css97: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/effects_celebration.mp3"
-}
+},
 boba24css98: {
   text: "Awesome! Your bakery website looks amazing with all the transitions and animations, but now it's time to ensure it’s **responsive**. Responsive design makes sure your website adapts to different screen sizes. Whether your users are on a mobile, tablet, or desktop, they’ll always have a pleasant experience. Ready to make your bakery site fully responsive?",
   choices: [
@@ -4496,7 +4496,7 @@ boba24css108: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/final_responsive.mp3"
-}
+},
 boba24css109: {
   text: "Fantastic job so far! Your bakery website is responsive and visually appealing. Now, let’s enhance your content organization. It's time to work with **lists** and **tables**. For example, you can display your bakery’s menu items or special offers using styled lists and tables. Ready to make your lists look better?",
   choices: [
@@ -4595,7 +4595,7 @@ boba24css118: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/complex_table.mp3"
-}
+},
 
 boba24css121: {
   text: "You're doing amaezing! Now let’s get into some **advanced CSS** topics that will make your website even more stunning. Let’s start with **CSS Grid**. This layout system allows you to create complex designs with ease. For example, you can organize your bakery’s content into different sections like menu, offers, and testimonials using a grid system. Here’s how you can start with a simple layout:\n\n`* { box-sizing: border-box; }\n.container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }`\n\nThis will divide your layout into three equal columns. Want to try this to organize your bakery content?",
@@ -4690,9 +4690,9 @@ boba24css129: {
 boba24css130: {
   text: "Fantastic! You’ve now mastered **advanced CSS** techhniques. Your bakery website is responsive, dynamic, and ready for any device. Whether it’s using **CSS Grid**, **Flexbox**, **CSS Variables**, **Transitions**, **Animations**, or **Media Queries**, you’ve got all the tools to make it shine. Ready to start a new project or dive deeper into any specific CSS topic?",
   choices: [
-    { text: "MAINMENU.",next"MainPage"}
+    { text: "MAINMENU.",next:"mainPage"},
     { text: "I want to explore more advanced CSS.", next: "boba24css122" }
   ],
   background: "Assets/images",
   sound: "Assets/sounds/final_advanced_css.mp3"
-}
+}}
