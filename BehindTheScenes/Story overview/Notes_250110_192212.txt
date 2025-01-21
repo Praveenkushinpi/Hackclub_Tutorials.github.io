@@ -1,0 +1,258 @@
+Blot tutorial 🤓
+const story = {
+  episode1: {
+    text: "Ahoy, matey! Ye find yerself on the shores of Hack Club Island. Rumors tell of a treasure called Blot, a magic tool to create blogs. What do ye do first?",
+    option1: {
+      text: "Search for clues in the Hack Club library",
+      next: "episode2a",
+    },
+    option2: {
+      text: "Ask the pirate crew in the Hack Club Slack",
+      next: "episode2b",
+    },
+  },
+  episode2a: {
+    text: "Ye scour the Hack Club library and find a treasure map labeled 'Blot.' It mentions a magical syncing method. What will ye choose to learn about?",
+    option1: {
+      text: "Learn about Dropbox syncing",
+      next: "episode3a",
+    },
+    option2: {
+      text: "Learn about Git syncing",
+      next: "episode3b",
+    },
+  },
+  episode2b: {
+    text: "The pirate crew tells ye about the Blot treasure and gives ye two choices for syncing it. Which one do ye fancy?",
+    option1: {
+      text: "Use Dropbox syncing",
+      next: "episode3a",
+    },
+    option2: {
+      text: "Use Git syncing",
+      next: "episode3b",
+    },
+  },
+  episode3a: {
+    text: "Arr! Ye chose Dropbox syncing. The map tells ye to connect Dropbox to Blot and create a folder where ye can drop yer blog posts. Ye reach a fork in the trail. What do ye do next?",
+    option1: {
+      text: "Follow the glowing path toward the Blot folder",
+      next: "episode4a",
+    },
+    option2: {
+      text: "Take a detour to gather tools for Markdown writing",
+      next: "episode4b",
+    },
+  },
+  episode3b: {
+    text: "Aye, Git syncing be yer choice! Ye set up a repository and connect it to Blot. Suddenly, a sea monster emerges, demanding ye show it a file format it likes. What do ye do?",
+    option1: {
+      text: "Show it a Markdown (.md) file",
+      next: "episode4c",
+    },
+    option2: {
+      text: "Show it a text (.txt) file",
+      next: "episode4d",
+    },
+  },
+  episode4a: {
+    text: "Ye reach the Blot folder and add a Markdown file with yer first post. The treasure map glows brighter! But ye see a cave filled with customizable templates. Do ye enter?",
+    option1: {
+      text: "Enter the cave to customize templates",
+      next: "episode5a",
+    },
+    option2: {
+      text: "Ignore the cave and follow the map to publish yer blog",
+      next: "episode5b",
+    },
+  },
+  episode4b: {
+    text: "Ye gather tools like a Markdown editor and learn the ways of formatting text. Ye feel more prepared! What will ye do next?",
+    option1: {
+      text: "Head to the Blot folder to add yer first post",
+      next: "episode4a",
+    },
+    option2: {
+      text: "Explore more Markdown tricks before continuing",
+      next: "episode5c",
+    },
+  },
+  episode4c: {
+    text: "The sea monster accepts yer Markdown file and lets ye pass. Ye arrive at the Blot treasure chest, ready to begin blogging. What do ye do next?",
+    option1: {
+      text: "Add yer first post to the Git repository",
+      next: "episode5b",
+    },
+    option2: {
+      text: "Customize the templates to make it more pirate-themed",
+      next: "episode5a",
+    },
+  },
+  episode4d: {
+    text: "The sea monster rejects yer text file! Ye must choose another format before it attacks. What do ye do?",
+    option1: {
+      text: "Quickly show it a Markdown (.md) file",
+      next: "episode4c",
+    },
+    option2: {
+      text: "Retreat to learn more about file formats",
+      next: "episode5c",
+    },
+  },
+  episode5a: {
+    text: "Inside the cave, ye discover treasure chests filled with customizable templates. Ye add a pirate theme and a custom logo of yer ship. What do ye do next?",
+    option1: {
+      text: "Publish yer blog with the new theme",
+      next: "episode6a",
+    },
+    option2: {
+      text: "Continue tweaking yer design to perfection",
+      next: "episode6b",
+    },
+  },
+  episode5b: {
+    text: "Ye publish yer first blog post, and the treasure map leads ye to the final step: sharing yer blog with the world. What do ye do?",
+    option1: {
+      text: "Share yer blog with the Hack Club crew",
+      next: "episode6c",
+    },
+    option2: {
+      text: "Keep yer blog a secret and continue writing posts",
+      next: "episode6d",
+    },
+  },
+  episode5c: {
+    text: "Ye retreat to learn more about Markdown and file formats. Now armed with knowledge, ye feel ready to tackle the Blot treasure. What do ye do?",
+    option1: {
+      text: "Head back to the Blot folder",
+      next: "episode4a",
+    },
+    option2: {
+      text: "Prepare to face the sea monster again",
+      next: "episode4c",
+    },
+  },
+  episode6a: {
+    text: "Yer blog is live with a stunning pirate theme! The crew is amazed by yer handiwork, and ye feel like a true blogging captain.",
+    option1: {
+      text: "Celebrate with the crew",
+      next: "episode7a",
+    },
+    option2: {
+      text: "Set sail for new blogging adventures",
+      next: "episode7b",
+    },
+  },
+  episode6b: {
+    text: "Ye tweak yer blog design until it’s perfect. With every detail just right, yer blog is now the envy of all pirates!",
+    option1: {
+      text: "Publish yer masterpiece",
+      next: "episode6a",
+    },
+    option2: {
+      text: "Add more posts before sharing it",
+      next: "episode6d",
+    },
+  },
+  episode6c: {
+    text: "Ye share yer blog with the Hack Club crew, who cheer yer success! Yer name becomes legendary among the pirate coders.",
+    option1: {
+      text: "Continue adding more posts",
+      next: "episode7a",
+    },
+    option2: {
+      text: "Help others set up their own blogs",
+      next: "episode7c",
+    },
+  },
+  episode6d: {
+    text: "Ye keep yer blog a secret, working on more posts to make it even grander. Yer treasure grows with every new entry.",
+    option1: {
+      text: "Finally share it with the world",
+      next: "episode6c",
+    },
+    option2: {
+      text: "Keep writing in secret",
+      next: "episode7d",
+    },
+  },
+  episode7a: {
+    text: "Yer blog is filled with posts, and the crew celebrates yer success. Ye’ve become a legend on Hack Club Island!",
+    option1: {
+      text: "Start a new adventure",
+      next: "episode1",
+    },
+    option2: {
+      text: "Retire and enjoy yer treasure",
+      next: null,
+    },
+  },
+  episode7b: {
+    text: "Ye set sail for new adventures, leaving behind a trail of blog posts for others to follow. The world awaits yer next creation!",
+    option1: {
+      text: "Begin a new story",
+      next: "episode1",
+    },
+    option2: {
+      text: "Enjoy the open seas",
+      next: null,
+    },
+  },
+  episode7c: {
+    text: "Ye help others set up their own blogs, spreading the magic of Blot. Ye’ve earned a reputation as a mentor among pirates!",
+    option1: {
+      text: "Celebrate with the crew",
+      next: "episode7a",
+    },
+    option2: {
+      text: "Seek new challenges",
+      next: "episode1",
+    },
+  },
+  episode7d: {
+    text: "Yer secret blog becomes a hidden treasure, filled with knowledge and adventure. Perhaps one day, ye’ll share it with the world.",
+    option1: {
+      text: "Reveal yer treasure",
+      next: "episode6c",
+    },
+    option2: {
+      text: "Continue in secret",
+      next: null,
+    },
+  },
+};
+
+// Start the story
+let currentEpisode = "episode1";
+
+function displayEpisode(episode) {
+  console.clear();
+  console.log(story[episode].text);
+  if (story[episode].option1) {
+    console.log("1: " + story[episode].option1.text);
+  }
+  if (story[episode].option2) {
+    console.log("2: " + story[episode].option2.text);
+  }
+  console.log("Choose 1 or 2:");
+}
+
+function chooseOption(option) {
+  const nextEpisode = story[currentEpisode][`option${option}`]?.next;
+  if (nextEpisode) {
+    currentEpisode = nextEpisode;
+    displayEpisode(currentEpisode);
+  } else {
+    console.log("The story ends here. Farewell, matey!");
+  }
+}
+
+// Display the first episode
+displayEpisode(currentEpisode);
+
+// Simulate user input
+document.addEventListener("keydown", (e) => {
+  if (e.key === "1" || e.key === "2") {
+    chooseOption(e.key);
+  }
+});
