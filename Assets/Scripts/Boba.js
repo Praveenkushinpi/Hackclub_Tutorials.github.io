@@ -1,4 +1,4 @@
-bobaTutorials = {
+const tutorials = {
     boba1html1: {
         text: "is your boba submission is keep rejecting ? so you are at the right place this is very fun revision for you to learn or revise your html",
         choices: [
@@ -23,6 +23,7 @@ bobaTutorials = {
             { text: "YES, BUT I AM AFRAID", next: "boba1_html4" },
             { text: "FEELING POSITIVE, I WANT TO FINISH MY JOURNEY BY DRINKING A BOBA", next: "boba1_html4" }
         ],
+
         background: "Assets/images",
         sound: "Assets/Sounds/cabin-sound.mp3"
     },
@@ -4695,4 +4696,4 @@ boba24css130: {
   ],
   background: "Assets/images",
   sound: "Assets/sounds/final_advanced_css.mp3"
-}}
+}};
