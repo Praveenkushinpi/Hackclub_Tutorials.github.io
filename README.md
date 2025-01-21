@@ -3,3 +3,5 @@ This is not completed yet , but most of the scripts are made like the tutorial s
 Some?Some?
 Of the files and scripts are not added in the get up because of the minute mistake details so I'm putting up the file sources here.Which will led you to the slack and then you can see there.This is not a fraud.I actually worked on them
 https://hackclub.slack.com/archives/C07UA18MXBJ/p1737436633123899?thread_ts=1737436633.123899&cid=C07UA18MXBJ
+And also I am stuck in the multiple Java scripts.So I'm thinking of 2.Merge them into a one Java script.So I'm working on it.I will ship that tomorrow and the website on the GitHub.Pages will be work and my future plans around this will be a rpg game
+https://youtu.be/pbJj-9d-5dc?si=PYDUSzBsqwFjRORP
