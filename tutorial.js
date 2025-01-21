@@ -23,8 +23,8 @@ const tutorials = {
     boba1html2: {
         text: "hello! adventurer are you new in this jungle and you look confused i knoW that you are stuck in the WHERE TO START FROM JUNGLE",
         choices: [
-            { text: "YES MASTER!", next: "boba1html3" },
-            { text: "NO IWANT TO GAIN THE KNOWLEDGE OF THE HTML!", next: "boba1html3" }
+            { text: "YES MASTER!", next: "boba1_html3" },
+            { text: "NO IWANT TO GAIN THE KNOWLEDGE OF THE HTML!", next: "boba1_html3" }
         ],
         background: "Assets/images",
         sound: "Assets/Sounds/boba2.mp3"
