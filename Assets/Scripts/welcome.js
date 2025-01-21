@@ -2,7 +2,7 @@ const tutorials = {
   mainPage: {
     text: "WELCOME TO THE HACKCLUB TUTORIALS! SELECT A TUTORIAL TO BEGIN.",
     choices: [
-      { text: "BOBA", next: "boba1html1", script: "boba.js" },
+      { text: "BOBA", next: "boba1html1", script: "Boba.js" },
       { text: "FRAPS", next: "frapss1.1", script: "Hackaccino.js" },
       { text: "SPRIG", next: "sprig1.1", script: "sprig.js" },
       { text: "BLOT", next: "blot1.1", script: "blot.js" },
