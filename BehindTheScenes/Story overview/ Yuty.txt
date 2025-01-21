@@ -1,0 +1,1829 @@
+A frame library 😱 tutorial 
+Core concepts 
+const frapsTutorials = {
+    fraps1A1: {
+        text: "You awaken in a small cave, the morning sun casting long shadows on the walls. The air is thick with the scent of smoke and earth. Suddenly, a large stone door opens, revealing a wise elder from the Stone Age. He speaks: 'Welcome, young adventurer. You have entered the world of A-Frame. It is a place where you can shape your own virtual world, much like we shape the stone tools of our time. Do you wish to learn the ancient art of creating virtual worlds?'",
+        choices: [
+            { text: "YES, I AM READY TO LEARN!", next: "fraps1A2" },
+            { text: "I'M NOT SURE, TELL ME MORE.", next: "fraps1A3" }
+        ],
+        background: "https://example.com/cave.jpg",
+        sound: "cave-sounds.mp3"
+    },
+    fraps1A2: {
+        text: "The elder nods and leads you to the center of a vast stone circle. 'The first tool we need is the <a-scene> element. It is like the foundation of a fire—a place to begin and shape your world. In the Stone Age, we used stones to create our shelters; here, we use <a-scene> to build our virtual shelter.'",
+        choices: [
+            { text: "WHAT IS THE <a-scene> ELEMENT?", next: "fraps1A4" },
+            { text: "SHOW ME MORE ABOUT BUILDING", next: "fraps1A5" }
+        ],
+        background: "https://example.com/stone-circle.jpg",
+        sound: "ancient-background.mp3"
+    },
+    fraps1A3: {
+        text: "The elder raises an eyebrow. 'Ah, I see. Perhaps you need more convincing. This world, much like our stone tools, can be molded to your will. With the <a-scene> element, you can create entire worlds, full of shapes and wonders. It is the key to this ancient art. Would you like to give it a try?'",
+        choices: [
+            { text: "YES, LET'S TRY IT.", next: "fraps1A4" },
+            { text: "I'LL WAIT A LITTLE LONGER.", next: "fraps1A2" }
+        ],
+        background: "https://example.com/stone-circle.jpg",
+        sound: "calm-ambient.mp3"
+    },
+    fraps1A4: {
+        text: "The elder waves his hand, and a giant stone circle appears, surrounded by glowing firelight. 'Here is your first creation: a simple <a-scene>—a canvas upon which you can build. Just as we carve rocks with our primitive tools, you can carve out your virtual world here.' The stone circle hums with energy. 'Shall we add a simple stone shape, a <a-box>, to this world to see it come to life?'",
+        choices: [
+            { text: "YES, LET'S ADD A STONE!", next: "fraps1A6" },
+            { text: "I WANT TO LEARN MORE ABOUT THE <a-scene> FIRST.", next: "fraps1A5" }
+        ],
+        background: "https://example.com/stone-circle.jpg",
+        sound: "mystical-stone-sounds.mp3"
+    },
+    fraps1A5: {
+        text: "The elder sits on a large stone and smiles warmly. 'The <a-scene> element is the foundation of your world. Inside it, you will place all your creations—stones, tools, and lights. Without it, nothing exists.' He shows you a picture of a stone house being built. 'Would you like to see how to add objects to your scene, like adding stones to build a shelter?'",
+        choices: [
+            { text: "YES, LET'S BUILD!", next: "fraps1A6" },
+            { text: "SHOW ME MORE ABOUT LIGHTING", next: "fraps1A7" }
+        ],
+        background: "https://example.com/building.jpg",
+        sound: "building-sounds.mp3"
+    },
+    fraps1A6: {
+        text: "With a motion of his hand, a large stone block materializes in the center of the stone circle. The elder says, 'This is your first stone—a simple <a-box>. You can control its size and position, just as we control the rocks to shape our shelters.' The stone block begins to rotate slowly in the air. 'You can change its position and rotation with the right tools.'",
+        choices: [
+            { text: "I WANT TO MOVE THE STONE!", next: "fraps1A8" },
+            { text: "TELL ME MORE ABOUT THE TOOLS.", next: "fraps1A9" }
+        ],
+        background: "https://example.com/stone-block.jpg",
+        sound: "stone-moving.mp3"
+    },
+    fraps1A7: {
+        text: "The elder waves his hands again, and a warm firelight appears in the scene. 'Ah, the light of the campfire! It is essential to illuminate our world. You can add different types of lights in A-Frame, just like we use torches to light our caves. Let me show you the <a-light> element.' The scene now glows with a soft, amber light.",
+        choices: [
+            { text: "I WANT TO ADJUST THE LIGHT!", next: "fraps1A10" },
+            { text: "SHOW ME MORE OBJECTS!", next: "fraps1A6" }
+        ],
+        background: "https://example.com/campfire.jpg",
+        sound: "fire-sounds.mp3"
+    },
+    fraps1A8: {
+        text: "You focus on the stone block, adjusting its position in the world. As you change the stone's position, the elder nods. 'Well done, young adventurer. You have learned the art of moving stones—just as we shape and move rocks to build our shelters.' The stone block rotates, and you realize you can move and control it as you please.",
+        choices: [
+            { text: "I WANT TO ADD ANOTHER SHAPE!", next: "fraps1A11" },
+            { text: "SHOW ME THE MAGIC OF ANIMATING!", next: "fraps1A12" }
+        ],
+        background: "https://example.com/moving-stone.jpg",
+        sound: "success-sounds.mp3"
+    },
+    fraps1A9: {
+        text: "The elder explains, 'Attributes are the tools of your trade. With them, you can manipulate the size, position, and even the texture of your stone objects. For example, if you add position='1 1 -5' to your <a-box>, it will move in the scene.' He shows you a glowing example. 'Now, it's your turn. Would you like to add your own attributes?'",
+        choices: [
+            { text: "YES, LET'S ADD ATTRIBUTES!", next: "fraps1A10" },
+            { text: "SHOW ME MORE OBJECTS!", next: "fraps1A6" }
+        ],
+        background: "https://example.com/attributes.jpg",
+        sound: "crafting-sounds.mp3"
+    },
+    fraps1A10: {
+        text: "The elder lights a torch, casting a glow across the stone circle. 'Now we turn our attention to the light. In the Stone Age, fire was our greatest ally. In A-Frame, light brings your world to life.' He shows you a glowing <a-light> element. 'You can control the light intensity and color, just as we control the fire in our world.'",
+        choices: [
+            { text: "LET'S ADJUST THE LIGHT!", next: "fraps1A11" },
+            { text: "I'M READY TO LEARN MORE OBJECTS.", next: "fraps1A6" }
+        ],
+        background: "https://example.com/torchlight.jpg",
+        sound: "light-adjust.mp3"
+    }
+};
+Components 
+const frapsTutorials = {
+    fraps1A1: {
+        text: "You awaken in a dense forest surrounded by towering ancient trees. A glowing stone circle lies ahead, pulsing with energy. The voice of an ancient spirit echoes in your mind, 'You have entered a world of creation, young one. To shape the world around you, you must master the ancient components. These components are the magical tools that will allow you to craft your reality. Do you wish to learn their secrets?'",
+        choices: [
+            { text: "YES, I WANT TO LEARN!", next: "fraps1A2" },
+            { text: "I'M NOT SURE, TELL ME MORE.", next: "fraps1A3" }
+        ],
+        background: "https://example.com/stone-circle.jpg",
+        sound: "forest-wind.mp3"
+    },
+    fraps1A2: {
+        text: "'Ah, the eagerness of youth,' the spirit whispers. 'The first artifact you must learn is the <a-box> component. This tool allows you to create solid objects, like the stone walls of an ancient temple. Do you see that stone block before you? It is your first creation, the <a-box>.'",
+        choices: [
+            { text: "HOW DO I USE THE <a-box> COMPONENT?", next: "fraps1A4" },
+            { text: "WHAT OTHER COMPONENTS EXIST?", next: "fraps1A5" }
+        ],
+        background: "https://example.com/stone-block.jpg",
+        sound: "mystical-sounds.mp3"
+    },
+    fraps1A3: {
+        text: "The spirit chuckles softly, 'I see hesitation in your heart, but fear not. The components are simple tools, yet powerful in their abilities. Come closer, and I shall show you the first of them.' As the stone block before you glows brighter, you are filled with an understanding of its power.",
+        choices: [
+            { text: "LET'S BEGIN WITH THE <a-box>!", next: "fraps1A4" },
+            { text: "I STILL HAVE QUESTIONS.", next: "fraps1A2" }
+        ],
+        background: "https://example.com/stone-block-glow.jpg",
+        sound: "calm-ambient.mp3"
+    },
+    fraps1A4: {
+        text: "The spirit raises their hand and the stone block begins to change shape. 'The <a-box> component can be altered. Its size, position, and appearance are under your control. See how this block stretches into a long wall.' The wall grows taller, its form shifting as you watch.",
+        choices: [
+            { text: "LET'S CHANGE THE BLOCK'S SIZE!", next: "fraps1A6" },
+            { text: "SHOW ME MORE COMPONENTS.", next: "fraps1A5" }
+        ],
+        background: "https://example.com/stretching-wall.jpg",
+        sound: "stone-building.mp3"
+    },
+    fraps1A5: {
+        text: "The spirit smiles as you marvel at the block's transformation. 'Components exist in many forms. For example, the <a-light> component can illuminate your creations, and the <a-sphere> component will create spheres of any size. But first, you must master the basics. Let's focus on the <a-box>.'",
+        choices: [
+            { text: "LET'S TRY THE <a-light> COMPONENT!", next: "fraps1A7" },
+            { text: "I WANT TO LEARN MORE ABOUT <a-box>.", next: "fraps1A6" }
+        ],
+        background: "https://example.com/mystical-light.jpg",
+        sound: "ambient-light.mp3"
+    },
+    fraps1A6: {
+        text: "The spirit waves their hand, and the stone block shrinks and grows, changing dimensions. 'To control the size of your <a-box>, you must adjust its width, height, and depth. Change these attributes, and watch your block transform.'",
+        choices: [
+            { text: "LET'S MOVE THE BLOCK!", next: "fraps1A8" },
+            { text: "SHOW ME THE <a-light> COMPONENT.", next: "fraps1A7" }
+        ],
+        background: "https://example.com/adjusting-block.jpg",
+        sound: "adjusting-sounds.mp3"
+    },
+    fraps1A7: {
+        text: "The spirit moves their hand, and the entire forest around you brightens. 'Now, let us speak of light. The <a-light> component allows you to bring illumination to your world. Adjust its color, intensity, and type. Watch how the world changes with light.' A brilliant light appears in the sky, shifting between warm gold and cool blue.",
+        choices: [
+            { text: "LET'S CHANGE THE LIGHT COLOR!", next: "fraps1A9" },
+            { text: "SHOW ME THE <a-camera> COMPONENT.", next: "fraps1A10" }
+        ],
+        background: "https://example.com/glowing-light.jpg",
+        sound: "light-changing.mp3"
+    },
+    fraps1A8: {
+        text: "You focus and push the stone block, making it glide across the ground. 'The <a-box> can be moved too. Adjust its position in the world by changing the position attribute.' The block moves across the ground, its edges sharpening as it moves. 'Now, you control its place in the world.'",
+        choices: [
+            { text: "LET'S TRY A NEW COMPONENT!", next: "fraps1A5" },
+            { text: "SHOW ME MORE ABOUT MOVEMENT.", next: "fraps1A10" }
+        ],
+        background: "https://example.com/moving-block.jpg",
+        sound: "movement-sounds.mp3"
+    },
+    fraps1A9: {
+        text: "The spirit raises their hand, and the light changes from amber to a deep red. 'The <a-light> component allows you to create all sorts of lighting effects. Change the color to create magical sunsets or eerie moonlight. Light is the soul of your world.'",
+        choices: [
+            { text: "LET'S TRY A NEW LIGHT TYPE!", next: "fraps1A10" },
+            { text: "SHOW ME MORE COMPONENTS!", next: "fraps1A5" }
+        ],
+        background: "https://example.com/red-light.jpg",
+        sound: "color-change.mp3"
+    },
+    fraps1A10: {
+        text: "The spirit gestures, and a glowing orb appears before you. 'Now, we turn to the <a-camera> component. This artifact allows you to see the world you have created. Place it in the right spot and it will show you your creations.'",
+        choices: [
+            { text: "LET'S PLACE THE CAMERA!", next: "fraps1A11" },
+            { text: "SHOW ME MORE COMPONENTS!", next: "fraps1A5" }
+        ],
+        background: "https://example.com/orb-view.jpg",
+        sound: "camera-sounds.mp3"
+    },
+    fraps1A11: {
+        text: "You carefully place the camera in the world, and as you peer through it, the landscape before you becomes clearer. 'This is your window into the world. The <a-camera> component gives you the power to view and explore your creations.'",
+        choices: [
+            { text: "LET'S ADD MORE COMPONENTS!", next: "fraps1A5" },
+            { text: "SHOW ME HOW TO ANIMATE!", next: "fraps1A12" }
+        ],
+        background: "https://example.com/camera-view.jpg",
+        sound: "camera-sounds.mp3"
+    }
+};
+
+Primitive Shapes 
+const frapsTutorials = {
+    fraps1A12: {
+        text: "'The world you create is built from the simplest of shapes,' the spirit says. 'Primitive shapes are the foundation of this world. Your next lesson will introduce you to these shapes.' The spirit raises their hand and a floating sphere forms in the air before you. 'This is the <a-sphere>.'",
+        choices: [
+            { text: "WHAT DOES THE <a-sphere> DO?", next: "fraps1A13" },
+            { text: "I WANT TO LEARN ABOUT OTHER SHAPES.", next: "fraps1A14" }
+        ],
+        background: "https://example.com/primitive-shapes.jpg",
+        sound: "mystical-orb.mp3"
+    },
+    fraps1A13: {
+        text: "'The <a-sphere> is the simplest of all forms, yet it can become whatever you need,' the spirit explains. 'Use it to create orbs, planets, or even glowing gems. Its size and position can be altered to fit your needs.' The sphere begins to grow in size, filling the sky with its soft glow.",
+        choices: [
+            { text: "LET'S CHANGE THE SPHERE'S SIZE!", next: "fraps1A15" },
+            { text: "SHOW ME ANOTHER SHAPE.", next: "fraps1A14" }
+        ],
+        background: "https://example.com/enlarging-sphere.jpg",
+        sound: "sphere-changing.mp3"
+    },
+    fraps1A14: {
+        text: "'There are more shapes to discover,' the spirit continues. A cube appears beside the sphere. 'This is the <a-box>—you already know it well. But there is more. The <a-cylinder> can create tall, cylindrical forms, while the <a-plane> creates flat surfaces. You have many tools at your disposal.'",
+        choices: [
+            { text: "LET'S TRY THE <a-cylinder>!", next: "fraps1A16" },
+            { text: "TELL ME MORE ABOUT THE <a-plane>.", next: "fraps1A17" }
+        ],
+        background: "https://example.com/cube-and-cylinder.jpg",
+        sound: "shaping-sounds.mp3"
+    },
+    fraps1A15: {
+        text: "You adjust the sphere's size with a wave of your hand. 'See how it changes?' the spirit asks. 'By modifying the <a-sphere>'s radius, you can make it large like a moon or tiny like a pebble. These shapes hold immense power.' The sphere now shines brightly in the sky, like a new moon.",
+        choices: [
+            { text: "LET'S CREATE A PLANET!", next: "fraps1A18" },
+            { text: "TRY A DIFFERENT SHAPE.", next: "fraps1A16" }
+        ],
+        background: "https://example.com/planet-shape.jpg",
+        sound: "planetary-sounds.mp3"
+    },
+    fraps1A16: {
+        text: "You focus on the <a-cylinder>, and a long, towering pillar forms beside you. 'The <a-cylinder> is great for creating columns, towers, or even trees. Adjust its height and radius to match your needs.' The cylinder grows taller, its base widening as you concentrate.",
+        choices: [
+            { text: "LET'S MAKE A TOWER!", next: "fraps1A19" },
+            { text: "TRY THE <a-plane> NEXT.", next: "fraps1A17" }
+        ],
+        background: "https://example.com/towering-cylinder.jpg",
+        sound: "tower-building.mp3"
+    },
+    fraps1A17: {
+        text: "The spirit waves their hand, and a flat surface appears beneath your feet. 'The <a-plane> is the simplest shape, a flat surface that can be used for floors, roads, or even landscapes. Adjust its width and height to create expansive plains or small patches.' The plane stretches out, becoming a large, open area.",
+        choices: [
+            { text: "LET'S CREATE A FLOOR!", next: "fraps1A20" },
+            { text: "TRY THE <a-sphere> AGAIN.", next: "fraps1A13" }
+        ],
+        background: "https://example.com/flat-plane.jpg",
+        sound: "flat-surface.mp3"
+    },
+    fraps1A18: {
+        text: "You create a glowing planet in the sky using the <a-sphere>. 'Look at how you can transform these primitive shapes,' the spirit says. 'With the power of these shapes, you can create anything—from planets to castles. Now, your world begins to take form.' The planet hovers above, casting soft shadows below.",
+        choices: [
+            { text: "LET'S ADD A TOWER!", next: "fraps1A19" },
+            { text: "LET'S CREATE A LANDSCAPE.", next: "fraps1A20" }
+        ],
+        background: "https://example.com/planet-and-tower.jpg",
+        sound: "planet-glow.mp3"
+    },
+    fraps1A19: {
+        text: "The <a-cylinder> becomes a towering structure before you. 'Now, your creations are taking shape. Use the <a-cylinder> to create massive pillars for temples or towering skyscrapers. Adjust its height and radius as needed.' The tower reaches high into the sky, its silhouette casting a shadow across the land.",
+        choices: [
+            { text: "LET'S CREATE A CASTLE!", next: "fraps1A20" },
+            { text: "TRY THE <a-plane> NOW.", next: "fraps1A17" }
+        ],
+        background: "https://example.com/tower-silhouette.jpg",
+        sound: "tower-shadow.mp3"
+    },
+    fraps1A20: {
+        text: "With a flick of your wrist, you shape the <a-plane> into a large ground. 'This is the base of your world,' the spirit whispers. 'The <a-plane> can be used to create the foundation of your landscape, whether it’s the floor of a temple or the ground for your civilization.' The plane stretches endlessly, giving you a canvas to build your empire.",
+        choices: [
+            { text: "LET'S CREATE A GARDEN!", next: "fraps1A21" },
+            { text: "SEE WHAT ELSE I CAN BUILD!", next: "fraps1A21" }
+        ],
+        background: "https://example.com/garden-creation.jpg",
+        sound: "garden-building.mp3"
+    },
+    fraps1A21: {
+        text: "As you look around, the world is transforming. 'From these primitive shapes, your world grows,' the spirit says. 'Each shape is a tool, and with your imagination, the world will bend to your will. You have mastered the art of creation—now the real adventure begins.'",
+        choices: [
+            { text: "LET'S CREATE MORE COMPLEX SHAPES!", next: "fraps1A22" },
+            { text: "I'VE LEARNED ENOUGH FOR NOW.", next: "fraps1A23" }
+        ],
+        background: "https://example.com/world-transformation.jpg",
+        sound: "final-transformation.mp3"
+    }
+};
+
+Camera and view
+const frapsTutorials = {
+    fraps1A22: {
+        text: "'The world is not just created by shapes,' the spirit says, 'it’s experienced through the eyes. This next lesson will introduce you to the <a-camera>, the tool through which you view this reality.' The spirit waves their hand, and a small floating camera appears before you, its lens pointing directly at you.",
+        choices: [
+            { text: "WHAT DOES THE <a-camera> DO?", next: "fraps1A23" },
+            { text: "I'M READY TO LEARN ABOUT THE VIEW.", next: "fraps1A24" }
+        ],
+        background: "https://example.com/camera-introduction.jpg",
+        sound: "camera-whirring.mp3"
+    },
+    fraps1A23: {
+        text: "'The <a-camera> is more than just an observer; it is the perspective through which the world is seen,' the spirit explains. 'You can place the camera anywhere, giving you control over how the world unfolds before you. The first thing you must understand is the concept of positioning the camera.'",
+        choices: [
+            { text: "LET'S MOVE THE CAMERA!", next: "fraps1A25" },
+            { text: "SHOW ME THE VIEW SETTINGS.", next: "fraps1A24" }
+        ],
+        background: "https://example.com/camera-moving.jpg",
+        sound: "camera-moving.mp3"
+    },
+    fraps1A24: {
+        text: "'The view can be altered in many ways,' the spirit continues. 'You can change the field of view, the rotation, or even the position of the camera. By adjusting these settings, you can explore the world as though you were a bird soaring through the skies or as though you were standing on the ground.' A small window appears, showing different options for adjusting the view.",
+        choices: [
+            { text: "LET'S CHANGE THE FIELD OF VIEW.", next: "fraps1A26" },
+            { text: "ADJUST THE CAMERA'S ROTATION.", next: "fraps1A27" }
+        ],
+        background: "https://example.com/view-settings.jpg",
+        sound: "view-adjusting.mp3"
+    },
+    fraps1A25: {
+        text: "You focus on the floating camera and gently move it across the world. As you do, you notice the landscape shifting with your movements. 'Positioning the camera allows you to experience the world from different angles,' the spirit says. 'You can change the height, distance, and direction of your view.'",
+        choices: [
+            { text: "MOVE IT TO A HIGHER POINT.", next: "fraps1A28" },
+            { text: "PLACE IT AT GROUND LEVEL.", next: "fraps1A29" }
+        ],
+        background: "https://example.com/camera-high.jpg",
+        sound: "camera-moving-high.mp3"
+    },
+    fraps1A26: {
+        text: "'The field of view controls how much of the world is visible at once,' the spirit explains. 'A smaller field of view can make the world feel more focused, while a larger one makes everything appear vast.' You notice the world expanding and shrinking as you adjust the field of view.",
+        choices: [
+            { text: "LET'S MAKE THE WORLD FEEL VAST!", next: "fraps1A30" },
+            { text: "NARROW THE VIEW TO FOCUS ON DETAILS.", next: "fraps1A31" }
+        ],
+        background: "https://example.com/field-of-view.jpg",
+        sound: "vast-world.mp3"
+    },
+    fraps1A27: {
+        text: "You twist the camera’s rotation and watch as the world around you spins. 'Rotating the camera changes your point of view,' the spirit explains. 'This can help you see things from different perspectives. Whether you’re following the horizon or looking straight down, the world changes with every turn.' The landscape around you shifts as the camera rotates.",
+        choices: [
+            { text: "LET'S LOOK DOWN FROM ABOVE.", next: "fraps1A32" },
+            { text: "LOOK AT THE HORIZON.", next: "fraps1A33" }
+        ],
+        background: "https://example.com/rotating-camera.jpg",
+        sound: "camera-rotation.mp3"
+    },
+    fraps1A28: {
+        text: "You lift the camera higher, and suddenly, the view changes dramatically. The world becomes a sprawling city beneath your feet. 'See how the height changes your perspective?' the spirit says. 'From up here, you can see the entire landscape. You have control over your view.'",
+        choices: [
+            { text: "LOWER THE CAMERA TO GROUND LEVEL.", next: "fraps1A29" },
+            { text: "MOVE TO A DIFFERENT LOCATION.", next: "fraps1A34" }
+        ],
+        background: "https://example.com/above-city.jpg",
+        sound: "city-view.mp3"
+    },
+    fraps1A29: {
+        text: "Placing the camera at ground level gives you a closer, more intimate view of the world. 'At ground level, you experience the environment as if you were a part of it,' the spirit says. 'This is great for exploring small details or walking through your creations.' The world feels more personal and immediate as you look around.",
+        choices: [
+            { text: "RAISE THE CAMERA AGAIN.", next: "fraps1A28" },
+            { text: "LET'S MOVE IT TO A NEW LOCATION.", next: "fraps1A34" }
+        ],
+        background: "https://example.com/ground-level.jpg",
+        sound: "ground-level-sound.mp3"
+    },
+    fraps1A30: {
+        text: "You widen the field of view, and the world stretches out before you like a vast landscape. 'With a wide field of view, you can see more of the world around you,' the spirit explains. 'This is ideal for grand vistas, landscapes, or whenever you need to see the bigger picture.'",
+        choices: [
+            { text: "NARROW THE FIELD OF VIEW.", next: "fraps1A31" },
+            { text: "MOVE TO A DIFFERENT LOCATION.", next: "fraps1A34" }
+        ],
+        background: "https://example.com/expanded-view.jpg",
+        sound: "expansive-view.mp3"
+    },
+    fraps1A31: {
+        text: "You narrow the field of view, and the world feels more focused. 'A smaller field of view creates a sense of intimacy,' the spirit says. 'It draws your attention to the details in front of you.' The world seems to shrink as your focus tightens.",
+        choices: [
+            { text: "WIDEN THE FIELD OF VIEW.", next: "fraps1A30" },
+            { text: "MOVE TO A NEW AREA.", next: "fraps1A34" }
+        ],
+        background: "https://example.com/narrow-view.jpg",
+        sound: "focused-view.mp3"
+    },
+    fraps1A32: {
+        text: "Looking down from above, you see the intricate details of the landscape below. 'From this height, you gain a bird’s-eye view,' the spirit says. 'It’s perfect for planning, building, or understanding the layout of your world.' The camera hovers above, surveying the land.",
+        choices: [
+            { text: "LOOK UP AT THE SKY.", next: "fraps1A33" },
+            { text: "MOVE TO A DIFFERENT SPOT.", next: "fraps1A34" }
+        ],
+        background: "https://example.com/birds-eye-view.jpg",
+        sound: "birdseye-sound.mp3"
+    },
+    fraps1A33: {
+        text: "You shift the camera to focus on the horizon, and the world seems to stretch endlessly before you. 'The horizon creates a sense of scale,' the spirit explains. 'By focusing on the horizon, you can create a feeling of distance and depth.' The view is both expansive and serene.",
+        choices: [
+            { text: "LOOK DOWN FROM ABOVE.", next: "fraps1A32" },
+            { text: "EXPERIMENT WITH OTHER VIEW SETTINGS.", next: "fraps1A24" }
+        ],
+        background: "https://example.com/horizon-view.jpg",
+        sound: "horizon-sound.mp3"
+    },
+    fraps1A34: {
+        text: "As you explore the world with the camera, you realize the possibilities are endless. 'You control the perspective,' the spirit says. 'Now that you understand the camera and its view, you can experience your creations in any way you desire.'",
+        choices: [
+            { text: "LET'S MOVE THE CAMERA AGAIN!", next: "fraps1A25" },
+            { text: "READY FOR THE NEXT LESSON!", next: "fraps1A35" }
+        ],
+        background: "https://example.com/exploring-world.jpg",
+        sound: "exploration-sound.mp3"
+    },
+    fraps1A35: {
+        text: "'You have now learned to see the world through different lenses,' the spirit says. 'With the <a-camera>, you control how the world is experienced. The next lesson will teach you how to interact with your world in even deeper ways.' The world around you glows as the spirit moves toward the next lesson.",
+        choices: [
+            { text: "LET'S BEGIN THE NEXT LESSON!", next: "fraps1A36" },
+            { text: "I'VE LEARNED ENOUGH FOR NOW.", next: "fraps1A37" }
+        ],
+        background: "https://example.com/next-lesson.jpg",
+        sound: "lesson-completion.mp3"
+    }
+};
+
+Lights
+const frapsTutorials = {
+    fraps1A36: {
+        text: "The spirit beckons you to follow, leading you to a dimly lit cave. Inside, faint glimmers of light bounce off the walls. 'You’ve learned to see the world through different lenses,' the spirit says, 'but what is a world without light? Let me show you how to illuminate your creations.'",
+        choices: [
+            { text: "SHOW ME THE LIGHT!", next: "fraps1A37" },
+            { text: "WHY IS LIGHT SO IMPORTANT?", next: "fraps1A38" }
+        ],
+        background: "https://example.com/cave-dim.jpg",
+        sound: "cave-echo.mp3"
+    },
+    fraps1A37: {
+        text: "With a wave of their hand, the spirit conjures a glowing orb. 'This is an <a-light>, the source of illumination in your world. Lights bring out the beauty of your creations and can create different moods, from warm sunsets to eerie shadows.' The orb floats above your head, casting soft light around the cave.",
+        choices: [
+            { text: "WHAT TYPES OF LIGHT EXIST?", next: "fraps1A39" },
+            { text: "CAN I CONTROL THE LIGHT?", next: "fraps1A40" }
+        ],
+        background: "https://example.com/orb-light.jpg",
+        sound: "light-glow.mp3"
+    },
+    fraps1A38: {
+        text: "'Light is what brings your world to life,' the spirit explains. 'Without it, everything would be shrouded in darkness. Different types of light allow you to create ambiance, highlight objects, or simulate natural phenomena.' The spirit gestures to the cave walls, and shadows dance across them.",
+        choices: [
+            { text: "TEACH ME ABOUT LIGHT TYPES.", next: "fraps1A39" },
+            { text: "SHOW ME HOW TO CONTROL LIGHTS.", next: "fraps1A40" }
+        ],
+        background: "https://example.com/shadows-dance.jpg",
+        sound: "shadow-dance.mp3"
+    },
+    fraps1A39: {
+        text: "The spirit summons three different orbs, each casting a unique glow. 'There are many types of light,' they say. 'Directional lights, point lights, ambient lights, and spotlights. Each has its purpose. Directional lights simulate sunlight, while point lights are like lanterns, radiating light in all directions.'",
+        choices: [
+            { text: "WHAT ABOUT AMBIENT LIGHT?", next: "fraps1A41" },
+            { text: "TELL ME ABOUT SPOTLIGHTS.", next: "fraps1A42" }
+        ],
+        background: "https://example.com/light-types.jpg",
+        sound: "light-variety.mp3"
+    },
+    fraps1A40: {
+        text: "'Controlling light is an art,' the spirit says. 'You can adjust its intensity, color, position, and range. This lets you create anything from a cozy campfire glow to the harsh brightness of a spotlight.' A control panel appears before you, allowing you to tweak the floating orb’s settings.",
+        choices: [
+            { text: "CHANGE THE LIGHT'S COLOR.", next: "fraps1A43" },
+            { text: "ADJUST THE LIGHT'S INTENSITY.", next: "fraps1A44" }
+        ],
+        background: "https://example.com/light-controls.jpg",
+        sound: "light-adjustment.mp3"
+    },
+    fraps1A41: {
+        text: "'Ambient light provides soft, uniform lighting for the entire scene,' the spirit explains. 'It’s like the glow of the moon, ensuring no corner of your world is completely dark.' The cave lights up gently, its details now visible without harsh shadows.",
+        choices: [
+            { text: "SHOW ME SPOTLIGHTS.", next: "fraps1A42" },
+            { text: "HOW DO I CREATE MOODS WITH LIGHT?", next: "fraps1A45" }
+        ],
+        background: "https://example.com/ambient-light.jpg",
+        sound: "ambient-glow.mp3"
+    },
+    fraps1A42: {
+        text: "'Spotlights,' the spirit says, 'are focused beams of light. They are perfect for highlighting specific areas or objects.' The spirit points at a dark corner of the cave, and a spotlight illuminates a glimmering crystal. 'Notice how it draws your attention.'",
+        choices: [
+            { text: "USE A SPOTLIGHT TO ILLUMINATE AN OBJECT.", next: "fraps1A46" },
+            { text: "CREATE A DRAMATIC SHADOW.", next: "fraps1A47" }
+        ],
+        background: "https://example.com/spotlight-crystal.jpg",
+        sound: "spotlight-beam.mp3"
+    },
+    fraps1A43: {
+        text: "You change the color of the glowing orb, shifting it from warm yellow to cool blue. The atmosphere of the cave transforms instantly. 'Color changes the mood of your world,' the spirit explains. 'Warm colors feel inviting, while cool tones create a sense of calm.'",
+        choices: [
+            { text: "ADJUST THE LIGHT'S INTENSITY.", next: "fraps1A44" },
+            { text: "MOVE THE LIGHT TO A NEW POSITION.", next: "fraps1A48" }
+        ],
+        background: "https://example.com/color-change.jpg",
+        sound: "color-shift.mp3"
+    },
+    fraps1A44: {
+        text: "You increase the intensity of the orb’s light, and the cave becomes brilliantly illuminated. Lowering it makes the space feel more intimate. 'The intensity determines how bright the light is,' the spirit says. 'It can create both subtle and dramatic effects.'",
+        choices: [
+            { text: "CHANGE THE LIGHT'S COLOR.", next: "fraps1A43" },
+            { text: "EXPLORE POSITIONING THE LIGHT.", next: "fraps1A48" }
+        ],
+        background: "https://example.com/intensity-adjust.jpg",
+        sound: "intensity-adjust.mp3"
+    },
+    fraps1A45: {
+        text: "'To create moods, you must balance the type, color, and intensity of light,' the spirit explains. 'Combine warm tones with ambient light for a cozy feel or use sharp, bright spotlights to create tension.' The spirit demonstrates, shifting the cave’s ambiance from serene to ominous.",
+        choices: [
+            { text: "SHOW ME MORE LIGHT EFFECTS.", next: "fraps1A49" },
+            { text: "I'M READY FOR THE NEXT LESSON.", next: "fraps1A50" }
+        ],
+        background: "https://example.com/mood-lighting.jpg",
+        sound: "mood-change.mp3"
+    },
+    fraps1A46: {
+        text: "You direct the spotlight onto a carved stone, bringing out its intricate details. 'Spotlights help highlight the beauty of specific objects,' the spirit says. 'Use them wisely to guide attention in your world.'",
+        choices: [
+            { text: "CREATE A DRAMATIC SHADOW.", next: "fraps1A47" },
+            { text: "ADJUST THE SPOTLIGHT'S POSITION.", next: "fraps1A48" }
+        ],
+        background: "https://example.com/object-lighting.jpg",
+        sound: "highlight-effect.mp3"
+    },
+    fraps1A47: {
+        text: "You position the spotlight at an angle, casting a long shadow behind the stone. 'Shadows create depth and drama,' the spirit says. 'They can make your world feel alive and dynamic.' The stone now feels like a mysterious artifact in the dimly lit cave.",
+        choices: [
+            { text: "ILLUMINATE ANOTHER OBJECT.", next: "fraps1A46" },
+            { text: "EXPLORE MORE LIGHT SETTINGS.", next: "fraps1A40" }
+        ],
+        background: "https://example.com/dramatic-shadow.jpg",
+        sound: "shadow-cast.mp3"
+    },
+    fraps1A48: {
+        text: "You move the light to a new position, watching how the cave’s appearance changes. 'Positioning is key,' the spirit says. 'Lights closer to objects make them stand out, while distant lights create an even glow over a wider area.'",
+        choices: [
+            { text: "ADJUST THE LIGHT'S COLOR.", next: "fraps1A43" },
+            { text: "CHANGE THE LIGHT TYPE.", next: "fraps1A39" }
+        ],
+        background: "https://example.com/positioning-light.jpg",
+        sound: "position-light.mp3"
+    },
+    fraps1A49: {
+        text: "The spirit demonstrates various lighting effects: flickering flames, soft glows, and sharp beams. 'Experimentation is the key to mastering light. Try different combinations to find what works for your world.'",
+        choices: [
+            { text: "I'M READY FOR THE NEXT LESSON.", next: "fraps1A50" },
+            { text: "SHOW ME MORE LIGHT SETTINGS.", next: "fraps1A40" }
+        ],
+        background: "https://example.com/light-effects.jpg",
+        sound: "effect-demo.mp3"
+    },
+    fraps1A50: {
+        text: "'You’ve now mastered the art of lighting,' the spirit says, their voice filled with pride. 'With light, you can bring emotion and life to your world. The next lesson will teach you how to make your creations interactive.'",
+        choices: [
+            { text: "START THE NEXT LESSON!", next: "fraps1A51" },
+            { text: "I NEED A BREAK.", next: "fraps1A52" }
+        ],
+        background: "https://example.com/lesson-end.jpg",
+        sound: "lesson-complete.mp3"
+    }
+};
+Animations
+const frapsTutorials = {
+    fraps1A51: {
+        text: "As you step out of the glowing cave, the spirit turns to you with a smile. 'You’ve brought light to your world, but now it’s time to breathe life into it. A static world is dull and lifeless. Let me show you the art of motion—animations.'",
+        choices: [
+            { text: "LET'S MAKE THINGS MOVE!", next: "fraps1A52" },
+            { text: "WHY IS ANIMATION IMPORTANT?", next: "fraps1A53" }
+        ],
+        background: "https://example.com/cave-exit.jpg",
+        sound: "wind-blowing.mp3"
+    },
+    fraps1A52: {
+        text: "The spirit waves their hand, and a rock nearby begins to float, spin, and change colors. 'This is the power of animations in A-Frame,' they explain. 'With animations, you can create motion, transitions, and bring your objects to life.'",
+        choices: [
+            { text: "HOW DO I START ANIMATING?", next: "fraps1A54" },
+            { text: "SHOW ME A SIMPLE ANIMATION.", next: "fraps1A55" }
+        ],
+        background: "https://example.com/rock-floating.jpg",
+        sound: "magic-whirl.mp3"
+    },
+    fraps1A53: {
+        text: "'Imagine a world where everything stands still,' the spirit says. 'It feels unnatural. Animations create flow, tell stories, and captivate the viewer. They can be subtle, like a flickering flame, or dramatic, like a leaping tiger.'",
+        choices: [
+            { text: "SHOW ME HOW TO CREATE ANIMATIONS.", next: "fraps1A54" },
+            { text: "WHAT CAN I ANIMATE?", next: "fraps1A56" }
+        ],
+        background: "https://example.com/static-world.jpg",
+        sound: "stillness.mp3"
+    },
+    fraps1A54: {
+        text: "The spirit hands you a glowing rune. 'To animate, you must use the <a-animation> component or the animation attribute. You can animate properties like position, rotation, scale, or even colors. Let me show you an example.'",
+        choices: [
+            { text: "SHOW ME AN EXAMPLE.", next: "fraps1A55" },
+            { text: "WHAT ELSE CAN I ANIMATE?", next: "fraps1A56" }
+        ],
+        background: "https://example.com/animation-rune.jpg",
+        sound: "rune-glow.mp3"
+    },
+    fraps1A55: {
+        text: "The spirit points at a small boulder. 'Watch closely.' The boulder begins to float upwards, rotate, and turn blue before gently returning to the ground. 'This is an animation that changes position, rotation, and color over time.'",
+        choices: [
+            { text: "HOW DO I CONTROL THE TIMING?", next: "fraps1A57" },
+            { text: "CAN I LOOP ANIMATIONS?", next: "fraps1A58" }
+        ],
+        background: "https://example.com/boulder-animation.jpg",
+        sound: "boulder-move.mp3"
+    },
+    fraps1A56: {
+        text: "'In A-Frame, you can animate almost anything,' the spirit explains. 'From basic properties like position and rotation to custom attributes or even interactions triggered by events.' A nearby tree begins to sway, its leaves rustling softly.",
+        choices: [
+            { text: "SHOW ME EVENT-BASED ANIMATIONS.", next: "fraps1A59" },
+            { text: "HOW DO I MAKE ANIMATIONS SMOOTH?", next: "fraps1A60" }
+        ],
+        background: "https://example.com/tree-sway.jpg",
+        sound: "leaves-rustle.mp3"
+    },
+    fraps1A57: {
+        text: "'Timing is everything,' the spirit says. 'You can control animations with attributes like duration, easing, and delay. Duration defines how long the animation lasts, while easing controls its speed curve.' A ball rolls across the ground, slowing as it stops.",
+        choices: [
+            { text: "WHAT IS EASING?", next: "fraps1A61" },
+            { text: "SHOW ME AN ANIMATION WITH DELAY.", next: "fraps1A62" }
+        ],
+        background: "https://example.com/ball-roll.jpg",
+        sound: "rolling-sound.mp3"
+    },
+    fraps1A58: {
+        text: "The spirit nods. 'Animations can loop endlessly or repeat a set number of times. You can even set them to alternate back and forth.' A glowing crystal pulses with light, fading in and out repeatedly.",
+        choices: [
+            { text: "HOW DO I CREATE A PULSING EFFECT?", next: "fraps1A63" },
+            { text: "CAN I STOP AN ANIMATION MIDWAY?", next: "fraps1A64" }
+        ],
+        background: "https://example.com/pulsing-crystal.jpg",
+        sound: "pulse-sound.mp3"
+    },
+    fraps1A59: {
+        text: "'Animations can also be triggered by events,' the spirit says. 'For example, clicking an object could start an animation. Watch this.' You touch a rock, and it bursts into tiny floating particles before reforming.",
+        choices: [
+            { text: "HOW DO I TRIGGER AN ANIMATION?", next: "fraps1A65" },
+            { text: "SHOW ME MORE EVENT ANIMATIONS.", next: "fraps1A66" }
+        ],
+        background: "https://example.com/event-animation.jpg",
+        sound: "burst-effect.mp3"
+    },
+    fraps1A60: {
+        text: "'Smoothness is achieved with proper easing functions,' the spirit explains. 'Easing determines how an animation accelerates and decelerates. Linear easing is constant, while others like ease-in or ease-out create natural movement.'",
+        choices: [
+            { text: "SHOW ME AN EASING DEMO.", next: "fraps1A67" },
+            { text: "I WANT TO LEARN ABOUT ANIMATION CHAINS.", next: "fraps1A68" }
+        ],
+        background: "https://example.com/easing-demo.jpg",
+        sound: "smooth-move.mp3"
+    },
+    fraps1A61: {
+        text: "'Easing creates the illusion of weight and momentum,' the spirit says. 'For instance, ease-in starts slow and speeds up, while ease-out does the opposite. Combine them for dynamic effects.' A pebble rolls to a stop naturally.",
+        choices: [
+            { text: "SHOW ME DELAYED ANIMATIONS.", next: "fraps1A62" },
+            { text: "HOW CAN I COMBINE ANIMATIONS?", next: "fraps1A69" }
+        ],
+        background: "https://example.com/ease-demo.jpg",
+        sound: "ease-demo.mp3"
+    },
+    fraps1A62: {
+        text: "The spirit demonstrates an animation where a row of stones rises, one after the other, with a slight delay. 'Adding delay makes animations feel sequential and purposeful,' they explain.",
+        choices: [
+            { text: "CAN I CONTROL THE ORDER?", next: "fraps1A70" },
+            { text: "SHOW ME AN ANIMATION CHAIN.", next: "fraps1A68" }
+        ],
+        background: "https://example.com/delayed-animation.jpg",
+        sound: "stone-rise.mp3"
+    },
+    fraps1A63: {
+        text: "'A pulsing effect is created by animating scale or opacity repeatedly,' the spirit says. 'Here, let me show you.' The glowing orb nearby expands and contracts rhythmically, creating a mesmerizing effect.",
+        choices: [
+            { text: "SHOW ME MORE LOOPING EFFECTS.", next: "fraps1A58" },
+            { text: "I'M READY FOR THE NEXT LESSON.", next: "fraps1A71" }
+        ],
+        background: "https://example.com/pulsing-orb.jpg",
+        sound: "pulse-loop.mp3"
+    },
+    fraps1A64: {
+        text: "'You can stop an animation by interacting with the object or setting specific events,' the spirit explains. 'For example, clicking the object can pause or reset its animation.' A leaf fluttering in the breeze suddenly freezes mid-air.",
+        choices: [
+            { text: "SHOW ME HOW TO RESET AN ANIMATION.", next: "fraps1A72" },
+            { text: "TEACH ME ABOUT ANIMATION STATES.", next: "fraps1A73" }
+        ],
+        background: "https://example.com/frozen-leaf.jpg",
+        sound: "leaf-freeze.mp3"
+    }
+    // Additional paths continue...
+};
+
+Interactivity 
+
+const frapsTutorials = {
+    fraps1A71: {
+        text: "After mastering animations, you and the spirit walk further into the mystical valley. Suddenly, the spirit stops near an ancient pedestal. 'Your world now moves, but it needs to respond to its inhabitants. Let me show you the magic of **interactivity**.'",
+        choices: [
+            { text: "TELL ME MORE ABOUT INTERACTIVITY.", next: "fraps1A72" },
+            { text: "WHY IS INTERACTIVITY IMPORTANT?", next: "fraps1A73" }
+        ],
+        background: "https://example.com/mystical-valley.jpg",
+        sound: "ambient-wind.mp3"
+    },
+    fraps1A72: {
+        text: "The spirit waves their hand, and the pedestal begins to glow. 'Interactivity lets users engage with your world. They can click, hover, or use other actions to trigger events. Watch closely.' The pedestal reacts to your touch, emitting a soft hum.",
+        choices: [
+            { text: "HOW DO I MAKE OBJECTS CLICKABLE?", next: "fraps1A74" },
+            { text: "CAN INTERACTIVITY WORK WITH ANIMATIONS?", next: "fraps1A75" }
+        ],
+        background: "https://example.com/glowing-pedestal.jpg",
+        sound: "pedestal-hum.mp3"
+    },
+    fraps1A73: {
+        text: "'Interactivity transforms a passive experience into an engaging one,' the spirit explains. 'It allows your world to respond, creating a sense of connection. Imagine doors opening when approached, or objects revealing secrets when touched.'",
+        choices: [
+            { text: "HOW DO I START ADDING INTERACTIVITY?", next: "fraps1A74" },
+            { text: "CAN INTERACTIVITY TRIGGER SOUNDS?", next: "fraps1A76" }
+        ],
+        background: "https://example.com/interactive-door.jpg",
+        sound: "door-creak.mp3"
+    },
+    fraps1A74: {
+        text: "The spirit hands you a glowing shard. 'In A-Frame, you can use components like **cursor** and **event listeners**. For example, adding the `cursor` component to your camera allows you to interact with objects when you look at them.'",
+        choices: [
+            { text: "SHOW ME A CLICK EXAMPLE.", next: "fraps1A77" },
+            { text: "WHAT EVENTS CAN I LISTEN FOR?", next: "fraps1A78" }
+        ],
+        background: "https://example.com/glowing-shard.jpg",
+        sound: "shard-power.mp3"
+    },
+    fraps1A75: {
+        text: "The spirit nods. 'Yes, interactivity can trigger animations. For instance, you can start an animation when an object is clicked, hovered over, or interacted with in other ways. Let me show you.' A rock spins and glows when you click it.",
+        choices: [
+            { text: "HOW DO I COMBINE INTERACTIVITY AND ANIMATIONS?", next: "fraps1A79" },
+            { text: "CAN I CREATE CHAINED EVENTS?", next: "fraps1A80" }
+        ],
+        background: "https://example.com/spinning-rock.jpg",
+        sound: "rock-spin.mp3"
+    },
+    fraps1A76: {
+        text: "'Absolutely,' the spirit says, smiling. 'You can bind sounds to interactions. Imagine footsteps echoing as you walk or a chime when an object is clicked. Let me show you how.' You touch the pedestal, and it plays a soothing chime.",
+        choices: [
+            { text: "HOW DO I ADD SOUND TO AN OBJECT?", next: "fraps1A81" },
+            { text: "CAN I PLAY DIFFERENT SOUNDS FOR DIFFERENT INTERACTIONS?", next: "fraps1A82" }
+        ],
+        background: "https://example.com/sound-interaction.jpg",
+        sound: "pedestal-chime.mp3"
+    },
+    fraps1A77: {
+        text: "The spirit gestures at a glowing orb. 'Look at this object and click it.' You follow the instruction, and the orb changes color. 'That's how interactivity works. Use the `event-set` component or JavaScript to respond to clicks.'",
+        choices: [
+            { text: "SHOW ME MORE CLICK ACTIONS.", next: "fraps1A83" },
+            { text: "HOW DO I LISTEN FOR OTHER EVENTS?", next: "fraps1A78" }
+        ],
+        background: "https://example.com/color-changing-orb.jpg",
+        sound: "click-change.mp3"
+    },
+    fraps1A78: {
+        text: "'In A-Frame, you can listen for various events like `mouseenter`, `mouseleave`, `mousedown`, and more,' the spirit explains. 'Each event opens up possibilities to create engaging interactions.' A nearby tree sways when you approach it.",
+        choices: [
+            { text: "HOW DO I USE MOUSE EVENTS?", next: "fraps1A84" },
+            { text: "CAN I ADD TOUCH EVENTS FOR MOBILE?", next: "fraps1A85" }
+        ],
+        background: "https://example.com/swaying-tree.jpg",
+        sound: "tree-sway.mp3"
+    },
+    fraps1A79: {
+        text: "'To combine interactivity with animations,' the spirit says, 'you can trigger animations using event listeners. For example, clicking an object can start a sequence of animations.' You click a boulder, and it floats, spins, and changes color.",
+        choices: [
+            { text: "SHOW ME HOW TO SET THIS UP.", next: "fraps1A86" },
+            { text: "CAN I LOOP INTERACTIVE ANIMATIONS?", next: "fraps1A87" }
+        ],
+        background: "https://example.com/boulder-interaction.jpg",
+        sound: "boulder-effect.mp3"
+    },
+    fraps1A80: {
+        text: "The spirit smiles. 'Chained events allow one interaction to trigger another. For instance, clicking a button could unlock a door, and stepping through the door could start an animation.' A path opens as you step forward.",
+        choices: [
+            { text: "HOW DO I CREATE EVENT CHAINS?", next: "fraps1A88" },
+            { text: "SHOW ME COMPLEX EXAMPLES.", next: "fraps1A89" }
+        ],
+        background: "https://example.com/interactive-path.jpg",
+        sound: "path-open.mp3"
+    },
+    fraps1A81: {
+        text: "The spirit explains, 'To add sound to an object, use the `sound` component. You can play sounds on click, hover, or other events. Watch this.' A glowing orb emits a soft tone as you touch it.",
+        choices: [
+            { text: "SHOW ME SOUND TRIGGERS.", next: "fraps1A90" },
+            { text: "CAN I LOOP SOUNDS?", next: "fraps1A91" }
+        ],
+        background: "https://example.com/sound-orb.jpg",
+        sound: "soft-tone.mp3"
+    },
+    fraps1A82: {
+        text: "'Yes, each interaction can play a unique sound,' the spirit says. 'You can define different sounds for different events or even randomize them for variety.' A tree plays a different chime each time you touch it.",
+        choices: [
+            { text: "HOW DO I RANDOMIZE SOUNDS?", next: "fraps1A92" },
+            { text: "CAN I ADD AMBIENT SOUNDS?", next: "fraps1A93" }
+        ],
+        background: "https://example.com/tree-chime.jpg",
+        sound: "random-chime.mp3"
+    }
+    // Additional paths continue...
+};
+
+Audio
+const frapsTutorials = {
+    fraps1A101: {
+        text: "As the spirit guides you deeper into the valley, you come across an ancient amphitheater. A soft hum fills the air. 'You’ve mastered interactivity,' the spirit says. 'Now, let us awaken the power of **audio**. A world without sound is incomplete.'",
+        choices: [
+            { text: "HOW CAN I USE AUDIO IN MY WORLD?", next: "fraps1A102" },
+            { text: "WHAT TYPES OF AUDIO CAN I ADD?", next: "fraps1A103" }
+        ],
+        background: "https://example.com/ancient-amphitheater.jpg",
+        sound: "ambient-hum.mp3"
+    },
+    fraps1A102: {
+        text: "The spirit picks up a glowing shell. 'In A-Frame, audio is magic. The `sound` component lets you attach sounds to objects or environments. These sounds can be played on interaction, looped, or triggered by events.'",
+        choices: [
+            { text: "SHOW ME AN EXAMPLE OF ATTACHING AUDIO.", next: "fraps1A104" },
+            { text: "CAN I CONTROL WHEN AUDIO PLAYS?", next: "fraps1A105" }
+        ],
+        background: "https://example.com/glowing-shell.jpg",
+        sound: "shell-whisper.mp3"
+    },
+    fraps1A103: {
+        text: "'You can use ambient sounds for environments, triggered sounds for events, or directional sounds for immersive experiences,' the spirit explains. 'The possibilities are endless. Watch.' A bird chirps in the distance, and a drum beats nearby.",
+        choices: [
+            { text: "HOW DO I ADD AMBIENT SOUND?", next: "fraps1A106" },
+            { text: "WHAT IS DIRECTIONAL AUDIO?", next: "fraps1A107" }
+        ],
+        background: "https://example.com/soundscape.jpg",
+        sound: "bird-chirp.mp3"
+    },
+    fraps1A104: {
+        text: "The spirit taps on the glowing shell, and a soothing melody plays. 'To attach audio, use the `sound` component. For example, `<a-entity sound=\"src: url(melody.mp3);\"></a-entity>` will play your sound.'",
+        choices: [
+            { text: "WHAT OTHER OPTIONS CAN I SET?", next: "fraps1A108" },
+            { text: "HOW DO I TRIGGER AUDIO INTERACTIVELY?", next: "fraps1A109" }
+        ],
+        background: "https://example.com/playing-shell.jpg",
+        sound: "soothing-melody.mp3"
+    },
+    fraps1A105: {
+        text: "The spirit nods. 'You can control when and how audio plays. Use event listeners to start, stop, or pause audio based on user actions.' A gong rings as you tap it, then stops when you tap it again.",
+        choices: [
+            { text: "SHOW ME HOW TO START AND STOP AUDIO.", next: "fraps1A110" },
+            { text: "CAN I LOOP AUDIO?", next: "fraps1A111" }
+        ],
+        background: "https://example.com/gong.jpg",
+        sound: "gong.mp3"
+    },
+    fraps1A106: {
+        text: "'Ambient sound can immerse your users,' the spirit says. 'For instance, adding a looping background track creates atmosphere. Use `<a-entity sound=\"src: url(ambient.mp3); autoplay: true; loop: true;\"></a-entity>`.' The amphitheater fills with soft music.",
+        choices: [
+            { text: "HOW DO I SET VOLUME FOR AMBIENT SOUND?", next: "fraps1A112" },
+            { text: "CAN AMBIENT SOUND CHANGE OVER TIME?", next: "fraps1A113" }
+        ],
+        background: "https://example.com/amphitheater-sound.jpg",
+        sound: "ambient-music.mp3"
+    },
+    fraps1A107: {
+        text: "'Directional audio makes sounds feel like they come from specific locations,' the spirit explains. 'As you move closer, the sound gets louder. Use `<a-entity sound=\"positional: true;\"></a-entity>` to enable this magic.'",
+        choices: [
+            { text: "SHOW ME AN EXAMPLE OF POSITIONAL AUDIO.", next: "fraps1A114" },
+            { text: "CAN I COMBINE DIRECTIONAL AUDIO WITH INTERACTIVITY?", next: "fraps1A115" }
+        ],
+        background: "https://example.com/directional-audio.jpg",
+        sound: "positional-effect.mp3"
+    },
+    fraps1A108: {
+        text: "The spirit smiles. 'You can customize audio with options like volume, autoplay, loop, and more. For example, `<a-entity sound=\"src: url(sound.mp3); volume: 0.5; autoplay: true;\"></a-entity>` controls playback details.'",
+        choices: [
+            { text: "WHAT IS THE DEFAULT VOLUME LEVEL?", next: "fraps1A116" },
+            { text: "CAN I DYNAMICALLY ADJUST AUDIO SETTINGS?", next: "fraps1A117" }
+        ],
+        background: "https://example.com/audio-options.jpg",
+        sound: "customizable-audio.mp3"
+    },
+    fraps1A109: {
+        text: "The spirit demonstrates. 'To trigger audio interactively, you can use event listeners. For instance, clicking an object can play its associated sound.' You tap a crystal, and it plays a magical chime.",
+        choices: [
+            { text: "HOW DO I ADD CLICK TRIGGERS?", next: "fraps1A118" },
+            { text: "CAN I USE MOUSEENTER FOR AUDIO?", next: "fraps1A119" }
+        ],
+        background: "https://example.com/magical-chime.jpg",
+        sound: "crystal-chime.mp3"
+    },
+    fraps1A110: {
+        text: "'Starting and stopping audio is simple,' the spirit explains. 'Use JavaScript to call `playSound()` or `stopSound()` on the entity. Try it!' You start and stop a drumbeat by interacting with a floating drum.",
+        choices: [
+            { text: "SHOW ME A CODE EXAMPLE.", next: "fraps1A120" },
+            { text: "CAN I PAUSE AUDIO?", next: "fraps1A121" }
+        ],
+        background: "https://example.com/drumbeat.jpg",
+        sound: "drumbeat.mp3"
+    },
+    fraps1A111: {
+        text: "The spirit nods. 'Looping audio creates continuous ambiance. Use the `loop: true` option in the `sound` component. Watch.' A soft rain sound loops as the spirit gestures to the sky.",
+        choices: [
+            { text: "HOW DO I STOP LOOPING AUDIO?", next: "fraps1A122" },
+            { text: "CAN I LOOP AUDIO CONDITIONALLY?", next: "fraps1A123" }
+        ],
+        background: "https://example.com/looping-rain.jpg",
+        sound: "soft-rain.mp3"
+    }
+    // Additional paths continue...
+};
+
+Textures and material 
+const frapsTutorials = {
+    fraps1A124: {
+        text: "With the power of audio resonating in the valley, the spirit leads you to a mysterious canyon where the walls shimmer with strange patterns. 'You’ve unlocked sound, but now it’s time to understand the essence of **textures and materials**. Every surface in this world tells a story.'",
+        choices: [
+            { text: "WHAT ARE TEXTURES AND MATERIALS?", next: "fraps1A125" },
+            { text: "HOW CAN I USE THEM IN MY SCENE?", next: "fraps1A126" }
+        ],
+        background: "https://example.com/shimmering-canyon.jpg",
+        sound: "soft-wind.mp3"
+    },
+    fraps1A125: {
+        text: "The spirit touches a stone, and its surface changes from rough to smooth. 'Textures define the surface appearance, while materials control properties like color, shininess, and transparency. Together, they bring objects to life.'",
+        choices: [
+            { text: "SHOW ME HOW TO ADD TEXTURES.", next: "fraps1A127" },
+            { text: "CAN I CONTROL MATERIAL PROPERTIES?", next: "fraps1A128" }
+        ],
+        background: "https://example.com/surface-change.jpg",
+        sound: "stone-shift.mp3"
+    },
+    fraps1A126: {
+        text: "The spirit waves its hand, and a wooden crate appears. 'In A-Frame, textures and materials are applied using the `material` component. You can add images, change colors, and adjust the feel of objects.'",
+        choices: [
+            { text: "WHAT IS THE `MATERIAL` COMPONENT?", next: "fraps1A129" },
+            { text: "HOW DO I APPLY AN IMAGE AS A TEXTURE?", next: "fraps1A130" }
+        ],
+        background: "https://example.com/wooden-crate.jpg",
+        sound: "wood-creak.mp3"
+    },
+    fraps1A127: {
+        text: "The spirit gestures to a glowing orb. 'To add textures, use the `src` attribute in the `material` component. For instance: `<a-sphere material=\"src: url(texture.jpg);\"></a-sphere>` applies an image texture to a sphere.'",
+        choices: [
+            { text: "CAN I USE MULTIPLE TEXTURES?", next: "fraps1A131" },
+            { text: "WHAT FILE FORMATS ARE SUPPORTED?", next: "fraps1A132" }
+        ],
+        background: "https://example.com/glowing-orb.jpg",
+        sound: "orb-hum.mp3"
+    },
+    fraps1A128: {
+        text: "The spirit shows you a metal cube. 'You can control material properties like roughness, metalness, and opacity. For example, `<a-box material=\"color: red; metalness: 0.8;\"></a-box>` creates a shiny, red metal cube.'",
+        choices: [
+            { text: "HOW DO I MAKE OBJECTS TRANSPARENT?", next: "fraps1A133" },
+            { text: "CAN I CREATE GLOWING EFFECTS?", next: "fraps1A134" }
+        ],
+        background: "https://example.com/metal-cube.jpg",
+        sound: "metal-clink.mp3"
+    },
+    fraps1A129: {
+        text: "'The `material` component is your tool for defining the appearance of objects,' the spirit explains. 'Use it to set colors, add textures, and tweak surface properties to match your vision.'",
+        choices: [
+            { text: "WHAT OPTIONS DOES IT SUPPORT?", next: "fraps1A135" },
+            { text: "CAN MATERIALS CHANGE DYNAMICALLY?", next: "fraps1A136" }
+        ],
+        background: "https://example.com/material-options.jpg",
+        sound: "material-swipe.mp3"
+    },
+    fraps1A130: {
+        text: "The spirit demonstrates by painting a boulder with an image of the night sky. 'To apply an image as a texture, use the `src` attribute in the `material` component.' The stars twinkle on the boulder’s surface.",
+        choices: [
+            { text: "HOW DO I TILE A TEXTURE?", next: "fraps1A137" },
+            { text: "CAN I ANIMATE A TEXTURE?", next: "fraps1A138" }
+        ],
+        background: "https://example.com/starry-boulder.jpg",
+        sound: "star-twinkle.mp3"
+    },
+    fraps1A131: {
+        text: "The spirit conjures a layered crystal. 'Using shaders, you can create advanced effects with multiple textures. For example, combining a color map with a bump map for depth.' The crystal sparkles as light hits it.",
+        choices: [
+            { text: "WHAT ARE SHADERS?", next: "fraps1A139" },
+            { text: "CAN YOU SHOW ME AN EXAMPLE?", next: "fraps1A140" }
+        ],
+        background: "https://example.com/layered-crystal.jpg",
+        sound: "crystal-echo.mp3"
+    },
+    fraps1A133: {
+        text: "The spirit holds a translucent orb. 'To make objects transparent, use `opacity`. For example, `<a-box material=\"color: blue; opacity: 0.5;\"></a-box>` creates a semi-transparent blue box.'",
+        choices: [
+            { text: "CAN I MAKE GRADIENT TRANSPARENCY?", next: "fraps1A141" },
+            { text: "DOES TRANSPARENCY AFFECT PERFORMANCE?", next: "fraps1A142" }
+        ],
+        background: "https://example.com/translucent-orb.jpg",
+        sound: "soft-glow.mp3"
+    },
+    fraps1A134: {
+        text: "'To create glowing effects, use emissive materials,' the spirit says. 'For example, `<a-box material=\"color: yellow; emissive: yellow;\"></a-box>` creates a glowing yellow box.' The canyon lights up as an example appears.",
+        choices: [
+            { text: "CAN I CONTROL THE GLOW INTENSITY?", next: "fraps1A143" },
+            { text: "HOW DOES EMISSIVE DIFFER FROM LIGHT?", next: "fraps1A144" }
+        ],
+        background: "https://example.com/glowing-box.jpg",
+        sound: "glow-intensify.mp3"
+    }
+    // Additional paths continue...
+};
+
+Advanced Features.
+const frapsTutorials = {
+    fraps1A145: {
+        text: "The shimmering canyon fades, and you find yourself standing before a colossal, ancient obelisk glowing with intricate patterns. The spirit’s voice echoes, 'You’ve mastered the basics. Now, it’s time to uncover the **advanced features** that will elevate your creations.'",
+        choices: [
+            { text: "WHAT ARE THESE ADVANCED FEATURES?", next: "fraps1A146" },
+            { text: "HOW CAN I USE THEM TO IMPROVE MY SCENES?", next: "fraps1A147" }
+        ],
+        background: "https://example.com/ancient-obelisk.jpg",
+        sound: "low-hum.mp3"
+    },
+    fraps1A146: {
+        text: "The spirit points to the obelisk as its patterns animate. 'Advanced features in A-Frame include shaders, data-driven components, custom geometries, and dynamic interactions. These tools let you push the boundaries of what's possible.'",
+        choices: [
+            { text: "TELL ME ABOUT SHADERS.", next: "fraps1A148" },
+            { text: "HOW CAN I CREATE CUSTOM GEOMETRIES?", next: "fraps1A149" }
+        ],
+        background: "https://example.com/animated-obelisk.jpg",
+        sound: "magic-echo.mp3"
+    },
+    fraps1A147: {
+        text: "The obelisk reveals a glowing interface. 'You can use advanced features to optimize performance, create unique visuals, and design deeply interactive experiences. Let me show you the way.'",
+        choices: [
+            { text: "HOW CAN I OPTIMIZE PERFORMANCE?", next: "fraps1A150" },
+            { text: "CAN I CREATE INTERACTIVE ENVIRONMENTS?", next: "fraps1A151" }
+        ],
+        background: "https://example.com/obelisk-interface.jpg",
+        sound: "interface-beep.mp3"
+    },
+    fraps1A148: {
+        text: "The spirit waves its hand, and a fragment of light splits from the obelisk. 'Shaders are small programs that run on the GPU to control the appearance of your objects. Use custom shaders for effects like water ripples or holograms.'",
+        choices: [
+            { text: "HOW DO I ADD A SHADER?", next: "fraps1A152" },
+            { text: "CAN I CUSTOMIZE A DEFAULT SHADER?", next: "fraps1A153" }
+        ],
+        background: "https://example.com/light-fragment.jpg",
+        sound: "light-flicker.mp3"
+    },
+    fraps1A149: {
+        text: "A stone tablet rises from the ground, carved with patterns of cubes, spheres, and pyramids. 'Custom geometries let you define unique shapes. Use the `geometry` component to specify vertices, faces, and dimensions.'",
+        choices: [
+            { text: "SHOW ME AN EXAMPLE.", next: "fraps1A154" },
+            { text: "CAN I COMBINE GEOMETRIES?", next: "fraps1A155" }
+        ],
+        background: "https://example.com/stone-tablet.jpg",
+        sound: "stone-slide.mp3"
+    },
+    fraps1A150: {
+        text: "The spirit taps the obelisk, and the patterns speed up. 'Optimization involves techniques like reducing draw calls, using low-poly models, and leveraging A-Frame’s `dynamic` and `pool` attributes.'",
+        choices: [
+            { text: "WHAT IS THE `DYNAMIC` ATTRIBUTE?", next: "fraps1A156" },
+            { text: "HOW DOES THE `POOL` ATTRIBUTE WORK?", next: "fraps1A157" }
+        ],
+        background: "https://example.com/optimized-obelisk.jpg",
+        sound: "soft-rumble.mp3"
+    },
+    fraps1A151: {
+        text: "The spirit conjures an interactive portal. 'Advanced interactivity can be achieved with event listeners and custom components. Create environments where users can touch, grab, or move objects dynamically.'",
+        choices: [
+            { text: "SHOW ME AN EXAMPLE.", next: "fraps1A158" },
+            { text: "CAN I ADD MULTI-USER INTERACTIONS?", next: "fraps1A159" }
+        ],
+        background: "https://example.com/interactive-portal.jpg",
+        sound: "portal-hum.mp3"
+    },
+    fraps1A152: {
+        text: "The fragment of light transforms into a glowing script. 'To add a shader, use the `material` component with a shader property. For example: `<a-plane material=\"shader: custom-shader;\"></a-plane>`.'",
+        choices: [
+            { text: "HOW DO I WRITE A SHADER?", next: "fraps1A160" },
+            { text: "CAN I USE PREMADE SHADERS?", next: "fraps1A161" }
+        ],
+        background: "https://example.com/glowing-script.jpg",
+        sound: "script-flutter.mp3"
+    },
+    fraps1A154: {
+        text: "The stone tablet glows as a unique shape emerges. 'For example, `<a-entity geometry=\"primitive: custom; vertices: ...\"></a-entity>` defines a custom shape using vertices and faces.'",
+        choices: [
+            { text: "CAN I MAKE DYNAMIC GEOMETRIES?", next: "fraps1A162" },
+            { text: "WHAT ABOUT TEXTURES ON CUSTOM SHAPES?", next: "fraps1A163" }
+        ],
+        background: "https://example.com/custom-shape.jpg",
+        sound: "shape-morph.mp3"
+    },
+    fraps1A158: {
+        text: "The portal reveals a scene where objects move as the user interacts. 'For example, add an event listener to detect user input: `<a-box onclick=\"this.setAttribute('position', '1 2 3');\"></a-box>`.'",
+        choices: [
+            { text: "CAN I TRIGGER COMPLEX ACTIONS?", next: "fraps1A164" },
+            { text: "HOW DO I TEST INTERACTIONS?", next: "fraps1A165" }
+        ],
+        background: "https://example.com/interactive-scene.jpg",
+        sound: "interaction-click.mp3"
+    }
+    // Additional paths continue...
+};
+
+Loading assets
+const frapsTutorials = {
+    fraps1A166: {
+        text: "The obelisk hums louder, and a hidden door opens. Inside, you find an expansive library filled with shimmering orbs, each holding a fragment of knowledge. The spirit whispers, 'To bring life to your creations, you must learn the art of **loading assets**.'",
+        choices: [
+            { text: "WHAT ARE ASSETS?", next: "fraps1A167" },
+            { text: "HOW DO I USE ASSETS IN A-FRAME?", next: "fraps1A168" }
+        ],
+        background: "https://example.com/library-of-light.jpg",
+        sound: "door-creak.mp3"
+    },
+    fraps1A167: {
+        text: "The spirit waves its hand, and an orb floats before you, showing images of textures, models, and sounds. 'Assets are resources like images, 3D models, audio, and videos that you can use to enhance your scenes.'",
+        choices: [
+            { text: "HOW DO I LOAD THESE ASSETS?", next: "fraps1A169" },
+            { text: "CAN I USE MULTIPLE ASSETS?", next: "fraps1A170" }
+        ],
+        background: "https://example.com/floating-orb.jpg",
+        sound: "orb-glow.mp3"
+    },
+    fraps1A168: {
+        text: "The spirit gestures to an ancient scroll with glowing text. 'In A-Frame, assets are defined in the `<a-assets>` tag. It preloads resources before rendering the scene to ensure smooth performance.'",
+        choices: [
+            { text: "SHOW ME HOW TO USE `<A-ASSETS>`.", next: "fraps1A171" },
+            { text: "CAN I PRELOAD COMPLEX MODELS?", next: "fraps1A172" }
+        ],
+        background: "https://example.com/glowing-scroll.jpg",
+        sound: "paper-rustle.mp3"
+    },
+    fraps1A169: {
+        text: "The orb displays an example: `<a-assets><img id='sky' src='sky.jpg'></a-assets>`. 'You can then reference these assets using their `id`, like this: `<a-sky src='#sky'></a-sky>`.'",
+        choices: [
+            { text: "CAN I LOAD 3D MODELS?", next: "fraps1A173" },
+            { text: "WHAT ABOUT AUDIO ASSETS?", next: "fraps1A174" }
+        ],
+        background: "https://example.com/example-orb.jpg",
+        sound: "orb-chime.mp3"
+    },
+    fraps1A170: {
+        text: "The spirit nods as the library fills with light. 'Yes, you can load multiple assets in `<a-assets>` for images, videos, models, and sounds. Organize them well for efficiency.'",
+        choices: [
+            { text: "SHOW ME A MULTI-ASSET EXAMPLE.", next: "fraps1A175" },
+            { text: "CAN I USE VIDEOS AS TEXTURES?", next: "fraps1A176" }
+        ],
+        background: "https://example.com/library-glow.jpg",
+        sound: "soft-glow.mp3"
+    },
+    fraps1A171: {
+        text: "The scroll transforms into a simple example: `<a-assets><img id='grass' src='grass.jpg'></a-assets>`. 'Reference this image in a material: `<a-plane material=\"src: #grass\"></a-plane>`.'",
+        choices: [
+            { text: "HOW CAN I OPTIMIZE LARGE ASSETS?", next: "fraps1A177" },
+            { text: "CAN I LOAD ASSETS DYNAMICALLY?", next: "fraps1A178" }
+        ],
+        background: "https://example.com/scroll-example.jpg",
+        sound: "scroll-unfurl.mp3"
+    },
+    fraps1A172: {
+        text: "A 3D model of a dragon appears from the orb. 'Yes, use the `<a-asset-item>` tag for complex models. For example: `<a-assets><a-asset-item id='dragon' src='dragon.gltf'></a-asset-item></a-assets>`.'",
+        choices: [
+            { text: "HOW DO I ADD THIS TO MY SCENE?", next: "fraps1A179" },
+            { text: "CAN I ADD ANIMATIONS TO MODELS?", next: "fraps1A180" }
+        ],
+        background: "https://example.com/dragon-model.jpg",
+        sound: "dragon-roar.mp3"
+    },
+    fraps1A175: {
+        text: "The spirit conjures an example with multiple assets: `<a-assets><img id='sky' src='sky.jpg'><img id='ground' src='ground.jpg'></a-assets>`. 'These can be used in multiple entities.'",
+        choices: [
+            { text: "CAN I COMBINE DIFFERENT TYPES OF ASSETS?", next: "fraps1A181" },
+            { text: "WHAT HAPPENS IF AN ASSET FAILS TO LOAD?", next: "fraps1A182" }
+        ],
+        background: "https://example.com/assets-mix.jpg",
+        sound: "entity-load.mp3"
+    },
+    fraps1A177: {
+        text: "The spirit explains, 'Optimize large assets by compressing images and models, using CDN-hosted resources, or lazy-loading them after the scene starts.'",
+        choices: [
+            { text: "CAN YOU SHOW ME LAZY-LOADING?", next: "fraps1A183" },
+            { text: "WHAT ARE BEST PRACTICES FOR MODELS?", next: "fraps1A184" }
+        ],
+        background: "https://example.com/optimized-asset.jpg",
+        sound: "data-stream.mp3"
+    },
+    fraps1A180: {
+        text: "The dragon begins to move, and the spirit explains, 'Add animations to models using the `animation-mixer` component. For example: `<a-entity gltf-model=\"#dragon\" animation-mixer></a-entity>`.'",
+        choices: [
+            { text: "HOW DO I CONTROL ANIMATIONS?", next: "fraps1A185" },
+            { text: "CAN I TRIGGER ANIMATIONS ON EVENTS?", next: "fraps1A186" }
+        ],
+        background: "https://example.com/animated-dragon.jpg",
+        sound: "wing-flap.mp3"
+    }
+    // More paths can follow based on user interaction...
+};
+
+Third party integration.
+const frapsTutorials = {
+  fraps1A187: {
+    text: "The Elder Spirit points to a mysterious glowing crystal embedded in the cave wall. 'This crystal,' it says, 'represents the gateway to infinite possibilities. Through **third-party integrations**, you can enhance your creations beyond the tools we have discussed so far. Let me show you.'",
+    choices: [
+      { text: "TELL ME MORE ABOUT THESE INTEGRATIONS.", next: "fraps1A188" },
+      { text: "I AM READY TO EXPLORE!", next: "fraps1A189" }
+    ],
+    background: "https://cloud-images/spirit-cave.png",
+    sound: "mystical-chime.mp3"
+  },
+  fraps1A188: {
+    text: "'Third-party integrations allow you to connect A-Frame with other libraries or tools. For example, you can integrate physics engines, UI frameworks, or even multiplayer functionalities! Imagine your creations coming to life with interactions beyond what you’ve seen so far.'",
+    choices: [
+      { text: "SHOW ME AN EXAMPLE.", next: "fraps1A190" },
+      { text: "HOW DO I START?", next: "fraps1A191" }
+    ],
+    background: "https://cloud-images/integration-info.png",
+    sound: "teaching-moment.mp3"
+  },
+  fraps1A189: {
+    text: "You touch the crystal and find yourself surrounded by visions of creations enhanced by third-party tools. 'From realistic physics simulations to voice-controlled interfaces, all of this is possible with the right tools,' the Elder Spirit says.",
+    choices: [
+      { text: "TELL ME MORE ABOUT PHYSICS.", next: "fraps1A192" },
+      { text: "WHAT ABOUT MULTIPLAYER?", next: "fraps1A193" }
+    ],
+    background: "https://cloud-images/portal-vision.png",
+    sound: "vision-sound.mp3"
+  },
+  fraps1A190: {
+    text: "'Imagine using a physics engine like **cannon.js** in your A-Frame world,' the Elder explains. 'You could create objects that roll, bounce, or collide like in the real world. For instance, a boulder falling down a hill.'",
+    choices: [
+      { text: "I WANT TO LEARN ABOUT CANNON.JS.", next: "fraps1A194" },
+      { text: "WHAT OTHER INTEGRATIONS CAN I USE?", next: "fraps1A195" }
+    ],
+    background: "https://cloud-images/boulder-demo.png",
+    sound: "rolling-boulder.mp3"
+  },
+  fraps1A191: {
+    text: "'To start with third-party integrations, you’ll often need to include their libraries in your project, either via a script tag or an npm package. Once included, you can use their APIs within your A-Frame scene!' the Elder Spirit explains.",
+    choices: [
+      { text: "CAN YOU SHOW ME A DEMO?", next: "fraps1A196" },
+      { text: "WHAT ARE THE BEST INTEGRATIONS?", next: "fraps1A197" }
+    ],
+    background: "https://cloud-images/integration-start.png",
+    sound: "knowledge-unlock.mp3"
+  },
+  fraps1A192: {
+    text: "'With a physics engine like **cannon.js**, you can simulate real-world behaviors,' the Elder Spirit says. 'Imagine crafting a game where stones fall naturally or players must dodge moving objects. The possibilities are endless.'",
+    choices: [
+      { text: "SHOW ME HOW TO BEGIN.", next: "fraps1A198" },
+      { text: "WHAT ELSE CAN I DO WITH PHYSICS?", next: "fraps1A199" }
+    ],
+    background: "https://cloud-images/physics-demo.png",
+    sound: "physics-effect.mp3"
+  },
+  fraps1A193: {
+    text: "'Ah, multiplayer!' The Elder Spirit smiles. 'By integrating tools like **WebRTC** or platforms like **Socket.io**, you can create shared worlds where players interact in real-time. Imagine building an ancient village where everyone contributes to its growth!'",
+    choices: [
+      { text: "I WANT TO LEARN ABOUT SOCKET.IO.", next: "fraps1A200" },
+      { text: "CAN I COMBINE MULTIPLAYER AND PHYSICS?", next: "fraps1A201" }
+    ],
+    background: "https://cloud-images/multiplayer-vision.png",
+    sound: "multiplayer-vision.mp3"
+  },
+  fraps1A194: {
+    text: "The Elder Spirit waves its hand, and a vision appears of boulders falling naturally. 'With **cannon.js**, you can make this happen. Just include its script and configure a physics system in your scene.'",
+    choices: [
+      { text: "I WANT TO IMPLEMENT THIS!", next: "fraps1A202" },
+      { text: "WHAT ARE OTHER OPTIONS FOR PHYSICS?", next: "fraps1A203" }
+    ],
+    background: "https://cloud-images/cannonjs-example.png",
+    sound: "boulder-fall.mp3"
+  },
+  fraps1A195: {
+    text: "'Beyond physics, you can integrate **three.js** for advanced 3D rendering, **TONE.js** for audio control, and more! Each integration expands the capabilities of your scene,' the Elder Spirit explains.",
+    choices: [
+      { text: "TELL ME ABOUT THREE.JS.", next: "fraps1A204" },
+      { text: "WHAT IS TONE.JS?", next: "fraps1A205" }
+    ],
+    background: "https://cloud-images/integration-options.png",
+    sound: "integration-sound.mp3"
+  }
+};
+
+VR platform And Devices
+const frapsTutorials = {
+  fraps1A207: {
+    text: "The Elder Spirit gestures to a glowing portal surrounded by ancient glyphs. 'You have mastered the art of enhancing your worlds. Now, it’s time to explore where these worlds can be experienced: the **VR platforms and devices**. Step through this portal to begin.'",
+    choices: [
+      { text: "STEP INTO THE PORTAL.", next: "fraps1A208" },
+      { text: "TELL ME MORE BEFORE I GO.", next: "fraps1A209" }
+    ],
+    background: "https://cloud-images/vr-portal.png",
+    sound: "portal-hum.mp3"
+  },
+  fraps1A208: {
+    text: "You step into the portal and emerge in a futuristic landscape. The Elder Spirit’s voice echoes: 'Here lies the realm of **virtual reality platforms**. From standalone devices to browser-based VR, your creations can be experienced in immersive ways.'",
+    choices: [
+      { text: "SHOW ME STANDALONE DEVICES.", next: "fraps1A210" },
+      { text: "WHAT ABOUT BROWSER-BASED VR?", next: "fraps1A211" }
+    ],
+    background: "https://cloud-images/vr-futuristic-world.png",
+    sound: "futuristic-echo.mp3"
+  },
+  fraps1A209: {
+    text: "'VR platforms allow users to experience your A-Frame creations in fully immersive environments,' the Elder Spirit explains. 'You can target devices like Oculus, HTC Vive, or even mobile-based VR systems. Let me guide you through them.'",
+    choices: [
+      { text: "I’M READY TO LEARN ABOUT DEVICES.", next: "fraps1A210" },
+      { text: "HOW CAN I TARGET BROWSER-BASED VR?", next: "fraps1A211" }
+    ],
+    background: "https://cloud-images/vr-devices.png",
+    sound: "teaching-sound.mp3"
+  },
+  fraps1A210: {
+    text: "'Standalone VR devices, such as the Oculus Quest or HTC Vive, allow users to experience your scenes untethered from computers. A-Frame works seamlessly with these platforms by leveraging **WebXR**, a web standard for VR and AR,' the Elder Spirit explains.",
+    choices: [
+      { text: "HOW DO I USE WEBXR?", next: "fraps1A212" },
+      { text: "CAN YOU SHOW ME A DEMO?", next: "fraps1A213" }
+    ],
+    background: "https://cloud-images/vr-standalone-devices.png",
+    sound: "device-hum.mp3"
+  },
+  fraps1A211: {
+    text: "'Browser-based VR,' the Elder Spirit continues, 'lets users access your worlds without specialized devices. Using a mobile phone or desktop, they can enter VR experiences directly through the browser, thanks to A-Frame’s compatibility with **WebVR** and **WebXR**.'",
+    choices: [
+      { text: "TELL ME MORE ABOUT WEBVR.", next: "fraps1A214" },
+      { text: "HOW DO I TARGET WEBXR?", next: "fraps1A215" }
+    ],
+    background: "https://cloud-images/browser-vr.png",
+    sound: "browser-vr.mp3"
+  },
+  fraps1A212: {
+    text: "'WebXR is your bridge to creating VR and AR experiences directly in the browser,' the Elder Spirit explains. 'By enabling VR mode in A-Frame, your users can connect their devices and step into your creations instantly.'",
+    choices: [
+      { text: "SHOW ME HOW TO ENABLE VR MODE.", next: "fraps1A216" },
+      { text: "WHAT ABOUT AR MODE?", next: "fraps1A217" }
+    ],
+    background: "https://cloud-images/webxr-vr.png",
+    sound: "webxr-sound.mp3"
+  },
+  fraps1A213: {
+    text: "The Elder Spirit conjures a vision of a user wearing a VR headset and interacting with a vibrant virtual environment. 'A-Frame makes it simple to integrate VR mode. With just a few lines of code, your world comes alive for VR users.'",
+    choices: [
+      { text: "SHOW ME THE CODE FOR THIS.", next: "fraps1A218" },
+      { text: "WHAT MORE CAN I DO IN VR MODE?", next: "fraps1A219" }
+    ],
+    background: "https://cloud-images/vr-demo.png",
+    sound: "vr-demo.mp3"
+  },
+  fraps1A214: {
+    text: "'WebVR was the precursor to WebXR,' the Elder Spirit explains. 'It allowed browsers to support VR experiences. While it’s been mostly replaced, understanding its history can help you appreciate how VR evolved on the web.'",
+    choices: [
+      { text: "TELL ME MORE ABOUT THE EVOLUTION.", next: "fraps1A220" },
+      { text: "SHOW ME HOW TO MIGRATE TO WEBXR.", next: "fraps1A221" }
+    ],
+    background: "https://cloud-images/webvr-history.png",
+    sound: "webvr-sound.mp3"
+  },
+  fraps1A215: {
+    text: "'WebXR expands on WebVR to support both VR and AR devices,' the Elder Spirit says. 'It’s the modern standard for immersive experiences in browsers, making it the ideal choice for A-Frame developers.'",
+    choices: [
+      { text: "HOW DO I IMPLEMENT WEBXR?", next: "fraps1A222" },
+      { text: "SHOW ME EXAMPLES OF WEBXR IN ACTION.", next: "fraps1A223" }
+    ],
+    background: "https://cloud-images/webxr-integration.png",
+    sound: "webxr-effect.mp3"
+  },
+  fraps1A216: {
+    text: "'To enable VR mode in A-Frame, simply add the attribute `vr-mode-ui` to your scene. This will allow users to enter VR mode using compatible devices,' the Elder Spirit demonstrates, showing an example scene in action.",
+    choices: [
+      { text: "I WANT TO TRY THIS!", next: "fraps1A224" },
+      { text: "CAN I CUSTOMIZE VR MODE?", next: "fraps1A225" }
+    ],
+    background: "https://cloud-images/vr-mode-ui.png",
+    sound: "vr-mode.mp3"
+  }
+};
+
+Customization 
+ const frapsTutorials = {
+  fraps1A224: {
+    text: "'Now that you understand how to enable VR mode, it's time to customize your experience,' the Elder Spirit says, smiling. 'Customization is the key to making your worlds truly unique. From simple color changes to interactive features, A-Frame gives you the power to design everything.'",
+    choices: [
+      { text: "HOW CAN I CHANGE THE BACKGROUND?", next: "fraps1A225" },
+      { text: "SHOW ME HOW TO CUSTOMIZE INTERACTIVITY.", next: "fraps1A226" }
+    ],
+    background: "https://cloud-images/customization-start.png",
+    sound: "customization-sound.mp3"
+  },
+  fraps1A225: {
+    text: "'To change the background in A-Frame, use the `sky` component. The `sky` element allows you to add a textured or colored backdrop for your scene,' the Elder Spirit demonstrates, conjuring a mesmerizing sky around you. 'You can even animate it for a dynamic effect.'",
+    choices: [
+      { text: "SHOW ME AN EXAMPLE OF A SKY COMPONENT.", next: "fraps1A227" },
+      { text: "CAN I ADD A CUSTOM IMAGE AS BACKGROUND?", next: "fraps1A228" }
+    ],
+    background: "https://cloud-images/sky-background.png",
+    sound: "sky-animation.mp3"
+  },
+  fraps1A226: {
+    text: "'Interactive features are where the magic happens,' the Elder Spirit says. 'Using A-Frame’s components, you can trigger animations, modify objects, or even respond to user input.' The Elder Spirit waves his hand, causing a nearby object to animate with a flicker of light.",
+    choices: [
+      { text: "CAN YOU SHOW ME AN INTERACTIVE DEMO?", next: "fraps1A229" },
+      { text: "HOW DO I MAKE A BUTTON THAT DOES SOMETHING?", next: "fraps1A230" }
+    ],
+    background: "https://cloud-images/interactivity-demo.png",
+    sound: "interactive-effect.mp3"
+  },
+  fraps1A227: {
+    text: "'Here’s an example of how to use the `sky` component to change the background,' the Elder Spirit explains. A swirling galaxy fills the sky, enchanting all who look up. 'You can set the `src` attribute to define the background image.'",
+    choices: [
+      { text: "SHOW ME THE CODE FOR THIS EXAMPLE.", next: "fraps1A231" },
+      { text: "HOW DO I ANIMATE THE BACKGROUND?", next: "fraps1A232" }
+    ],
+    background: "https://cloud-images/sky-galaxy.png",
+    sound: "swirling-sound.mp3"
+  },
+  fraps1A228: {
+    text: "'To add a custom image as the background, simply link the image to the `src` attribute of the `sky` component,' the Elder Spirit says. He conjures a scene with a magnificent sunset in the background, illustrating the process.",
+    choices: [
+      { text: "CAN I CHANGE THE IMAGE ON THE FLY?", next: "fraps1A233" },
+      { text: "HOW DO I MAKE THE BACKGROUND SCROLL?", next: "fraps1A234" }
+    ],
+    background: "https://cloud-images/custom-background.png",
+    sound: "sunset-sound.mp3"
+  },
+  fraps1A229: {
+    text: "'Let me show you how interactivity works with a simple trigger event,' the Elder Spirit says. With a wave, a nearby tree starts to grow as you approach. 'A-Frame allows you to add event listeners like `click`, `mouseenter`, or even `animationcomplete`.'",
+    choices: [
+      { text: "SHOW ME THE CODE FOR THIS EVENT.", next: "fraps1A235" },
+      { text: "WHAT OTHER EVENTS CAN I USE?", next: "fraps1A236" }
+    ],
+    background: "https://cloud-images/tree-grow-interactive.png",
+    sound: "tree-growth-sound.mp3"
+  },
+  fraps1A230: {
+    text: "'Creating interactive buttons is as simple as using A-Frame’s `<a-entity>` component,' the Elder Spirit explains. He conjures a glowing button in front of you. 'With `event` listeners and animations, you can make any object clickable and responsive.'",
+    choices: [
+      { text: "CAN I ADD ANIMATION TO BUTTONS?", next: "fraps1A237" },
+      { text: "SHOW ME HOW TO MAKE A BUTTON WORK.", next: "fraps1A238" }
+    ],
+    background: "https://cloud-images/button-interactivity.png",
+    sound: "button-click.mp3"
+  },
+  fraps1A231: {
+    text: "'Here’s how to implement the `sky` component to change the background. You just need to add a `<a-sky>` tag and link it to your image like this,' the Elder Spirit explains, revealing a code snippet:\n`<a-sky src='#myImage'></a-sky>`\n'You can also use a color code like `#ff0000` for a solid background.'",
+    choices: [
+      { text: "HOW DO I ADD A COLOR TO THE SKY?", next: "fraps1A239" },
+      { text: "WHAT IF I WANT A 360° IMAGE?", next: "fraps1A240" }
+    ],
+    background: "https://cloud-images/sky-code.png",
+    sound: "code-effect.mp3"
+  },
+  fraps1A232: {
+    text: "'Animating the background is simple,' the Elder Spirit says. 'You can use A-Frame’s `animation` component to create smooth transitions. Just define the `to` and `duration` attributes and watch the sky shift.'",
+    choices: [
+      { text: "SHOW ME A CODE EXAMPLE FOR ANIMATED SKY.", next: "fraps1A241" },
+      { text: "HOW DO I LOOP THE ANIMATION?", next: "fraps1A242" }
+    ],
+    background: "https://cloud-images/sky-animation-code.png",
+    sound: "animation-sound.mp3"
+  },
+  fraps1A233: {
+    text: "'Yes, you can change the background dynamically using JavaScript,' the Elder Spirit says. 'By modifying the `src` attribute of the `sky` component, you can swap images based on events or user input.'",
+    choices: [
+      { text: "SHOW ME THE CODE FOR DYNAMIC BACKGROUND.", next: "fraps1A243" },
+      { text: "HOW DO I ADD MULTIPLE BACKGROUNDS?", next: "fraps1A244" }
+    ],
+    background: "https://cloud-images/dynamic-background.png",
+    sound: "dynamic-change-sound.mp3"
+  },
+  fraps1A234: {
+    text: "'To make the background scroll, you can use the `animation` component with the `property` set to `rotation` or `position`,' the Elder Spirit explains. 'This will create an effect of the sky moving in a loop.'",
+    choices: [
+      { text: "SHOW ME CODE FOR SCROLLING BACKGROUND.", next: "fraps1A245" },
+      { text: "CAN I COMBINE THIS WITH A DAY-NIGHT CYCLE?", next: "fraps1A246" }
+    ],
+    background: "https://cloud-images/scrolling-background.png",
+    sound: "scrolling-sound.mp3"
+  }
+};
+
+Debugging and tools
+
+const frapsTutorials = {
+  fraps1A247: {
+    text: "'Ah, traveler, every builder must face challenges during their journey,' the Elder Spirit says with a knowing smile. 'Now, we will explore the ways of debugging and the tools that will help you overcome obstacles in A-Frame.'",
+    choices: [
+      { text: "HOW DO I DEBUG MY SCENE?", next: "fraps1A248" },
+      { text: "TELL ME ABOUT THE TOOLS THAT CAN HELP.", next: "fraps1A249" }
+    ],
+    background: "https://cloud-images/debugging-start.png",
+    sound: "debugging-sound.mp3"
+  },
+  fraps1A248: {
+    text: "'To debug your A-Frame scene, one of the best tools at your disposal is the browser’s developer console,' the Elder Spirit explains. 'You can view errors, warnings, and log messages directly in the console to help identify any issues with your components or assets.'",
+    choices: [
+      { text: "SHOW ME HOW TO OPEN THE CONSOLE.", next: "fraps1A250" },
+      { text: "CAN I LOG MESSAGES IN A-FRAME?", next: "fraps1A251" }
+    ],
+    background: "https://cloud-images/console-debugging.png",
+    sound: "console-effect.mp3"
+  },
+  fraps1A249: {
+    text: "'There are many tools that will help with debugging in A-Frame,' the Elder Spirit says. 'For instance, the A-Frame Inspector, which is built directly into the framework, lets you visually inspect and manipulate your scene in real-time.'",
+    choices: [
+      { text: "WHAT IS THE A-FRAME INSPECTOR?", next: "fraps1A252" },
+      { text: "ARE THERE ANY THIRD-PARTY DEBUGGING TOOLS?", next: "fraps1A253" }
+    ],
+    background: "https://cloud-images/aframe-inspector.png",
+    sound: "inspector-sound.mp3"
+  },
+  fraps1A250: {
+    text: "'To open the console, simply press `F12` or `Ctrl + Shift + I` in most browsers. This will bring up the developer tools panel,' the Elder Spirit explains. 'From there, you can access the console tab, where errors, warnings, and custom log messages will be displayed.'",
+    choices: [
+      { text: "HOW DO I LOG MESSAGES IN THE CONSOLE?", next: "fraps1A251" },
+      { text: "CAN I USE THE CONSOLE TO TRACE PROBLEMS?", next: "fraps1A254" }
+    ],
+    background: "https://cloud-images/developer-tools.png",
+    sound: "console-open-sound.mp3"
+  },
+  fraps1A251: {
+    text: "'To log messages in A-Frame, you can use the standard `console.log()` function in your JavaScript code,' the Elder Spirit demonstrates, showing a code snippet:\n`console.log('This is a debug message');`\n'You can also log components and their states for deeper insights.'",
+    choices: [
+      { text: "CAN I LOG EVENTS AND INTERACTIONS?", next: "fraps1A255" },
+      { text: "HOW DO I LOG THE STATE OF A COMPONENT?", next: "fraps1A256" }
+    ],
+    background: "https://cloud-images/logging-code.png",
+    sound: "log-message-sound.mp3"
+  },
+  fraps1A252: {
+    text: "'The A-Frame Inspector is a powerful tool that allows you to inspect and edit your scene visually,' the Elder Spirit explains. 'You can activate it by pressing `Ctrl + Shift + I` in your browser, then selecting the A-Frame tab. From there, you can modify your scene directly.'",
+    choices: [
+      { text: "SHOW ME HOW TO USE THE A-FRAME INSPECTOR.", next: "fraps1A257" },
+      { text: "CAN I MODIFY COMPONENTS IN THE INSPECTOR?", next: "fraps1A258" }
+    ],
+    background: "https://cloud-images/inspector-example.png",
+    sound: "inspector-activation.mp3"
+  },
+  fraps1A253: {
+    text: "'While the A-Frame tools are powerful, there are third-party debugging tools that can further enhance your workflow,' the Elder Spirit says. 'For example, you can use `aframe-debugger` to visualize performance, inspect assets, and even see warnings for missing components.'",
+    choices: [
+      { text: "HOW DO I USE THE A-FRAME DEBUGGER?", next: "fraps1A259" },
+      { text: "WHAT OTHER THIRD-PARTY TOOLS CAN I USE?", next: "fraps1A260" }
+    ],
+    background: "https://cloud-images/debugger-tool.png",
+    sound: "third-party-tools.mp3"
+  },
+  fraps1A254: {
+    text: "'Indeed, the console can help trace issues step-by-step. You can use `console.trace()` to trace the stack of your code and identify where things go wrong,' the Elder Spirit explains, his eyes glowing with wisdom. 'It’s like following the path of breadcrumbs to your problem.'",
+    choices: [
+      { text: "SHOW ME HOW TO TRACE CODE.", next: "fraps1A261" },
+      { text: "CAN I TRACE SPECIFIC COMPONENTS?", next: "fraps1A262" }
+    ],
+    background: "https://cloud-images/trace-path.png",
+    sound: "trace-path-sound.mp3"
+  },
+  fraps1A255: {
+    text: "'You can log events like `click` or `mouseenter` by adding event listeners in your code,' the Elder Spirit says. 'For example, when a user clicks on an object, you can log the event to track interactions.'",
+    choices: [
+      { text: "SHOW ME AN EXAMPLE OF LOGGING EVENTS.", next: "fraps1A263" },
+      { text: "HOW DO I LOG INTERACTIONS WITH ENTITIES?", next: "fraps1A264" }
+    ],
+    background: "https://cloud-images/event-logging.png",
+    sound: "event-sound.mp3"
+  },
+  fraps1A256: {
+    text: "'To log the state of a component, simply access the component’s data and log it. For example, `console.log(entity.getAttribute('position'))` will log the position of an entity,' the Elder Spirit shares, demonstrating the process.",
+    choices: [
+      { text: "HOW DO I MODIFY COMPONENTS AFTER LOGGING?", next: "fraps1A265" },
+      { text: "CAN I LOG MULTIPLE COMPONENTS AT ONCE?", next: "fraps1A266" }
+    ],
+    background: "https://cloud-images/component-logging.png",
+    sound: "component-log-sound.mp3"
+  },
+  fraps1A257: {
+    text: "'To use the A-Frame Inspector, first open it by pressing `Ctrl + Shift + I` and selecting the A-Frame tab. Once open, you can click on any object in your scene to inspect its properties and change them in real-time,' the Elder Spirit explains.",
+    choices: [
+      { text: "HOW DO I USE THE INSPECTOR TO EDIT OBJECTS?", next: "fraps1A267" },
+      { text: "CAN I SAVE CHANGES IN THE INSPECTOR?", next: "fraps1A268" }
+    ],
+    background: "https://cloud-images/inspector-ui.png",
+    sound: "inspector-open.mp3"
+  },
+  fraps1A258: {
+    text: "'You can modify components in the Inspector by simply clicking on the component you wish to edit. A panel will appear, allowing you to change its properties directly,' the Elder Spirit explains, his voice echoing with knowledge.",
+    choices: [
+      { text: "CAN I ADD NEW COMPONENTS IN THE INSPECTOR?", next: "fraps1A269" },
+      { text: "HOW DO I REMOVE COMPONENTS?", next: "fraps1A270" }
+    ],
+    background: "https://cloud-images/inspector-edit.png",
+    sound: "modify-component.mp3"
+  }
+};
+
+Networking and multiplayer.
+const frapsTutorials = {
+  fraps1A271: {
+    text: "'Ah, traveler, the time has come for you to understand the magic of connecting with others. The Elder Spirit's voice carries a sense of excitement. 'In the world of A-Frame, networking and multiplayer are the key to sharing your creations with others, making them come alive in collaboration.'",
+    choices: [
+      { text: "HOW DO I ENABLE MULTIPLAYER IN A-FRAME?", next: "fraps1A272" },
+      { text: "WHAT IS NETWORKING IN A-FRAME?", next: "fraps1A273" }
+    ],
+    background: "https://cloud-images/multiplayer-intro.png",
+    sound: "multiplayer-intro-sound.mp3"
+  },
+  fraps1A272: {
+    text: "'To enable multiplayer in A-Frame, you’ll need to use the `aframe-networking` component. This component allows entities to synchronize across multiple browsers, enabling a shared experience between users. First, you’ll need to add the networking component to your scene, then define the entities you want to share across devices.'",
+    choices: [
+      { text: "SHOW ME HOW TO SET UP NETWORKING.", next: "fraps1A274" },
+      { text: "CAN I CREATE MULTIPLE PLAYERS IN MY SCENE?", next: "fraps1A275" }
+    ],
+    background: "https://cloud-images/networking-setup.png",
+    sound: "networking-setup-sound.mp3"
+  },
+  fraps1A273: {
+    text: "'Networking in A-Frame refers to the process of allowing multiple users to interact with the same virtual world simultaneously,' the Elder Spirit explains. 'With the help of tools like `aframe-networking`, you can synchronize actions, objects, and events across different users' screens in real-time.'",
+    choices: [
+      { text: "HOW DO PLAYERS SEE EACH OTHER IN MULTIPLAYER?", next: "fraps1A276" },
+      { text: "CAN I MAKE OBJECTS INTERACT BETWEEN PLAYERS?", next: "fraps1A277" }
+    ],
+    background: "https://cloud-images/multiplayer-players.png",
+    sound: "multiplayer-explained.mp3"
+  },
+  fraps1A274: {
+    text: "'To set up multiplayer, start by including the `aframe-networking` component in your scene. For example, you can add it like this:\n`<script src='https://cdn.aframe.io/components/aframe-networking-component.min.js'></script>`\nOnce included, you can define your entities and set them to synchronize across clients.'",
+    choices: [
+      { text: "SHOW ME HOW TO CREATE A MULTIPLAYER ROOM.", next: "fraps1A278" },
+      { text: "CAN I HAVE CUSTOMIZABLE AVATARS FOR PLAYERS?", next: "fraps1A279" }
+    ],
+    background: "https://cloud-images/networking-code.png",
+    sound: "networking-code-sound.mp3"
+  },
+  fraps1A275: {
+    text: "'Indeed, you can create multiple players by attaching a unique identifier to each avatar and then synchronizing their positions, rotations, and other attributes. Use the networking component’s `player` attribute to spawn new players in the scene, each with their own avatar.'",
+    choices: [
+      { text: "SHOW ME HOW TO CREATE PLAYER AVATARS.", next: "fraps1A280" },
+      { text: "CAN PLAYERS CUSTOMIZE THEIR AVATARS?", next: "fraps1A281" }
+    ],
+    background: "https://cloud-images/multiple-avatars.png",
+    sound: "player-avatars-sound.mp3"
+  },
+  fraps1A276: {
+    text: "'Players can see each other by defining an avatar entity for each user. The `aframe-networking` component ensures that avatars synchronize across devices, meaning that the movement and actions of one player are reflected in real-time on all other devices.'",
+    choices: [
+      { text: "HOW DO I MOVE AVATARS IN MULTIPLAYER?", next: "fraps1A282" },
+      { text: "CAN PLAYERS INTERACT WITH EACH OTHER?", next: "fraps1A283" }
+    ],
+    background: "https://cloud-images/avatar-movement.png",
+    sound: "avatar-move-sound.mp3"
+  },
+  fraps1A277: {
+    text: "'In multiplayer, objects can be made to interact between players using events and component synchronization. For example, if one player grabs an object, other players will see that object being manipulated in real-time. This is accomplished by syncing the object’s position and state between the players.'",
+    choices: [
+      { text: "CAN I MAKE OBJECTS THAT RESPOND TO PLAYER ACTIONS?", next: "fraps1A284" },
+      { text: "HOW CAN I HANDLE MULTIPLE PLAYER INTERACTIONS?", next: "fraps1A285" }
+    ],
+    background: "https://cloud-images/object-interaction.png",
+    sound: "object-interaction-sound.mp3"
+  },
+  fraps1A278: {
+    text: "'To create a multiplayer room, you need to ensure that each user is connected to a server that handles the communication between devices. The `aframe-networking` component allows you to manage these connections. You can add the following code snippet to create the basic networking setup:\n`<a-scene networking>`\nThis will ensure that each player is added to the same scene, syncing positions and movements.'",
+    choices: [
+      { text: "SHOW ME HOW TO ADD A SERVER.", next: "fraps1A286" },
+      { text: "CAN I HAVE MULTIPLE SCENES FOR MULTIPLAYER?", next: "fraps1A287" }
+    ],
+    background: "https://cloud-images/multiplayer-room.png",
+    sound: "multiplayer-room-sound.mp3"
+  },
+  fraps1A279: {
+    text: "'Yes, you can customize avatars by allowing players to select their own models or by creating a basic avatar with interchangeable components. For example, you could provide options for customizing the player's skin color, clothing, or even their avatar’s shape and size.'",
+    choices: [
+      { text: "HOW DO I CREATE A CUSTOMIZABLE AVATAR?", next: "fraps1A288" },
+      { text: "CAN I HAVE MULTIPLE CUSTOM AVATAR OPTIONS?", next: "fraps1A289" }
+    ],
+    background: "https://cloud-images/custom-avatar.png",
+    sound: "avatar-customization-sound.mp3"
+  },
+  fraps1A280: {
+    text: "'To create player avatars, you can use A-Frame’s `<a-entity>` element for each player. Assign each avatar a unique position and rotation that synchronizes with the player’s movement. Additionally, using the `networked` component, players' avatars can be synchronized across all connected devices.'",
+    choices: [
+      { text: "CAN I MAKE AVATARS MOVE BASED ON USER INPUT?", next: "fraps1A290" },
+      { text: "HOW DO I ADD CUSTOM AVATAR MODELS?", next: "fraps1A291" }
+    ],
+    background: "https://cloud-images/avatars-setup.png",
+    sound: "avatars-setup-sound.mp3"
+  },
+  fraps1A281: {
+    text: "'Players can indeed customize their avatars by defining custom textures, animations, and other properties. You can allow them to choose from a set of pre-made options or even provide an interface for uploading their own custom designs.'",
+    choices: [
+      { text: "CAN I ALLOW PLAYERS TO CHANGE TEXTURES?", next: "fraps1A292" },
+      { text: "HOW CAN I CREATE AN INTERFACE FOR CUSTOMIZATION?", next: "fraps1A293" }
+    ],
+    background: "https://cloud-images/avatar-options.png",
+    sound: "customization-options-sound.mp3"
+  },
+  fraps1A282: {
+    text: "'You can move avatars in multiplayer by using the `wasd-controls` component or through custom controls that you define. The `wasd-controls` component makes it easy to enable basic movement by simply pressing the keyboard keys W, A, S, and D.'",
+    choices: [
+      { text: "HOW DO I SET UP WASD CONTROLS?", next: "fraps1A294" },
+      { text: "CAN I MOVE AVATARS USING MOUSE INPUT?", next: "fraps1A295" }
+    ],
+    background: "https://cloud-images/wasd-controls.png",
+    sound: "wasd-controls-sound.mp3"
+  },
+  fraps1A283: {
+    text: "'Yes, players can interact with each other and with the environment. A-Frame allows you to create interactive elements like buttons, levers, and objects that can be picked up or triggered by players. These interactions can be synchronized across the network so everyone sees them happen in real-time.'",
+    choices: [
+      { text: "HOW CAN I MAKE INTERACTABLE OBJECTS?", next: "fraps1A296" },
+      { text: "CAN PLAYERS INTERACT WITH THE ENVIRONMENT?", next: "fraps1A297" }
+    ],
+    background: "https://cloud-images/player-interactions.png",
+    sound: "interaction-sync-sound.mp3"
+  }
+};
+
+Best practices.
+const frapsTutorials = {
+  fraps1A298: {
+    text: "'Ah, you have learned much, young traveler,' the Elder Spirit says with a wise smile. 'But in this vast digital world of A-Frame, there are certain best practices that will guide you to greatness. These practices will help you build smoother, more efficient, and more accessible virtual worlds.'",
+    choices: [
+      { text: "WHAT ARE THE BEST PRACTICES FOR PERFORMANCE?", next: "fraps1A299" },
+      { text: "HOW CAN I OPTIMIZE MY SCENE FOR MOBILE?", next: "fraps1A300" }
+    ],
+    background: "https://cloud-images/best-practices-intro.png",
+    sound: "best-practices-intro-sound.mp3"
+  },
+  fraps1A299: {
+    text: "'Performance is crucial, traveler,' the Elder Spirit advises. 'One of the best practices is to minimize the number of objects in your scene. Too many objects can slow down performance. Instead, use the `<a-entity>` wisely and merge geometry when possible. Also, don’t forget to optimize your assets like textures, making sure they are the right resolution for their use.'",
+    choices: [
+      { text: "HOW DO I OPTIMIZE MY TEXTURES?", next: "fraps1A301" },
+      { text: "WHAT ELSE CAN I DO TO IMPROVE PERFORMANCE?", next: "fraps1A302" }
+    ],
+    background: "https://cloud-images/performance-tips.png",
+    sound: "performance-tips-sound.mp3"
+  },
+  fraps1A300: {
+    text: "'Optimizing for mobile devices requires careful planning,' says the Elder Spirit. 'One practice is to keep your scenes lightweight by reducing the number of dynamic elements. Also, consider using simpler models and less complex shaders, as mobile devices may not handle the same level of detail as desktop computers. Lastly, avoid excessive animations that could drain the device’s resources.'",
+    choices: [
+      { text: "CAN I TEST MY SCENE ON MOBILE?", next: "fraps1A303" },
+      { text: "HOW CAN I USE LIGHTS EFFECTIVELY ON MOBILE?", next: "fraps1A304" }
+    ],
+    background: "https://cloud-images/mobile-optimization.png",
+    sound: "mobile-optimization-sound.mp3"
+  },
+  fraps1A301: {
+    text: "'To optimize textures, ensure that they are compressed and not larger than necessary. Use formats like `.jpg` or `.png` for static textures, and for dynamic textures, consider using lower resolution versions or procedural generation methods. You can also reduce texture sizes using tools like `imageoptim` or `tinypng`.'",
+    choices: [
+      { text: "HOW DO I COMPRESS TEXTURES?", next: "fraps1A305" },
+      { text: "CAN I STREAM TEXTURES TO IMPROVE PERFORMANCE?", next: "fraps1A306" }
+    ],
+    background: "https://cloud-images/texture-optimization.png",
+    sound: "texture-optimization-sound.mp3"
+  },
+  fraps1A302: {
+    text: "'Another important practice is to use level of detail (LOD) for objects that are far from the camera. By simplifying these distant objects, you can reduce rendering time. Also, make use of `requestAnimationFrame` to synchronize animations and frame rendering, which can help keep the performance smooth.'",
+    choices: [
+      { text: "HOW DO I USE LEVEL OF DETAIL (LOD)?", next: "fraps1A307" },
+      { text: "WHAT IS REQUESTANIMATIONFRAME?", next: "fraps1A308" }
+    ],
+    background: "https://cloud-images/lod-and-animation.png",
+    sound: "lod-animation-sound.mp3"
+  },
+  fraps1A303: {
+    text: "'Yes, you can test your scene on mobile using the A-Frame inspector or by connecting your mobile device directly to the scene. Simply open the scene URL on your mobile browser, and use the inspector to check performance and make necessary adjustments. It is essential to make sure that your mobile users have a smooth experience.'",
+    choices: [
+      { text: "HOW DO I CONNECT MY MOBILE DEVICE?", next: "fraps1A309" },
+      { text: "CAN I USE REAL-TIME TESTING FOR PERFORMANCE?", next: "fraps1A310" }
+    ],
+    background: "https://cloud-images/mobile-testing.png",
+    sound: "mobile-testing-sound.mp3"
+  },
+  fraps1A304: {
+    text: "'For mobile, avoid using too many dynamic lights, as they are computationally expensive. Instead, use baked lighting or ambient light sources whenever possible. If dynamic lights are necessary, reduce their range and intensity to minimize the performance cost.'",
+    choices: [
+      { text: "HOW DO I BAKED LIGHTING?", next: "fraps1A311" },
+      { text: "CAN I ADD MORE LIGHTS FOR BETTER MOBILE EXPERIENCE?", next: "fraps1A312" }
+    ],
+    background: "https://cloud-images/light-optimization.png",
+    sound: "light-optimization-sound.mp3"
+  },
+  fraps1A305: {
+    text: "'To compress textures, you can use online tools or command-line utilities. For example, online tools like `tinypng.com` can help you reduce the file size of your textures without losing too much quality. On the command line, you can use tools like `ImageMagick` or `pngcrush` to batch compress large numbers of images.'",
+    choices: [
+      { text: "SHOW ME HOW TO USE TINYPNG.", next: "fraps1A313" },
+      { text: "HOW DO I COMPRESS TEXTURES USING IMAGEMAGICK?", next: "fraps1A314" }
+    ],
+    background: "https://cloud-images/compression-tools.png",
+    sound: "compression-tools-sound.mp3"
+  },
+  fraps1A306: {
+    text: "'Yes, streaming textures can improve performance. This method involves loading textures as they are needed, rather than loading all of them at once. You can achieve this by using the A-Frame `loader` component to load textures dynamically when the user approaches an object or asset.'",
+    choices: [
+      { text: "SHOW ME HOW TO STREAM TEXTURES.", next: "fraps1A315" },
+      { text: "CAN I STREAM TEXTURES ON MOBILE?", next: "fraps1A316" }
+    ],
+    background: "https://cloud-images/texture-streaming.png",
+    sound: "texture-streaming-sound.mp3"
+  },
+  fraps1A307: {
+    text: "'To implement LOD, you can create multiple versions of an object with varying levels of detail. The A-Frame `lod` component allows you to specify which object version should be shown based on the camera’s distance. Objects that are far away are displayed with lower detail, and as the camera approaches, the higher-detail model is shown.'",
+    choices: [
+      { text: "SHOW ME HOW TO SET UP LOD.", next: "fraps1A317" },
+      { text: "HOW CAN I OPTIMIZE LOD FOR MOBILE?", next: "fraps1A318" }
+    ],
+    background: "https://cloud-images/lod-setup.png",
+    sound: "lod-setup-sound.mp3"
+  },
+  fraps1A308: {
+    text: "'The `requestAnimationFrame` method is a JavaScript function that ensures your animations are synchronized with the browser’s paint cycle. This improves performance by reducing unnecessary frame rendering and ensures that your animations run smoothly at the optimal frame rate.'",
+    choices: [
+      { text: "HOW DO I USE REQUESTANIMATIONFRAME?", next: "fraps1A319" },
+      { text: "CAN I USE IT FOR MULTIPLE ANIMATIONS?", next: "fraps1A320" }
+    ],
+    background: "https://cloud-images/raf-usage.png",
+    sound: "raf-usage-sound.mp3"
+  },
+  fraps1A309: {
+    text: "'To connect your mobile device to your A-Frame scene, you can use a local web server. Simply run a server on your computer and access the scene URL from your mobile browser. A-Frame will automatically adjust to mobile controls like touch gestures and orientation.'",
+    choices: [
+      { text: "SHOW ME HOW TO RUN A LOCAL SERVER.", next: "fraps1A321" },
+      { text: "CAN I TEST MULTIPLE DEVICES AT ONCE?", next: "fraps1A322" }
+    ],
+    background: "https://cloud-images/mobile-connection.png",
+    sound: "mobile-connection-sound.mp3"
+  },
+  fraps1A310: {
+    text: "'Yes, you can use tools like `WebGL Insights` to perform real-time testing of your A-Frame scene. These tools provide performance metrics, helping you understand how well your scene is running and identify areas for optimization.'",
+    choices: [
+      { text: "SHOW ME REAL-TIME TESTING TOOLS.", next: "fraps1A323" },
+      { text: "CAN I AUTOMATE PERFORMANCE TESTING?", next: "fraps1A324" }
+    ],
+    background: "https://cloud-images/performance-tools.png",
+    sound: "performance-tools-sound.mp3"
+  }
+};
