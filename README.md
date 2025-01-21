@@ -5,4 +5,5 @@ Of the files and scripts are not added in the get up because of the minute mista
 https://hackclub.slack.com/archives/C07UA18MXBJ/p1737436633123899?thread_ts=1737436633.123899&cid=C07UA18MXBJ
 And also I am stuck in the multiple Java scripts.So I'm thinking of 2.Merge them into a one Java script.So I'm working on it.I will ship that tomorrow and the website on the GitHub.Pages will be work and my future plans around this will be a rpg game
 https://youtu.be/pbJj-9d-5dc?si=PYDUSzBsqwFjRORP
+Something got messed up.I don't know what happened.Please give me some time.I will fix this by tomorrow
 ![Image](https://github.com/user-attachments/assets/cabf3a1f-e925-44d0-9dbd-f25a777fb5c7)
