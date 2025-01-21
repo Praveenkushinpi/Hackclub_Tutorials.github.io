@@ -4648,7 +4648,7 @@ boba24css125: {
 },
 
 boba24css126: {
-  text: "Great job with the **CSS Variables**! Now let's dive into **CSS Transitions**. TRAnsitions allow you to animate changes between states smoothly. For example, you can animate the background color of a button when the user hovers over it. Here's a simple transition effect for a button:\n\n`button { background-color: #f8d7da; transition: background-color 0.3s ease; }\nbutton:hover { background-color: #f1b0b7; }`\n\nThis will smoothly transition the background color when the user hovers over the button. Want to give it a try on your bakery’s "Order Now" button?",
+  text: "Great job with the **CSS Variables**! Now let's dive into **CSS Transitions**. TRAnsitions allow you to animate changes between states smoothly. For example, you can animate the background color of a button when the user hovers over it. Here's a simple transition effect for a button:\n\n`button { background-color: #f8d7da; transition: background-color 0.3s ease; }\nbutton:hover { background-color: #f1b0b7; }`\n\nThis will smoothly transition the background color when the user hovers over the button. Want to give it a try on your bakery’s ",
   choices: [
     { text: "I added the button transition!", next: "boba24css127" },
     { text: "I want to explore CSS animations.", next: "boba24css128" }
