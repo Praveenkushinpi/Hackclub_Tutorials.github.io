@@ -4702,12 +4702,833 @@ boba24css130: {
   text: "Fantastic! You’ve now mastered **advanced CSS** techhniques. Your bakery website is responsive, dynamic, and ready for any device. Whether it’s using **CSS Grid**, **Flexbox**, **CSS Variables**, **Transitions**, **Animations**, or **Media Queries**, you’ve got all the tools to make it shine. Ready to start a new project or dive deeper into any specific CSS topic?",
   choices: [
     { text: "MAINMENU.",next:"mainPage"},
-    { text: "I want to explore more advanced CSS.", next: "boba24css122" }
+    { text: "I want to explore some 3d.", next: "fraps1A1" }
   ],
   background: "Assets/images",
   sound: "Assets/sounds/final_advanced_css.mp3"
-}
-};
+},
+fraps1A1: {
+          text: "You awaken in a small cave, the morning sun casting long shadows on the walls. The air is thick with the scent of smoke and earth. Suddenly, a large stone door opens, revealing a wise elder from the Stone Age. He speaks: 'Welcome, young adventurer. You have entered the world of A-Frame. It is a place where you can shape your own virtual world, much like we shape the stone tools of our time. Do you wish to learn the ancient art of creating virtual worlds?'",
+          choices: [
+              { text: "YES, I AM READY TO LEARN!", next: "fraps1A2" },
+              { text: "I'M NOT SURE, TELL ME MORE.", next: "fraps1A3" }
+          ],
+          background: "Assets/images/cave.jpg",
+          sound: "Assets/sounds/cave-sounds.mp3"
+      },
+      fraps1A2: {
+          text: "'Excellent!' the elder exclaims. 'To build a virtual world, you need to know its core elements: the **scene**, the **entities**, and the **assets**. Each part works together to create the world you see. Now, adventurer, tell me, which core concept shall we explore first?'",
+          choices: [
+              { text: "THE SCENE!", next: "fraps1A4" },
+              { text: "THE ENTITIES!", next: "fraps1A5" },
+              { text: "THE ASSETS!", next: "fraps1A6" }
+          ],
+          background: "Assets/images/elder.jpg",
+          sound: "Assets/sounds/elder-voice.mp3"
+      },
+      fraps1A3: {
+          text: "The elder nods solemnly, understanding your hesitation. 'Creating virtual worlds is a journey of discovery. It starts with understanding the basics: a **scene** to hold your world, **entities** to shape it, and **assets** to bring it to life. When you're ready, we shall explore these ancient secrets together.'",
+          choices: [
+              { text: "I'M READY TO BEGIN.", next: "fraps1A2" },
+              { text: "I NEED MORE TIME TO THINK.", next: "fraps1A7" }
+          ],
+          background: "Assets/images/cave2.jpg",
+          sound: "Assets/sounds/gentle-wind.mp3"
+      },
+      fraps1A4: {
+          text: "'The **scene** is the foundation of your world,' the elder explains. 'It is where everything begins. Without it, there can be no world. Think of it as the canvas on which you paint your reality.' As he speaks, he reveals a glowing symbol on the wall: '<a-scene></a-scene>'.",
+          choices: [
+              { text: "UNDERSTOOD, WHAT'S NEXT?", next: "fraps1A8" }
+          ],
+          background: "Assets/images/scene.jpg",
+          sound: "Assets/sounds/mystic-chime.mp3"
+      },
+      fraps1A5: {
+          text: "'The **entities** are the building blocks of your world,' the elder continues. 'They can be anything: a rock, a tree, or even a creature. Each entity is defined by its shape and properties. For example, a simple box is written as '<a-box></a-box>.' The possibilities are endless.'",
+          choices: [
+              { text: "AMAZING, TELL ME MORE!", next: "fraps1A9" }
+          ],
+          background: "Assets/images/entities.jpg",
+          sound: "Assets/sounds/stone-carving.mp3"
+      },
+  fraps1A6: {
+            text: "'The **assets** are what make your world unique,' the elder explains. 'They are the images, sounds, and models that give life to your creation. Assets are stored separately and referenced to keep your world efficient and organized.' He shows you the glowing script: '<a-assets><img id=\"sky\" src=\"sky.jpg\"></a-assets>'.",
+            choices: [
+                { text: "I SEE, LET'S CONTINUE!", next: "fraps1A10" }
+            ],
+            background: "Assets/images/assets.jpg",
+            sound: "Assets/sounds/ancient-scroll.mp3"
+        },
+        fraps1A7: {
+            text: "The elder gives you a kind smile and says, 'Take your time, adventurer. The world of A-Frame awaits whenever you are ready. Remember, it is not only a journey of learning but also one of creation and joy.' You sit back, contemplating the exciting adventure ahead.",
+            choices: [
+                { text: "I AM READY NOW!", next: "fraps1A2" }
+            ],
+            background: "Assets/images/resting.jpg",
+            sound: "Assets/sounds/soft-flute.mp3"
+        },
+        fraps1A8: {
+            text: "'Now that you understand the **scene**, it is time to add depth to it,' the elder says. 'We begin with the **sky**, which sets the mood of your world. Whether it’s a bright blue day or a starry night, the sky is where your journey begins.'",
+            choices: [
+                { text: "HOW DO I CREATE A SKY?", next: "fraps1A11" }
+            ],
+            background: "Assets/images/sky.jpg",
+            sound: "Assets/sounds/breeze.mp3"
+        },
+        fraps1A9: {
+            text: "'Entities can take many forms,' the elder says. 'They can be boxes, spheres, or even custom models. Each entity can be styled with attributes like position, rotation, and color. Let me show you an example: '<a-box position=\"1 1 -3\" color=\"red\"></a-box>'.' As he finishes, a red box appears in the cave.",
+            choices: [
+                { text: "THIS IS FASCINATING! SHOW ME MORE.", next: "fraps1A12" }
+            ],
+            background: "Assets/images/entity-example.jpg",
+            sound: "Assets/sounds/chisel.mp3"
+        },
+        fraps1A10: {
+            text: "The elder gestures towards a glowing pool of water. 'The **assets** you use can include textures for objects, soundscapes for immersion, or even 3D models. By storing them efficiently, your world will load faster and run smoothly. Here is an example of asset usage: '<a-assets><audio id=\"ocean\" src=\"ocean.mp3\"></audio></a-assets>'.'",
+            choices: [
+                { text: "LET'S START USING ASSETS!", next: "fraps1A13" }
+            ],
+            background: "Assets/images/asset-pool.jpg",
+            sound: "Assets/sounds/flowing-water.mp3"
+        },
+    fraps1A11: {
+              text: "'To create a sky, you use the '<a-sky>' entity,' the elder explains. 'You can set its color, texture, or even use an image to create a realistic backdrop. For example: '<a-sky color=\"#87CEEB\"></a-sky>' creates a clear blue sky. Now, try it yourself!'",
+              choices: [
+                  { text: "I WILL CREATE A SKY NOW!", next: "fraps1A14" }
+              ],
+              background: "Assets/images/create-sky.jpg",
+              sound: "Assets/sounds/sky-chime.mp3"
+          },
+          fraps1A12: {
+              text: "'Entities can also have animations,' the elder continues. 'Adding motion to your objects makes your world dynamic. For example: '<a-animation attribute=\"rotation\" to=\"0 360 0\" dur=\"5000\" repeat=\"indefinite\"></a-animation>' makes an object rotate endlessly. What shall we animate first?'",
+              choices: [
+                  { text: "LET'S MAKE A SPINNING BOX!", next: "fraps1A15" },
+                  { text: "CAN WE ANIMATE A SPHERE?", next: "fraps1A16" }
+              ],
+              background: "Assets/images/animated-entity.jpg",
+              sound: "Assets/sounds/soft-drums.mp3"
+          },
+          fraps1A13: {
+              text: "'Excellent,' the elder says with pride. 'Now that you know how to use **assets**, it is time to create a more immersive world. Let’s use a texture for the ground and a sound for the ambiance. Combine these assets into your scene to see the magic unfold!'",
+              choices: [
+                  { text: "LET'S DO IT!", next: "fraps1A17" }
+              ],
+              background: "Assets/images/immersive-world.jpg",
+              sound: "Assets/sounds/ambient-world.mp3"
+          },
+          fraps1A14: {
+              text: "As you write your first sky code, the cave transforms. Above, a vast expanse of blue appears, dotted with soft clouds. The elder claps his hands. 'Well done! You’ve just created the sky. Now, let’s move to the ground.'",
+              choices: [
+                  { text: "I'M READY FOR THE NEXT STEP.", next: "fraps1A18" }
+              ],
+              background: "Assets/images/sky-success.jpg",
+              sound: "Assets/sounds/sky-creation.mp3"
+          },
+          fraps1A15: {
+              text: "You create a spinning box by adding this code: '<a-box position=\"0 1.5 -3\" color=\"blue\"><a-animation attribute=\"rotation\" to=\"0 360 0\" dur=\"3000\" repeat=\"indefinite\"></a-animation></a-box>'. The box begins to spin gracefully in the air. 'Marvelous!' the elder says.",
+              choices: [
+                  { text: "WHAT ELSE CAN WE ANIMATE?", next: "fraps1A19" }
+              ],
+              background: "Assets/images/spinning-box.jpg",
+              sound: "Assets/sounds/box-spin.mp3"
+          },
+      fraps1A16: {
+                text: "You animate a sphere by using the code: '<a-sphere position=\"0 2 -3\" radius=\"1\" color=\"yellow\"><a-animation attribute=\"scale\" to=\"2 2 2\" dur=\"2000\" direction=\"alternate\" repeat=\"indefinite\"></a-animation></a-sphere>'. The sphere starts pulsating rhythmically.",
+                choices: [
+                    { text: "I WANT TO ADD MORE ELEMENTS!", next: "fraps1A20" }
+                ],
+                background: "Assets/images/pulsating-sphere.jpg",
+                sound: "Assets/sounds/sphere-pulse.mp3"
+            },
+           fraps1A17: {
+            text: "Using the asset pool, you create a textured ground and ambient sound: '<a-plane src=\"#grass-texture\" rotation=\"-90 0 0\" width=\"50\" height=\"50\"></a-plane>'. A grassy field spreads beneath your feet, accompanied by the sound of chirping birds. 'A beautiful start!' the elder says.",
+            choices: [
+                { text: "LET'S EXPAND THE WORLD!", next: "fraps1A18" }
+            ],
+            background: "Assets/images/grass-field.jpg",
+            sound: "Assets/sounds/birds-chirping.mp3"
+        },
+        fraps1A18: {
+            text: "As you expand your creation, the elder waves their hand toward the horizon. 'Your world must grow,' they say. You see distant shapes materializing, forming ancient ruins shrouded in mist. 'Follow me, there is much to learn,' the elder beckons.",
+            choices: [
+                { text: "FOLLOW THE ELDER", next: "fraps1A19" },
+                { text: "PAUSE TO EXPLORE THE FIELD", next: "fraps1A20" }
+            ],
+            background: "Assets/images/forming-ruins.jpg",
+            sound: "Assets/sounds/ethereal-woosh.mp3"
+        },
+        fraps1A19: {
+            text: "The ruins stand tall, weathered by time yet brimming with power. At the center lies a glowing stone tablet, its inscriptions pulsing faintly. The elder turns to you with a serious expression. 'This artifact holds the key to true creation. Are you ready to unlock its secrets?'",
+            choices: [
+                { text: "STEP TOWARD THE TABLET", next: "fraps1A21" },
+                { text: "ASK ABOUT THE TABLET", next: "fraps1A20" }
+            ],
+            background: "Assets/images/ancient-ruins.jpg",
+            sound: "Assets/sounds/low-rumble.mp3"
+        },
+        fraps1A20: {
+            text: "The elder pauses, sensing your hesitation. 'These ruins are remnants of the first creators, beings who shaped worlds with their minds. Their knowledge is stored within the tablet, but its power is not without cost.' They wait for your decision.",
+            choices: [
+                { text: "CONTINUE TO THE TABLET", next: "fraps1A21" },
+                { text: "STAY BACK AND REFLECT", next: "fraps1A17" }
+            ],
+            background: "Assets/images/elder-explains.jpg",
+            sound: "Assets/sounds/mystic-chime.mp3"
+        },
+        fraps1A21: {
+              text: "The elder nods approvingly. 'Now, observe,' they say, as they gesture toward the tablet. The inscriptions shift and glow brighter, illuminating the ruins around you. 'These symbols guide you to shape your virtual world with purpose.'",
+              choices: [
+                  { text: "TOUCH THE TABLET", next: "fraps1A22" },
+                  { text: "STUDY THE SYMBOLS FIRST", next: "fraps1A23" }
+              ],
+              background: "Assets/images/tablet-glowing.jpg",
+              sound: "Assets/sounds/stone-hum.mp3"
+          },
+          fraps1A22: {
+              text: "The elder beckons you closer to the ancient stone tablet. As your fingers graze its surface, a surge of energy courses through you, filling your mind with visions of creation. 'This is the beginning,' the elder whispers. 'With this knowledge, you can bring your virtual world to life.'",
+              choices: [
+                  { text: "EMBRACE THE POWER", next: "fraps1A24" },
+                  { text: "STEP BACK AND PROCESS", next: "fraps1A20" }
+              ],
+              background: "Assets/images/tablet-power.jpg",
+              sound: "Assets/sounds/mystic-surge.mp3"
+          },
+              fraps1A23: {
+                  text: "'A component is an individual piece of functionality that can be added to an entity. For example, a component might change the color of an object or make it rotate automatically. Here’s a simple example: '<a-box color=\"red\" rotation=\"0 45 0\"></a-box>'. The rotation component will spin the box.'",
+                  choices: [
+                      { text: "HOW CAN I CREATE MY OWN COMPONENT?", next: "fraps1A24" }
+                  ],
+                  background: "Assets/images/box-rotation.jpg",
+                  sound: "Assets/sounds/box-spin.mp3"
+              },
+              fraps1A24: {
+                  text: "'To create a custom component, you must first define it in JavaScript. Here’s how we can create a component that changes an entity’s position over time: '<a-entity position=\"0 2 -5\" my-move></a-entity>' with the component code: '<script>AFRAME.registerComponent('my-move', { tick: function () { this.el.setAttribute('position', {x: 0, y: Math.sin(Date.now() / 1000) * 2, z: -5}); } });</script>' The entity will float up and down over time.'",
+                  choices: [
+                      { text: "LET'S TRY CREATING A COMPONENT!", next: "fraps1A25" }
+                  ],
+                  background: "Assets/images/custom-component.jpg",
+                  sound: "Assets/sounds/creative-work.mp3"
+              },
+              fraps1A25: {
+                  text: "You begin to write your first component. After defining it, you place the entity in the world: '<a-entity my-move></a-entity>'. The entity starts floating, moving up and down. The elder watches with pride. 'Excellent! You’ve created your own movement component. Now you can add more behaviors to your world using similar components.'",
+                  choices: [
+                      { text: "I'M READY TO LEARN MORE COMPONENTS!", next: "fraps1A26" }
+                  ],
+                  background: "Assets/images/floating-entity.jpg",
+                  sound: "Assets/sounds/moving-entity.mp3"
+              },
+          fraps1A26: {
+                    text: "'Next, let’s dive into more advanced components. A-Frame allows you to manipulate many aspects of an entity, like its material or its interactions with the user. For example, the **cursor** component can detect when a user points at an object, and trigger an event like changing the color of an object. You can add this behavior with: '<a-box color=\"blue\" cursor></a-box>' and the box will change color when clicked.'",
+                    choices: [
+                        { text: "I WANT TO MAKE INTERACTIVE OBJECTS!", next: "fraps1A27" }
+                    ],
+                    background: "Assets/images/cursor-interaction.jpg",
+                    sound: "Assets/sounds/click.mp3"
+                },
+                fraps1A27: {
+                    text: "'Let’s enhance your interactive world. You can use the **animation** component to bring objects to life. For example, adding animation to the box with: '<a-box color=\"green\"><a-animation attribute=\"rotation\" to=\"0 360 0\" dur=\"2000\" repeat=\"indefinite\"></a-animation></a-box>' will make it rotate endlessly, turning into an interactive, dynamic part of your world.'",
+                    choices: [
+                        { text: "LET'S ADD ANIMATION!", next: "fraps1A28" }
+                    ],
+                    background: "Assets/images/rotating-box.jpg",
+                    sound: "Assets/sounds/rotation-sound.mp3"
+                },
+                fraps1A28: {
+                    text: "'Great work! Now, let’s explore how to combine multiple components for greater complexity. For example, you could add a **sound** component to the rotating box. The sound could play when the box starts rotating, like this: '<a-box color=\"purple\" rotation=\"0 0 0\"><a-animation attribute=\"rotation\" to=\"0 360 0\" dur=\"2000\" repeat=\"indefinite\"></a-animation><a-sound src=\"#click-sound\"></a-sound></a-box>'. When the box rotates, the sound will play as well.'",
+                    choices: [
+                        { text: "THIS IS AMAZING! LET’S COMBINE MORE COMPONENTS.", next: "fraps1A29" }
+                    ],
+                    background: "Assets/images/animated-sound-box.jpg",
+                    sound: "Assets/sounds/ambient-sound.mp3"
+                },
+                fraps1A29: {
+                    text: "You successfully combine the components to create a dynamic, interactive world where entities rotate, move, and make sounds. The elder nods approvingly. 'You are now learning the true power of A-Frame components. By combining them, you can create infinite possibilities for your virtual worlds.'",
+                    choices: [
+                        { text: "WHAT ELSE CAN I CREATE WITH COMPONENTS?", next: "fraps1A30" }
+                    ],
+                    background: "Assets/images/combo-entity.jpg",
+                    sound: "Assets/sounds/ambient-background.mp3"
+                },
+                fraps1A30: {
+                    text: "'You can create complex systems using multiple components. For example, adding a **physics** component allows objects to interact with each other, simulating gravity and collisions. Let’s add a simple physics behavior: '<a-box dynamic-body></a-box>'. This box will now fall and bounce, just like a physical object.'",
+                    choices: [
+                        { text: "LET’S ADD PHYSICS TO AN OBJECT!", next: "fraps1A31" }
+                    ],
+                    background: "Assets/images/physics-object.jpg",
+                    sound: "Assets/sounds/impact-sound.mp3"
+                },
+  fraps1A31: {
+            text: "You add the `dynamic-body` component to an entity. It starts falling and bouncing as if affected by gravity. The elder smiles. 'You have now unlocked the ability to bring true interactivity and realism to your world using A-Frame components.'",
+            choices: [
+                { text: "I’M READY TO CREATE MY WORLD!", next: "fraps1A32" }
+            ],
+            background: "Assets/images/physics-entity.jpg",
+            sound: "Assets/sounds/bounce.mp3"
+        },
+   
+        fraps1A32: {
+            text: "'Now that you've mastered components, it’s time to learn about the fundamental building blocks of A-Frame – **primitive shapes**. These are the basic shapes that you can create and manipulate in your virtual world. From a simple box to complex geometries, primitives are the foundation of every virtual object.'",
+            choices: [
+                { text: "WHAT ARE PRIMITIVE SHAPES?", next: "fraps1A33" }
+            ],
+            background: "Assets/images/primitive-shapes.jpg",
+            sound: "Assets/sounds/mystic-chimes.mp3"
+        },
+        fraps1A33: {
+            text: "'In A-Frame, there are several types of primitive shapes: the **box**, **sphere**, **cylinder**, **cone**, and **plane**. These shapes are incredibly versatile and can be customized to create almost anything in your world. For example, you can create a box using '<a-box color=\"blue\"></a-box>' or a sphere using '<a-sphere color=\"green\"></a-sphere>'.'",
+            choices: [
+                { text: "HOW DO I CUSTOMIZE THESE SHAPES?", next: "fraps1A34" }
+            ],
+            background: "Assets/images/box-sphere.jpg",
+            sound: "Assets/sounds/shape-sounds.mp3"
+        },
+        fraps1A34: {
+            text: "'To customize these shapes, you can modify their properties like size, position, and rotation. For instance, you can change the size of a box with the `width`, `height`, and `depth` attributes: '<a-box width=\"2\" height=\"3\" depth=\"1\" color=\"red\"></a-box>'. Similarly, you can rotate and move shapes with `rotation` and `position` attributes.'",
+            choices: [
+                { text: "CAN I COMBINE PRIMITIVE SHAPES?", next: "fraps1A35" }
+            ],
+            background: "Assets/images/combined-shapes.jpg",
+            sound: "Assets/sounds/shapes-blend.mp3"
+        },
+        fraps1A35: {
+            text: "'Yes, you can! By combining multiple primitives, you can create complex structures. For example, combining a box and a sphere will create a basic object like a robot’s body or a building’s window. To place two objects side by side, you just modify their `position` attributes: '<a-box position=\"0 1 0\"></a-box><a-sphere position=\"2 1 0\"></a-sphere>'.'",
+            choices: [
+                { text: "I WANT TO TRY CREATING MY OWN SHAPE COMBINATION.", next: "fraps1A36" }
+            ],
+            background: "Assets/images/robot-creation.jpg",
+            sound: "Assets/sounds/robot-build.mp3"
+        },
+        fraps1A36: {
+            text: "You begin to experiment with combining different primitive shapes. By adjusting their positions, sizes, and colors, you create a new object. The elder looks on with approval. 'Well done! You’ve now built your own creation using primitive shapes. This is the first step to crafting more complex worlds.'",
+            choices: [
+                { text: "I WANT TO EXPLORE MORE SHAPES.", next: "fraps1A37" }
+            ],
+            background: "Assets/images/complex-shapes.jpg",
+            sound: "Assets/sounds/creative-building.mp3"
+        },
+        fraps1A37: {
+            text: "'There are many other primitives to explore. The **cylinder** is perfect for creating things like trees, pillars, or pipes. Use '<a-cylinder color=\"brown\" radius=\"0.5\" height=\"4\"></a-cylinder>' to create a tree trunk. The **cone** is ideal for creating objects like cones, traffic cones, or even rocket ships. Use '<a-cone color=\"orange\" radius-bottom=\"1\" height=\"3\"></a-cone>' to create a cone-shaped object.'",
+            choices: [
+                { text: "I WANT TO CREATE A TREE USING A CYLINDER.", next: "fraps1A38" }
+            ],
+            background: "Assets/images/cylinder-tree.jpg",
+            sound: "Assets/sounds/tree-sounds.mp3"
+        },
+        fraps1A38: {
+            text: "You place a cylinder in your world and adjust its size and color to resemble a tree trunk. Then, you use another primitive — a sphere — to create the tree's leaves. You place the sphere on top of the cylinder and scale it to look like a crown of leaves. The elder nods in approval. 'Excellent! You have brought nature into your world using simple shapes.'",
+            choices: [
+                { text: "CAN I MAKE A BUILDING USING PRIMITIVES?", next: "fraps1A39" }
+            ],
+            background: "Assets/images/tree-building.jpg",
+            sound: "Assets/sounds/nature-sounds.mp3"
+        },
+        fraps1A39: {
+            text: "'Of course! You can create a building using the **plane** for the ground and **boxes** for walls. Start by creating a large plane for the ground: '<a-plane width=\"10\" height=\"10\" color=\"gray\"></a-plane>'. Then, build the walls using boxes, adjusting their size and position to form a structure. You can even create windows and doors by adding smaller boxes with different sizes.'",
+            choices: [
+                { text: "LET’S CREATE A SIMPLE BUILDING.", next: "fraps1A40" }
+            ],
+            background: "Assets/images/building-creation.jpg",
+            sound: "Assets/sounds/constructing.mp3"
+        },
+        fraps1A40: {
+            text: "You begin to build a simple house by combining boxes for walls and a plane for the floor. You add windows and a door by resizing and positioning smaller boxes. The elder smiles proudly. 'You’ve now created a basic structure! Remember, with primitive shapes, you can create anything — from houses to entire cities!'",
+            choices: [
+                { text: "I CAN CREATE ANYTHING NOW!", next: "fraps1A41" }
+            ],
+            background: "Assets/images/house-complete.jpg",
+            sound: "Assets/sounds/building-complete.mp3"
+        },
+    fraps1A41: {
+              text: "'Indeed, you can. Keep experimenting and combining shapes to create more complex objects and worlds. The possibilities are endless, and with the power of primitives, you can start building anything your imagination dreams up.'",
+              choices: [
+                  { text: "I'M READY TO EXPLORE MORE ADVANCED TOPICS!", next: "fraps1A42" }
+              ],
+              background: "Assets/images/advanced-structures.jpg",
+              sound: "Assets/sounds/next-step.mp3"
+          },
+     
+          fraps1A42: {
+              text: "'As you explore the world you’ve created, you realize that you need a way to **see** everything clearly. In A-Frame, the **camera** is your eyes in the virtual world. It defines the viewpoint from which you observe the scene. Just like how you move through the real world, you can control the camera’s position and movement in your virtual world.'",
+              choices: [
+                  { text: "TELL ME MORE ABOUT THE CAMERA!", next: "fraps1A43" }
+              ],
+              background: "Assets/images/camera-view.jpg",
+              sound: "Assets/sounds/echo.mp3"
+          },
+          fraps1A43: {
+              text: "'In A-Frame, the camera is an entity just like any other object. It’s placed in the scene, and you can use it to look around. By default, A-Frame provides a camera that you can move using the mouse or keyboard. But you can customize the camera’s position and other settings by changing the `position`, `rotation`, and `fov` attributes.'",
+              choices: [
+                  { text: "HOW CAN I CUSTOMIZE THE CAMERA?", next: "fraps1A44" }
+              ],
+              background: "Assets/images/camera-settings.jpg",
+              sound: "Assets/sounds/camera-adjust.mp3"
+          },
+          fraps1A44: {
+              text: "'To customize the camera, you can adjust its `position` attribute to set where the camera is in the world. For example, `<a-camera position=\"0 1.6 5\"></a-camera>` places the camera 5 units forward along the Z-axis. You can also change the camera's `rotation` to control which direction it faces. For example, `<a-camera rotation=\"0 90 0\"></a-camera>` will make the camera look to the right.'",
+              choices: [
+                  { text: "CAN I CONTROL THE CAMERA WITH KEYBOARD?", next: "fraps1A45" }
+              ],
+              background: "Assets/images/moving-camera.jpg",
+              sound: "Assets/sounds/movement.mp3"
+          },
+          fraps1A45: {
+              text: "'Yes! You can use the **wasd** keys to move the camera forward, backward, left, and right. By adding the `<a-camera wasd-controls></a-camera>` component to the camera entity, you give it the ability to move through the world using the keyboard. You can also change the **look-controls** component to enable mouse or touch control.'",
+              choices: [
+                  { text: "WHAT ABOUT THE FIELD OF VIEW?", next: "fraps1A46" }
+              ],
+              background: "Assets/images/field-of-view.jpg",
+              sound: "Assets/sounds/fov-adjust.mp3"
+          },
+          fraps1A46: {
+              text: "'The **field of view** (FOV) controls how wide the camera's view is. A higher FOV allows the camera to see more of the scene at once, while a lower FOV makes the world appear zoomed in. You can change the FOV by adjusting the `fov` attribute: `<a-camera fov=\"75\"></a-camera>`. A common setting is 75 degrees, but you can experiment with other values.'",
+              choices: [
+                  { text: "CAN I ADD A CAMERA EFFECT, LIKE A SHAKE?", next: "fraps1A47" }
+              ],
+              background: "Assets/images/camera-effect.jpg",
+              sound: "Assets/sounds/camera-shake.mp3"
+          },
+          fraps1A47: {
+              text: "'Yes! You can add special effects to the camera, such as a camera shake or a smooth transition between different views. There are various components in A-Frame, such as **aframe-effects**, that allow you to add visual effects to the camera. You can also use **animation** to smoothly move the camera from one point to another.'",
+              choices: [
+                  { text: "I WANT TO TRY MOVING THE CAMERA!", next: "fraps1A48" }
+              ],
+              background: "Assets/images/camera-animation.jpg",
+              sound: "Assets/sounds/transition.mp3"
+          },
+          fraps1A48: {
+              text: "You decide to test your newfound camera skills by creating a smooth camera animation. You adjust the camera’s position and rotation over time to smoothly transition to a new viewpoint in the world. The elder smiles and nods in approval. 'Good work! You've now mastered how to control the viewpoint of your world.'",
+              choices: [
+                  { text: "I'M READY TO EXPLORE MORE CAMERA OPTIONS.", next: "fraps1A49" }
+              ],
+              background: "Assets/images/smooth-transition.jpg",
+              sound: "Assets/sounds/smooth-move.mp3"
+          },
+          fraps1A49: {
+              text: "'There are many more camera effects you can explore. For example, you can create a **first-person perspective** camera by combining the camera with a **cursor**. You can even create a **third-person perspective** where the camera follows an object. The possibilities are endless, and as you progress, you’ll discover new ways to use the camera in A-Frame.'",
+              choices: [
+                  { text: "I’M READY TO MOVE ON TO MORE ADVANCED TOPICS!", next: "fraps1A50" }
+              ],
+              background: "Assets/images/advanced-camera.jpg",
+              sound: "Assets/sounds/next-steps.mp3"
+          },
+          fraps1A50: {
+              text: "'Fantastic! You now have the basic understanding of the camera and how to use it to navigate your world. In the next steps, we’ll dive into more advanced topics, such as adding lighting and shadows to your world, which will enhance the realism and depth of your scenes.'",
+              choices: [
+                  { text: "LET’S BEGIN EXPLORING LIGHTING AND SHADOWS.", next: "fraps1A51" }
+              ],
+              background: "Assets/images/lighting-effects.jpg",
+              sound: "Assets/sounds/lighting.mp3"
+          },
+    
+            fraps1A51: {
+                text: "'Now that you’ve learned how to control the camera, it’s time to shed some light on your virtual world. In A-Frame, **lights** are essential for illuminating your scene. They help bring life to the environment, allowing the colors and textures to shine. Without light, the world remains dark and mysterious, just like a cave.'",
+                choices: [
+                    { text: "TELL ME MORE ABOUT LIGHTING!", next: "fraps1A52" }
+                ],
+                background: "Assets/images/lighting-intro.jpg",
+                sound: "Assets/sounds/lighting-mysterious.mp3"
+            },
+            fraps1A52: {
+                text: "'In A-Frame, you can add several types of lights to your scene. The most common types are **ambient light**, **directional light**, and **point light**. Each type has different uses and effects on how your scene is illuminated.'",
+                choices: [
+                    { text: "WHAT IS AMBIENT LIGHT?", next: "fraps1A53" }
+                ],
+                background: "Assets/images/ambient-light.jpg",
+                sound: "Assets/sounds/ambient-light.mp3"
+            },
+            fraps1A53: {
+                text: "'**Ambient light** is the most basic form of lighting. It provides a soft, even light that illuminates all objects equally, without casting any shadows. This light helps remove the dark shadows in areas where there’s no direct light. You can adjust its brightness using the `intensity` attribute, for example: `<a-light type=\"ambient\" intensity=\"0.5\"></a-light>`.'",
+                choices: [
+                    { text: "WHAT ABOUT DIRECTIONAL LIGHT?", next: "fraps1A54" }
+                ],
+                background: "Assets/images/directional-light.jpg",
+                sound: "Assets/sounds/directional-light.mp3"
+            },
+            fraps1A54: {
+                text: "'**Directional light** simulates sunlight. It shines in a single direction and casts shadows on objects. The light is **parallel**, so it’s great for simulating sunlight or moonlight. You can control the direction of the light using the `rotation` attribute: `<a-light type=\"directional\" rotation=\"-90 0 0\"></a-light>`.'",
+                choices: [
+                    { text: "CAN POINT LIGHT BE DIFFERENT?", next: "fraps1A55" }
+                ],
+                background: "Assets/images/point-light.jpg",
+                sound: "Assets/sounds/point-light.mp3"
+            },
+            fraps1A55: {
+                text: "'**Point light** is like a light bulb. It radiates light in all directions from a single point. It’s great for simulating small light sources like lamps or fireflies. You can control the intensity and radius of the light to make it more realistic: `<a-light type=\"point\" intensity=\"1\" distance=\"10\"></a-light>`.'",
+                choices: [
+                    { text: "HOW CAN I ADD SHADOWS TO THE LIGHT?", next: "fraps1A56" }
+                ],
+                background: "Assets/images/lighting-with-shadow.jpg",
+                sound: "Assets/sounds/shadows.mp3"
+            },
+            fraps1A56: {
+                text: "'Shadows add depth to your scene and make it look more realistic. You can add shadows by enabling the `castShadow` and `receiveShadow` attributes. For example, to make a light cast shadows, you would add `castShadow` to the light: `<a-light type=\"directional\" castShadow=\"true\"></a-light>`. You also need to enable `receiveShadow` for the objects you want to cast shadows onto: `<a-box receiveShadow=\"true\"></a-box>`.'",
+                choices: [
+                    { text: "I WANT TO TRY ADDING LIGHT AND SHADOW!", next: "fraps1A57" }
+                ],
+                background: "Assets/images/lighting-experiment.jpg",
+                sound: "Assets/sounds/lighting-test.mp3"
+            },
+            fraps1A57: {
+                text: "You decide to experiment with different lighting settings. You place an ambient light for soft illumination, a directional light for the sun, and a point light to simulate a glowing lantern. Then, you adjust the shadows to create a more realistic effect. The world now looks more alive, with soft shadows falling around the objects.",
+                choices: [
+                    { text: "THIS LOOKS AMAZING! WHAT’S NEXT?", next: "fraps1A58" }
+                ],
+                background: "Assets/images/lighting-finished.jpg",
+                sound: "Assets/sounds/lighting-finish.mp3"
+            },
+            fraps1A58: {
+                text: "'Great job! You’ve mastered the basics of lighting. The next step in your journey is to learn how to manipulate materials and textures to make your world even more interesting. Lights work hand-in-hand with materials, so understanding both will allow you to create truly dynamic scenes.'",
+                choices: [
+                    { text: "I'M EXCITED TO LEARN ABOUT MATERIALS!", next: "fraps1A59" }
+                ],
+                background: "Assets/images/materials.jpg",
+                sound: "Assets/sounds/materials-intro.mp3"
+            },
+        
+            fraps1A59: {
+                text: "'Now that you've learned how to light up your world, it's time to add some movement! **Animations** bring your world to life, making it more dynamic and interactive. In A-Frame, you can animate objects, lights, cameras, and even the entire scene. Animations make it feel like the world is constantly changing and evolving.'",
+                choices: [
+                    { text: "TELL ME HOW TO ANIMATE OBJECTS!", next: "fraps1A60" }
+                ],
+                background: "Assets/images/animation-intro.jpg",
+                sound: "Assets/sounds/animation-magic.mp3"
+            },
+            fraps1A60: {
+                text: "'Animating objects in A-Frame is easy. You can use the `animation` component to define a series of properties such as position, rotation, scale, and more. The animation will be applied over a set period of time. For example, you can animate a cube to move up and down using: `<a-box animation=\"property: position; to: 0 2 0; dur: 2000; loop: true\"></a-box>`.'",
+                choices: [
+                    { text: "CAN I ADD MULTIPLE ANIMATIONS TO ONE OBJECT?", next: "fraps1A61" }
+                ],
+                background: "Assets/images/animate-move.jpg",
+                sound: "Assets/sounds/move-animation.mp3"
+            },
+        fraps1A61: {
+                  text: "'Yes, you can add multiple animations to a single object. For example, you can animate the position, rotation, and scale of an object simultaneously. To do so, you simply add multiple `animation` components to the same object. Here’s how you might animate a cube rotating and moving at the same time: `<a-box animation=\"property: position; to: 0 2 0; dur: 2000; loop: true\" animation__rotate=\"property: rotation; to: 0 360 0; dur: 4000; loop: true\"></a-box>`.'",
+                  choices: [
+                      { text: "WHAT OTHER ANIMATIONS CAN I CREATE?", next: "fraps1A62" }
+                  ],
+                  background: "Assets/images/animate-rotate.jpg",
+                  sound: "Assets/sounds/rotate-animation.mp3"
+              },
+              fraps1A62: {
+                  text: "'There are a variety of animation types you can use in A-Frame. For example, you can animate a light to change its color, make objects scale up and down, or even move through the scene. Some of the most popular animations include: **color animation**, **scaling animation**, and **position animation**. Here’s how you could animate the color of an object: `<a-box animation=\"property: material.color; to: red; dur: 1000; loop: true\"></a-box>`.'",
+                  choices: [
+                      { text: "CAN I ANIMATE THE CAMERA TOO?", next: "fraps1A63" }
+                  ],
+                  background: "Assets/images/animate-color.jpg",
+                  sound: "Assets/sounds/color-animation.mp3"
+              },
+              fraps1A63: {
+                  text: "'Yes! You can animate the camera just like any other object. For example, you can animate the camera to move smoothly across the scene, providing a cinematic feel. To animate the camera, you can use a similar syntax as with other objects. Here’s an example of a camera moving: `<a-camera animation=\"property: position; to: 0 5 10; dur: 3000; easing: easeInOutQuad\"></a-camera>`.'",
+                  choices: [
+                      { text: "CAN I ANIMATE THE ENTIRE SCENE?", next: "fraps1A64" }
+                  ],
+                  background: "Assets/images/animate-camera.jpg",
+                  sound: "Assets/sounds/camera-animation.mp3"
+              },
+              fraps1A64: {
+                  text: "'Yes, the entire scene can be animated! You can animate the camera, lights, and objects all at once. You can also create more complex animations like **timelines** and **delays** using the `animation__` property for multiple objects. You can synchronize them to create dramatic effects, like a slow-moving camera with fading lights and objects flying by.'",
+                  choices: [
+                      { text: "I WANT TO TRY ANIMATION NOW!", next: "fraps1A65" }
+                  ],
+                  background: "Assets/images/animation-scene.jpg",
+                  sound: "Assets/sounds/scene-animation.mp3"
+              },
+              fraps1A65: {
+                  text: "You decide to create a moving world. You animate a cube that moves up and down while rotating, a light that changes color, and the camera that smoothly moves through the scene. The world now feels alive with motion and energy, as if it’s always in motion.",
+                  choices: [
+                      { text: "IT LOOKS AWESOME! WHAT'S NEXT?", next: "fraps1A66" }
+                  ],
+                  background: "Assets/images/animation-done.jpg",
+                  sound: "Assets/sounds/animation-complete.mp3"
+              },
+              fraps1A66: {
+                  text: "'Great work! You’ve mastered basic animations. With this knowledge, you can now create a dynamic, interactive world. The next step is to learn how to use **events** to trigger animations and interactions. This will allow you to create even more engaging experiences for your users.'",
+                  choices: [
+                      { text: "I CAN'T WAIT TO LEARN ABOUT EVENTS!", next: "fraps1A67" }
+                  ],
+                  background: "Assets/images/events.jpg",
+                  sound: "Assets/sounds/events-intro.mp3"
+              },
+       
+              fraps1A67: {
+                  text: "'Now that your world is alive with animation, it’s time to make it interactive! **Interactivity** allows users to engage with your world, triggering actions when they click, hover, or press keys. In A-Frame, you can use **events** to make objects react to user actions.'",
+                  choices: [
+                      { text: "TELL ME MORE ABOUT INTERACTIVITY!", next: "fraps1A68" }
+                  ],
+                  background: "Assets/images/interactivity-intro.jpg",
+                  sound: "Assets/sounds/interactivity-intro.mp3"
+              },
+              fraps1A68: {
+                  text: "'In A-Frame, interactivity is mostly handled through **event listeners**. These events can be triggered by user actions, such as **clicking**, **hovering**, or **key presses**. You can attach events to any object in the scene. For example, if you want an object to respond when clicked, you would use the `event-listener` component like this: `<a-box event-listener=\"click: changeColor\"></a-box>`.'",
+                  choices: [
+                      { text: "CAN I CHANGE THE OBJECT'S PROPERTIES ON CLICK?", next: "fraps1A69" }
+                  ],
+                  background: "Assets/images/click-interaction.jpg",
+                  sound: "Assets/sounds/click-interaction.mp3"
+              },
+              fraps1A69: {
+                  text: "'Yes, absolutely! You can change an object's properties when it is clicked. For example, you can change its color, position, or even trigger an animation. Here's how you can change the color of a box when clicked: `<a-box event-listener=\"click: changeColor\" material=\"color: blue\"></a-box>`. This will make the box turn blue when clicked.'",
+                  choices: [
+                      { text: "WHAT ABOUT HOVER EFFECTS?", next: "fraps1A70" }
+                  ],
+                  background: "Assets/images/hover-interaction.jpg",
+                  sound: "Assets/sounds/hover-interaction.mp3"
+              },
+              fraps1A70: {
+                  text: "'Hover effects are also very popular for interactivity. You can change an object's properties when the user hovers over it, such as scaling up or changing color. Here’s an example of an object scaling when hovered: `<a-box event-listener=\"mouseenter: scaleUp; mouseleave: scaleDown\"></a-box>`. This makes the object scale up when the mouse enters and scale down when the mouse leaves.'",
+                  choices: [
+                      { text: "CAN I ADD KEYBOARD INTERACTIVITY?", next: "fraps1A71" }
+                  ],
+                  background: "Assets/images/keyboard-interaction.jpg",
+                  sound: "Assets/sounds/keyboard-interaction.mp3"
+              },
+          fraps1A71: {
+                    text: "'Yes, A-Frame allows you to add keyboard interactivity as well. You can listen for specific keys being pressed using the `keyboard` event. For example, you can move an object using the keyboard by detecting key presses like this: `<a-box event-listener=\"keydown: moveObject\"></a-box>`. You would then define the `moveObject` action in your code to respond to specific key presses.'",
+                    choices: [
+                        { text: "WHAT IF I WANT TO TRIGGER ANIMATION WITH INTERACTIONS?", next: "fraps1A72" }
+                    ],
+                    background: "Assets/images/animation-interaction.jpg",
+                    sound: "Assets/sounds/animation-interaction.mp3"
+                },
+                fraps1A72: {
+                    text: "'You can trigger animations based on interactions too! For example, you can make an object animate when clicked by using events and animations together. Here’s how you might animate an object to move and rotate when clicked: `<a-box event-listener=\"click: animateObject\" animation__move=\"property: position; to: 0 5 0; dur: 1000\" animation__rotate=\"property: rotation; to: 0 360 0; dur: 2000\"></a-box>`. This will animate the object to move and rotate when clicked.'",
+                    choices: [
+                        { text: "CAN I COMBINE SEVERAL INTERACTIONS?", next: "fraps1A73" }
+                    ],
+                    background: "Assets/images/multiple-interactions.jpg",
+                    sound: "Assets/sounds/multiple-interactions.mp3"
+                },
+                fraps1A73: {
+                    text: "'Yes! You can combine multiple interactions to create complex, multi-step responses. For instance, you can create an interaction that involves moving an object, changing its color, and triggering an animation all at once. You can also use `mixins` to group and apply several interactions to multiple objects at once, making your world even more interactive.'",
+                    choices: [
+                        { text: "I'M READY TO MAKE MY WORLD INTERACTIVE!", next: "fraps1A74" }
+                    ],
+                    background: "Assets/images/world-interactive.jpg",
+                    sound: "Assets/sounds/world-interactive.mp3"
+                },
+                fraps1A74: {
+                    text: "Excited to begin, you start adding interactivity to your world. You create clickable objects that change color, hoverable objects that scale, and interactive animations triggered by clicks and key presses. Your world is now full of life and interaction, offering a personalized experience for each user.",
+                    choices: [
+                        { text: "WHAT'S NEXT ON MY JOURNEY?", next: "fraps1A75" }
+                    ],
+                    background: "Assets/images/interactive-world.jpg",
+                    sound: "Assets/sounds/interactive-complete.mp3"
+                },
+                fraps1A75: {
+                    text: "'Now that your world is interactive, you can add even more features, like **user interfaces** or **VR interactions**. There’s always more to explore in A-Frame, and your journey is far from over. The next step is learning how to integrate your world with external data and making it truly dynamic.'",
+                    choices: [
+                        { text: "LET'S EXPLORE EXTERNAL DATA INTEGRATION!", next: "fraps1A76" }
+                    ],
+                    background: "Assets/images/external-data.jpg",
+                    sound: "Assets/sounds/external-data.mp3"
+                }
+            };
+            const storyLibrary = {
+                fraps1A76: {
+                    text: "'Your world is now interactive, but what’s a world without sound? Let’s explore **audio** in A-Frame! Audio can add a lot of atmosphere to your world. You can play background music, sound effects for interactions, or even spatialize sounds to make them feel more immersive.'",
+                    choices: [
+                        { text: "TELL ME MORE ABOUT AUDIO IN A-FRAME!", next: "fraps1A77" }
+                    ],
+                    background: "Assets/images/audio-intro.jpg",
+                    sound: "Assets/sounds/audio-intro.mp3"
+                },
+                fraps1A77: {
+                    text: "'A-Frame allows you to add audio in two main ways: by embedding audio files in the scene or using the `sound` component to play sounds when certain events occur. Let’s start by adding a simple background audio that plays continuously as soon as the scene loads. You can do this like this: `<a-sound src=\"#background-sound\" loop=\"true\" autoplay=\"true\"></a-sound>`.'",
+                    choices: [
+                        { text: "CAN I USE MULTIPLE SOUNDS?", next: "fraps1A78" }
+                    ],
+                    background: "Assets/images/background-audio.jpg",
+                    sound: "Assets/sounds/background-audio.mp3"
+                },
+                fraps1A78: {
+                    text: "'Yes, you can use multiple sounds in your scene! You can add several `<a-sound>` elements to your world, each with a unique audio source. For example, you can have one sound that plays when an object is clicked and another when the user enters a certain area. Here’s how you might add sound to an object: `<a-box position=\"0 2 -5\" sound=\"src: url(#click-sound)\"></a-box>`.'",
+                    choices: [
+                        { text: "HOW CAN I CONTROL AUDIO VOLUME?", next: "fraps1A79" }
+                    ],
+                    background: "Assets/images/sound-control.jpg",
+                    sound: "Assets/sounds/sound-control.mp3"
+                },
+                fraps1A79: {
+                    text: "'You can control the volume of each sound individually. The `sound` component allows you to adjust the volume with the `volume` attribute. For example, to lower the volume of a sound, you can use: `<a-sound src=\"#sound-source\" volume=\"0.5\"></a-sound>`. This will set the sound's volume to 50% of the original level.'",
+                    choices: [
+                        { text: "CAN I SPATIALIZE AUDIO?", next: "fraps1A80" }
+                    ],
+                    background: "Assets/images/spatial-sound.jpg",
+                    sound: "Assets/sounds/spatial-sound.mp3"
+                },
+                fraps1A80: {
+                    text: "'Absolutely! A-Frame supports **spatial audio**, which means sounds can be placed in 3D space and heard from different positions in the world. For example, you can place a sound at a specific location and have it only audible when the user is close. Here’s how you can do it: `<a-sound position=\"0 2 -5\" src=\"#spatial-sound\" distanceModel=\"linear\" maxDistance=\"10\"></a-sound>`. This sound will be heard only within a 10-meter radius.'",
+                    choices: [
+                        { text: "WHAT ABOUT SOUND EVENTS?", next: "fraps1A81" }
+                    ],
+                    background: "Assets/images/sound-events.jpg",
+                    sound: "Assets/sounds/sound-events.mp3"
+                },
+            fraps1A81: {
+                      text: "'You can trigger sounds in response to **events** in A-Frame, just like with interactivity. For example, you can play a sound when an object is clicked by adding the `sound` component to an event listener: `<a-box event-listener=\"click: playSound\" sound=\"src: url(#click-sound)\"></a-box>`. This will trigger the sound every time the box is clicked.'",
+                      choices: [
+                          { text: "CAN I COMBINE AUDIO AND ANIMATIONS?", next: "fraps1A82" }
+                      ],
+                      background: "Assets/images/audio-animation.jpg",
+                      sound: "Assets/sounds/audio-animation.mp3"
+                  },
+                  fraps1A82: {
+                      text: "'Yes, you can combine audio with animations to create more dynamic experiences! You can have sounds play during specific points in an animation, like having footsteps sound as an object moves. Here's an example: `<a-box animation__move=\"property: position; to: 0 5 -5; dur: 1000\" sound=\"src: url(#footsteps)\"></a-box>`. This will play the footsteps sound while the box moves.'",
+                      choices: [
+                          { text: "CAN I CREATE A REACTIVE AUDIO EXPERIENCE?", next: "fraps1A83" }
+                      ],
+                      background: "Assets/images/reactive-audio.jpg",
+                      sound: "Assets/sounds/reactive-audio.mp3"
+                  },
+                  fraps1A83: {
+                      text: "'You can create a reactive audio experience by using the `sound` component in combination with other elements like **user input** or **object states**. For example, you can change the volume of a sound depending on how far the user is from an object or change the sound when a particular event occurs. Here’s an example: `<a-sound src=\"#reactive-sound\" volume=\"${userDistance}\" loop=\"true\"></a-sound>`. This will adjust the volume based on the distance between the user and the sound source.'",
+                      choices: [
+                          { text: "I'M READY TO ADD AUDIO TO MY WORLD!", next: "fraps1A84" }
+                      ],
+                      background: "Assets/images/audio-ready.jpg",
+                      sound: "Assets/sounds/audio-ready.mp3"
+                  },
+                  fraps1A84: {
+                      text: "'Now that you know how to add audio to your world, you can start experimenting with background music, sound effects, spatial audio, and even interactive sounds that respond to user actions. Your world is now not only interactive, but also full of life and sound! What will you create next?'",
+                      choices: [
+                          { text: "LET'S MAKE IT EVEN MORE IMMERSIVE!", next: "fraps1A85" }
+                      ],
+                      background: "Assets/images/immersive-world.jpg",
+                      sound: "Assets/sounds/immersive-world.mp3"
+                  },
+                  fraps1A85: {
+                      text: "'There’s always more to explore in A-Frame! You can continue to add more features, like integrating **music** or creating complex interactive audio systems that change based on user input or the environment. The possibilities are endless.'",
+                      choices: [
+                          { text: "WHAT ELSE CAN I LEARN?", next: "fraps1A86" }
+                      ],
+                      background: "Assets/images/exploration.jpg",
+                      sound: "Assets/sounds/exploration.mp3"
+                  },
+              
+                  fraps1A86: {
+                      text: "'Your world is interactive and filled with sound, but something still feels missing. Let's dive into **textures** and **materials** to give your world a more realistic and immersive appearance. In A-Frame, materials and textures allow you to change the look and feel of your objects. Let’s see how we can enhance your scene visually.'",
+                      choices: [
+                          { text: "TELL ME ABOUT TEXTURES AND MATERIALS!", next: "fraps1A87" }
+                      ],
+                      background: "Assets/images/textures-intro.jpg",
+                      sound: "Assets/sounds/textures-intro.mp3"
+                  },
+                  fraps1A87: {
+                      text: "'In A-Frame, materials define the appearance of objects, while textures provide the details. For instance, you can apply a **color** to an object using the `color` property or use an **image texture** to give the object a detailed surface. To change an object’s material, you can use this syntax: `<a-box material=\"color: #4CC3D9\"></a-box>`, which applies a solid color to the box.'",
+                      choices: [
+                          { text: "CAN I USE IMAGES AS TEXTURES?", next: "fraps1A88" }
+                      ],
+                      background: "Assets/images/materials-colors.jpg",
+                      sound: "Assets/sounds/materials-colors.mp3"
+                  },
+                  fraps1A88: {
+                      text: "'Yes, you can use images as textures in A-Frame! Textures add realistic detail to your objects. For example, you can apply a wood texture to a box like this: `<a-box src=\"#wood-texture\" material=\"src: url(#wood-texture)\"></a-box>`. The `src` attribute points to the texture you want to apply.'",
+                      choices: [
+                          { text: "HOW DO I CREATE A REFLECTIVE SURFACE?", next: "fraps1A89" }
+                      ],
+                      background: "Assets/images/wood-texture.jpg",
+                      sound: "Assets/sounds/wood-texture.mp3"
+                  },
+                  fraps1A89: {
+                      text: "'To create a reflective surface, you can use the **reflectivity** property of the material. You can make an object shiny and reflective by using: `<a-sphere material=\"color: silver; roughness: 0; metalness: 1\"></a-sphere>`. This will give your object a metallic, reflective look.'",
+                      choices: [
+                          { text: "CAN I ADD TEXTURE TO MORE COMPLEX SHAPES?", next: "fraps1A90" }
+                      ],
+                      background: "Assets/images/reflective-sphere.jpg",
+                      sound: "Assets/sounds/reflective-sphere.mp3"
+                  },
+                  fraps1A90: {
+                      text: "'Absolutely! You can apply textures and materials to more complex shapes like **curved** or **3D objects**. For example, you can apply a texture to a sphere or a cylinder in the same way you would a box: `<a-sphere src=\"#texture\" material=\"src: url(#texture)\"></a-sphere>`. A-Frame will map the texture to the object based on its geometry.'",
+                      choices: [
+                          { text: "WHAT ABOUT CUSTOM MATERIALS?", next: "fraps1A91" }
+                      ],
+                      background: "Assets/images/custom-materials.jpg",
+                      sound: "Assets/sounds/custom-materials.mp3"
+                  },
+              fraps1A91: {
+                        text: "'A-Frame also allows you to create **custom materials** using shaders. Shaders are scripts that define how objects appear on the screen. By using the `shader` property, you can create unique effects, such as glowing or animated materials. For example: `<a-box material=\"shader: standard; color: blue\"></a-box>` will apply a standard material with a blue color to the box.'",
+                        choices: [
+                            { text: "CAN I MAKE TEXTURES ANIMATED?", next: "fraps1A92" }
+                        ],
+                        background: "Assets/images/animated-textures.jpg",
+                        sound: "Assets/sounds/animated-textures.mp3"
+                    },
+                    fraps1A92: {
+                        text: "'Yes! You can animate textures by changing the texture’s source over time or by using **animated textures**. For instance, you can have a texture change periodically like this: `<a-box material=\"src: url(#texture1); animation__texture: property: src; to: url(#texture2); dur: 1000; loop: true\"></a-box>`. This will animate the texture change between two different images.'",
+                        choices: [
+                            { text: "CAN I COMBINE TEXTURES WITH LIGHTING?", next: "fraps1A93" }
+                        ],
+                        background: "Assets/images/texture-lighting.jpg",
+                        sound: "Assets/sounds/texture-lighting.mp3"
+                    },
+                    fraps1A93: {
+                        text: "'Textures work beautifully with **lighting**! The way light interacts with textures can enhance the realism of your scene. You can add shadows, highlights, and reflections that make the textures appear more three-dimensional. For example, using a light source in combination with reflective materials: `<a-light type=\"directional\" position=\"1 3 -3\"></a-light>` will illuminate your objects and show how textures react to light.'",
+                        choices: [
+                            { text: "HOW DO I ADD TRANSPARENT TEXTURES?", next: "fraps1A94" }
+                        ],
+                        background: "Assets/images/transparent-textures.jpg",
+                        sound: "Assets/sounds/transparent-textures.mp3"
+                    },
+                    fraps1A94: {
+                        text: "'If you want to make textures **transparent** or **partially transparent**, you can adjust the `opacity` or `transparent` property of the material. For example: `<a-box material=\"transparent: true; opacity: 0.5\"></a-box>`. This will make the box semi-transparent, allowing you to see the objects behind it.'",
+                        choices: [
+                            { text: "I'M READY TO ADD TEXTURES AND MATERIALS TO MY WORLD!", next: "fraps1A95" }
+                        ],
+                        background: "Assets/images/ready-textures.jpg",
+                        sound: "Assets/sounds/ready-textures.mp3"
+                    },
+                    fraps1A95: {
+                        text: "'Now that you know how to use textures and materials, you can start enhancing your world’s appearance. You can combine colors, textures, reflective surfaces, and even animated materials to create a visually stunning environment. Your world is shaping up beautifully!'",
+                        choices: [
+                            { text: "LET'S MAKE IT EVEN MORE DYNAMIC!", next: "fraps1A96" }
+                        ],
+                        background: "Assets/images/dynamic-world.jpg",
+                        sound: "Assets/sounds/dynamic-world.mp3"
+                    },
+                    fraps1A96: {
+                        text: "'There’s always more to explore! You can keep playing with different materials, textures, and shaders to create even more unique and immersive experiences in your A-Frame world. What will you build next?'",
+                        choices: [
+                            { text: "WHAT ELSE CAN I LEARN?", next: "fraps1A97" }
+                        ],
+                        background: "Assets/images/exploration-textures.jpg",
+                        sound: "Assets/sounds/exploration-textures.mp3"
+                    },
+              
+                    fraps1A97: {
+                        text: "'You’ve learned the basics, and now it’s time to delve into the **advanced features** of A-Frame. These features will help you push the limits of what you can create in your VR world. Let’s get started with more powerful tools that A-Frame offers!'",
+                        choices: [
+                            { text: "SHOW ME THE ADVANCED FEATURES!", next: "fraps1A98" }
+                        ],
+                        background: "Assets/images/advanced-features-intro.jpg",
+                        sound: "Assets/sounds/advanced-features-intro.mp3"
+                    },
+                    fraps1A98: {
+                        text: "'A-Frame provides several advanced features such as **animations**, **physics**, **components**, and **interactivity**. These tools allow you to create highly dynamic and interactive experiences. Let’s begin with **physics**. By adding physics to your world, you can simulate real-world forces, like gravity and collisions, to make objects react naturally.'",
+                        choices: [
+                            { text: "WHAT IS PHYSICS IN A-FRAME?", next: "fraps1A99" }
+                        ],
+                        background: "Assets/images/physics-intro.jpg",
+                        sound: "Assets/sounds/physics-intro.mp3"
+                    },
+                    fraps1A99: {
+                        text: "'Physics in A-Frame can be enabled using the `aframe-physics-system`. This component adds real-world physics to the objects in your scene, allowing them to fall, bounce, or collide. For example, to make a box fall, simply add a `dynamic-body` component: `<a-box position=\"0 3 0\" dynamic-body></a-box>`. This makes the box affected by gravity.'",
+                        choices: [
+                            { text: "HOW DO I HANDLE COLLISIONS?", next: "fraps1A100" }
+                        ],
+                        background: "Assets/images/physics-collision.jpg",
+                        sound: "Assets/sounds/physics-collision.mp3"
+                    },
+                    fraps1A100: {
+                        text: "'To handle collisions in A-Frame, you need to use the `collider` component, which helps detect when objects collide with each other. You can set up collision detection like this: `<a-box position=\"0 3 0\" collider=\"objects: .collidable\"></a-box>`. This way, any object marked with the class `.collidable` will interact with this box when it falls.'",
+                        choices: [
+                            { text: "WHAT ABOUT **ANIMATIONS**?", next: "fraps1A101" }
+                        ],
+                        background: "Assets/images/physics-collision-box.jpg",
+                        sound: "Assets/sounds/physics-collision-box.mp3"
+                    }
+              };
+  
+
 
 let currentTutorial = "mainPage";
 let audio = new Audio();
