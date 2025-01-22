@@ -5321,10 +5321,8 @@ fraps1A1: {
                     ],
                     background: "Assets/images/external-data.jpg",
                     sound: "Assets/sounds/external-data.mp3"
-                }
-            };
-            const storyLibrary = {
-                fraps1A76: {
+                },
+              fraps1A76: {
                     text: "'Your world is now interactive, but what’s a world without sound? Let’s explore **audio** in A-Frame! Audio can add a lot of atmosphere to your world. You can play background music, sound effects for interactions, or even spatialize sounds to make them feel more immersive.'",
                     choices: [
                         { text: "TELL ME MORE ABOUT AUDIO IN A-FRAME!", next: "fraps1A77" }
@@ -5525,7 +5523,581 @@ fraps1A1: {
                         ],
                         background: "Assets/images/physics-collision-box.jpg",
                         sound: "Assets/sounds/physics-collision-box.mp3"
-                    }
+                    },
+                fraps1A101: {
+                          text: "'Animations in A-Frame bring your objects to life! You can animate any object with the `animation` component. For example, you can make a box move up and down with this code: `<a-box position=\"0 1 0\" animation=\"property: position; to: 0 3 0; dur: 1000; loop: true\"></a-box>`. This will animate the box’s position, creating a continuous movement.'",
+                          choices: [
+                              { text: "CAN I MAKE MY SCENE INTERACTIVE?", next: "fraps1A102" }
+                          ],
+                          background: "Assets/images/animated-box.jpg",
+                          sound: "Assets/sounds/animated-box.mp3"
+                      },
+                      fraps1A102: {
+                          text: "'Interactivity is a key feature of any engaging VR scene. You can create interactive experiences using **event listeners** and components like `cursor` or `raycaster`. For example, you can trigger an event when the user clicks on an object: `<a-box event-set__click=\"_event: click; scale: 1.5 1.5 1.5\"></a-box>`. This code makes the box scale up when it’s clicked.'",
+                          choices: [
+                              { text: "WHAT ELSE CAN I INTERACT WITH?", next: "fraps1A103" }
+                          ],
+                          background: "Assets/images/interactivity.jpg",
+                          sound: "Assets/sounds/interactivity.mp3"
+                      },
+                      fraps1A103: {
+                          text: "'You can make virtually any component interactive. You can add interaction to lights, animations, cameras, or even entire scenes. For example, you could change the color of an object when the user looks at it using the `cursor` component: `<a-entity cursor=\"rayOrigin: mouse\" material=\"color: #F00\"></a-entity>`. This makes the object change color when the user gazes at it.'",
+                          choices: [
+                              { text: "HOW CAN I MAKE MY OBJECTS MORE REALISTIC?", next: "fraps1A104" }
+                          ],
+                          background: "Assets/images/realistic-scene.jpg",
+                          sound: "Assets/sounds/realistic-scene.mp3"
+                      },
+                      fraps1A104: {
+                          text: "'To make your objects more realistic, you can combine advanced lighting techniques with **shaders**. Shaders control the appearance of materials and allow you to create custom visual effects. A simple example is creating a glowing object with the `emissive` property: `<a-box material=\"emissive: #00F\"></a-box>`. This will make the box glow with a blue light.'",
+                          choices: [
+                              { text: "CAN I CREATE MY OWN SHADERS?", next: "fraps1A105" }
+                          ],
+                          background: "Assets/images/glowing-box.jpg",
+                          sound: "Assets/sounds/glowing-box.mp3"
+                      },
+                      fraps1A105: {
+                          text: "'Yes! You can create custom shaders using GLSL (OpenGL Shading Language) in A-Frame. A custom shader allows you to apply unique visual effects, such as creating water, fire, or even custom lighting effects. For example: `<a-entity material=\"shader: customShader; color: #00FF00\"></a-entity>`. This code will apply a custom shader to the entity and color it green.'",
+                          choices: [
+                              { text: "CAN I ADD MORE COMPLEX BEHAVIORS?", next: "fraps1A106" }
+                          ],
+                          background: "Assets/images/custom-shader.jpg",
+                          sound: "Assets/sounds/custom-shader.mp3"
+                      },
+                      fraps1A106: {
+                          text: "'For complex behaviors, A-Frame allows you to create **custom components**. These components are JavaScript functions that can be attached to any entity, enabling complex logic like physics interactions, AI, or custom animations. For instance, you can create a component to move objects based on user input or apply AI for object movement.'",
+                          choices: [
+                              { text: "WHAT ABOUT MIXING FEATURES?", next: "fraps1A107" }
+                          ],
+                          background: "Assets/images/custom-component.jpg",
+                          sound: "Assets/sounds/custom-component.mp3"
+                      },
+                      fraps1A107: {
+                          text: "'The true power of A-Frame lies in combining all of these advanced features. You can create highly dynamic worlds by mixing animations, interactivity, physics, and custom shaders. For example, you could animate a character, make it interactive, and apply physics so that it reacts to the world around it—all at once! The possibilities are endless.'",
+                          choices: [
+                              { text: "I'M READY TO EXPLORE ADVANCED FEATURES!", next: "fraps1A108" }
+                          ],
+                          background: "Assets/images/exploring-advanced.jpg",
+                          sound: "Assets/sounds/exploring-advanced.mp3"
+                      },
+                      fraps1A108: {
+                          text: "'Now that you’ve unlocked the advanced features of A-Frame, it’s time to create your own world with these tools. Don’t be afraid to experiment with different combinations of animations, interactivity, physics, and custom shaders to create a truly unique VR experience.'",
+                          choices: [
+                              { text: "WHAT CAN I CREATE NEXT?", next: "fraps1A109" }
+                          ],
+                          background: "Assets/images/future-world.jpg",
+                          sound: "Assets/sounds/future-world.mp3"
+                      },
+                      fraps1A109: {
+                          text: "'The next step is up to you! With your newfound knowledge of A-Frame’s advanced features, you can create anything from interactive games to immersive experiences. Keep experimenting and building your ideas—your creativity is the limit!'",
+                          choices: [
+                              { text: "LET'S KEEP CREATING!", next: "fraps1A110" }
+                          ],
+                          background: "Assets/images/creating-world.jpg",
+                          sound: "Assets/sounds/creating-world.mp3"
+                      },
+
+                      fraps1A110: {
+                          text: "'You’ve learned a lot so far, and now it’s time to dive into how A-Frame handles **loading assets**. Loading assets such as images, sounds, models, and textures is essential for creating immersive experiences in your VR world. A-Frame provides a powerful asset management system to handle all these resources efficiently.'",
+                          choices: [
+                              { text: "SHOW ME HOW TO LOAD ASSETS!", next: "fraps1A111" }
+                          ],
+                          background: "Assets/images/loading-assets-intro.jpg",
+                          sound: "Assets/sounds/loading-assets-intro.mp3"
+                      },
+                  fraps1A111: {
+                            text: "'A-Frame provides the `<a-assets>` element to load all your assets in advance, ensuring that everything is ready before your scene starts. The `<a-assets>` element holds all resources like images, sounds, and 3D models. Here's an example of how to load a texture and sound: `<a-assets><img id=\"myTexture\" src=\"Assets/images/my-texture.jpg\"></a-assets>`. By doing this, your assets will be available when you need them in the scene.'",
+                            choices: [
+                                { text: "HOW DO I USE THESE ASSETS?", next: "fraps1A112" }
+                            ],
+                            background: "Assets/images/assets-example.jpg",
+                            sound: "Assets/sounds/assets-example.mp3"
+                        },
+                        fraps1A112: {
+                            text: "'Once your assets are loaded, you can use them in your scene. For example, to apply the loaded texture to an object, you would reference the asset like this: `<a-box src=\"#myTexture\"></a-box>`. This makes the box use the texture that you’ve previously loaded in the `<a-assets>` element.'",
+                            choices: [
+                                { text: "CAN I LOAD 3D MODELS?", next: "fraps1A113" }
+                            ],
+                            background: "Assets/images/3d-model.jpg",
+                            sound: "Assets/sounds/3d-model.mp3"
+                        },
+                        fraps1A113: {
+                            text: "'Yes! You can load 3D models in various formats like `.obj` or `.glTF` and add them to your scene. For example, to load a `.glTF` model, you can use the `<a-asset-item>` tag like this: `<a-assets><a-asset-item id=\"myModel\" src=\"Assets/models/my-model.glb\"></a-asset-item></a-assets>`. You can then reference it in your scene with `<a-entity gltf-model=\"#myModel\"></a-entity>`.'",
+                            choices: [
+                                { text: "WHAT ABOUT SOUND ASSETS?", next: "fraps1A114" }
+                            ],
+                            background: "Assets/images/loading-sound.jpg",
+                            sound: "Assets/sounds/loading-sound.mp3"
+                        },
+                        fraps1A114: {
+                            text: "'You can also load sound assets using the same method. For example, to load an MP3 sound, use the `<a-assets>` element like this: `<a-assets><audio id=\"mySound\" src=\"Assets/sounds/my-sound.mp3\"></audio></a-assets>`. To play the sound in your scene, reference it like this: `<a-sound src=\"#mySound\"></a-sound>`. This will automatically load and play the sound in your scene.'",
+                            choices: [
+                                { text: "CAN I MAKE SURE MY ASSETS ARE READY?", next: "fraps1A115" }
+                            ],
+                            background: "Assets/images/loading-check.jpg",
+                            sound: "Assets/sounds/loading-check.mp3"
+                        },
+                        fraps1A115: {
+                            text: "'A-Frame ensures that assets are loaded before the scene starts by using the `preload` attribute. You can add this attribute to any asset to ensure it’s loaded before being used: `<a-image src=\"#myTexture\" preload></a-image>`. This way, you won’t experience any delay in loading the asset during runtime.'",
+                            choices: [
+                                { text: "WHAT IF I NEED TO MANAGE LOAD STATUS?", next: "fraps1A116" }
+                            ],
+                            background: "Assets/images/preload-status.jpg",
+                            sound: "Assets/sounds/preload-status.mp3"
+                        },
+                        fraps1A116: {
+                            text: "'If you want to track the loading status of your assets, A-Frame provides an event system. You can listen for events like `loaded` to know when an asset is ready to use. For example, to listen for when a model has finished loading, you can use this code: `<a-entity gltf-model=\"#myModel\" loaded=\"console.log('Model loaded!')\"></a-entity>`. This will log a message when the model is fully loaded.'",
+                            choices: [
+                                { text: "HOW CAN I HANDLE FAILURES?", next: "fraps1A117" }
+                            ],
+                            background: "Assets/images/load-failure.jpg",
+                            sound: "Assets/sounds/load-failure.mp3"
+                        },
+                        fraps1A117: {
+                            text: "'A-Frame also allows you to handle failures using the `error` event. For example, if an asset fails to load, you can listen for the `error` event and take action, such as displaying a fallback image: `<a-entity gltf-model=\"#myModel\" error=\"console.log('Failed to load model');\"></a-entity>`. This helps ensure a smooth user experience even if something goes wrong.'",
+                            choices: [
+                                { text: "CAN I OPTIMIZE LOADING PERFORMANCE?", next: "fraps1A118" }
+                            ],
+                            background: "Assets/images/loading-performance.jpg",
+                            sound: "Assets/sounds/loading-performance.mp3"
+                        },
+                        fraps1A118: {
+                            text: "'To optimize loading performance, consider **lazy loading** your assets. This means only loading assets when they are needed. For example, you can delay loading non-essential assets until after the main scene has loaded. You can use the `lazy` attribute to achieve this: `<a-entity gltf-model=\"#myModel\" lazy></a-entity>`. This will load the model only when it comes into view, reducing initial loading time.'",
+                            choices: [
+                                { text: "CAN I LOAD MULTIPLE ASSETS AT ONCE?", next: "fraps1A119" }
+                            ],
+                            background: "Assets/images/lazy-load.jpg",
+                            sound: "Assets/sounds/lazy-load.mp3"
+                        },
+                        fraps1A119: {
+                            text: "'Yes! You can use the `<a-assets>` tag to load multiple assets at once. Simply add all your assets inside the `<a-assets>` element, and A-Frame will handle the rest. For example, to load multiple textures and sounds, you can use: `<a-assets><img id=\"texture1\" src=\"Assets/images/texture1.jpg\"><audio id=\"sound1\" src=\"Assets/sounds/sound1.mp3\"></audio></a-assets>`.'",
+                            choices: [
+                                { text: "READY TO LOAD ASSETS IN MY SCENE!", next: "fraps1A120" }
+                            ],
+                            background: "Assets/images/multiple-assets.jpg",
+                            sound: "Assets/sounds/multiple-assets.mp3"
+                        },
+                    fraps1A120: {
+                              text: "'Now that you know how to load assets efficiently in A-Frame, you can start building more complex scenes by adding textures, models, sounds, and much more. Whether it’s for interactive features, animations, or just a visually stunning world, proper asset management is the key to creating seamless experiences.'",
+                              choices: [
+                                  { text: "LET'S START LOADING MY ASSETS!", next: "fraps1A121" }
+                              ],
+                              background: "Assets/images/asset-loaded.jpg",
+                              sound: "Assets/sounds/asset-loaded.mp3"
+                          },
+                          fraps1A121: {
+                              text: "'Start creating your world, and don’t forget to optimize your assets to ensure your scene runs smoothly. Use **lazy loading**, **preloading**, and **event listeners** to handle assets efficiently and create an immersive, seamless experience for users.'",
+                              choices: [
+                                  { text: "I'M READY TO CREATE!", next: "fraps1A122" }
+                              ],
+                              background: "Assets/images/creating-world.jpg",
+                              sound: "Assets/sounds/creating-world.mp3"
+                          },
+                      
+                          fraps1A122: {
+                              text: "'You’ve learned about loading assets, and now we’re going to expand your skills. Let’s dive into **third-party integration** with A-Frame. A-Frame allows you to bring in external libraries, APIs, and services to enhance your virtual world. These integrations can add new features, interactivity, and real-time data to your scene. Are you ready to take your VR experience to the next level?'",
+                              choices: [
+                                  { text: "YES, LET'S INTEGRATE THIRD-PARTY SERVICES!", next: "fraps1A123" }
+                              ],
+                              background: "Assets/images/third-party-integration.jpg",
+                              sound: "Assets/sounds/third-party-integration.mp3"
+                          },
+                          fraps1A123: {
+                              text: "'Let’s start by adding a **physics engine**. With a physics engine like `ammo.js` or `cannon.js`, you can bring realistic physics into your scene. This means you can simulate gravity, collisions, and object movement. Let me show you how to integrate **ammo.js**.'",
+                              choices: [
+                                  { text: "SHOW ME HOW TO INTEGRATE A PHYSICS ENGINE!", next: "fraps1A124" }
+                              ],
+                              background: "Assets/images/physics-engine.jpg",
+                              sound: "Assets/sounds/physics-engine.mp3"
+                          },
+                          fraps1A124: {
+                              text: "'To integrate `ammo.js` with your A-Frame scene, include the library in your HTML file like this: `<script src=\"https://cdn.aframe.io/aframe-physics-system.min.js\"></script>`. This will enable physics in your scene, allowing you to interact with objects based on realistic forces. You can add physics properties like `dynamic`, `static`, and `kinematic` to control how objects behave.'",
+                              choices: [
+                                  { text: "CAN I ADD MORE LIBRARIES TO MY SCENE?", next: "fraps1A125" }
+                              ],
+                              background: "Assets/images/physics-example.jpg",
+                              sound: "Assets/sounds/physics-example.mp3"
+                          },
+                          fraps1A125: {
+                              text: "'Yes! You can integrate many different libraries into your scene. For example, you can use **three.js** for advanced 3D graphics or even connect to APIs like **Google Maps** for geospatial data. Let me show you how to add **three.js**.'",
+                              choices: [
+                                  { text: "SHOW ME HOW TO USE THREE.JS!", next: "fraps1A126" }
+                              ],
+                              background: "Assets/images/threejs-library.jpg",
+                              sound: "Assets/sounds/threejs-library.mp3"
+                          },
+                          fraps1A126: {
+                              text: "'To add `three.js` to your A-Frame project, you simply include the library in your HTML: `<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js\"></script>`. You can then use `three.js` to create complex 3D objects and import them into A-Frame. For example, you could create a custom 3D model using `three.js` and add it to your A-Frame scene with `<a-entity>`.'",
+                              choices: [
+                                  { text: "CAN I INTEGRATE GOOGLE MAPS?", next: "fraps1A127" }
+                              ],
+                              background: "Assets/images/google-maps-integration.jpg",
+                              sound: "Assets/sounds/google-maps-integration.mp3"
+                          },
+                          fraps1A127: {
+                              text: "'Of course! You can use **Google Maps** in your A-Frame scene by leveraging the `aframe-google-maps` component. Here’s an example: `<a-entity google-maps=\"location: 37.7749,-122.4194; zoom: 12;\"></a-entity>`. This will show a map of San Francisco at a zoom level of 12. It’s a great way to bring real-world geographic data into your scene.'",
+                              choices: [
+                                  { text: "HOW ABOUT USING OTHER APIS?", next: "fraps1A128" }
+                              ],
+                              background: "Assets/images/api-integration.jpg",
+                              sound: "Assets/sounds/api-integration.mp3"
+                          },
+                          fraps1A128: {
+                              text: "'A-Frame also allows you to integrate external **APIs** to bring dynamic data into your scene. For example, you can use weather APIs to show real-time weather information or news APIs to display live headlines. Let me show you an example of how you can use an API to update your scene.'",
+                              choices: [
+                                  { text: "SHOW ME HOW TO USE AN API!", next: "fraps1A129" }
+                              ],
+                              background: "Assets/images/fetch-api.jpg",
+                              sound: "Assets/sounds/fetch-api.mp3"
+                          },
+                          fraps1A129: {
+                              text: "'To use an API in A-Frame, you can use JavaScript’s `fetch` function to retrieve data. For example, you can fetch weather data from an API: `fetch('https://api.weather.com/data')`. Once you have the data, you can use it to update elements in your A-Frame scene, like changing the color of objects or displaying live weather information.'",
+                              choices: [
+                                  { text: "CAN I INTEGRATE SOCIAL MEDIA FEEDS?", next: "fraps1A130" }
+                              ],
+                              background: "Assets/images/social-media-integration.jpg",
+                              sound: "Assets/sounds/social-media-integration.mp3"
+                          },
+                          fraps1A130: {
+                              text: "'Yes, you can integrate social media feeds like Twitter or Instagram into your A-Frame scene. For example, you can use Twitter’s API to pull in live tweets and display them in your scene. The integration process is the same as any other API—you simply fetch the data and update your scene elements.'",
+                              choices: [
+                                  { text: "CAN I USE IOT DEVICES WITH A-FRAME?", next: "fraps1A131" }
+                              ],
+                              background: "Assets/images/iot-integration.jpg",
+                              sound: "Assets/sounds/iot-integration.mp3"
+                          },
+                      fraps1A131: {
+                                text: "'Definitely! You can integrate **Internet of Things (IoT)** devices with A-Frame to bring real-time data from physical sensors and devices into your virtual world. For example, you can use WebSocket or MQTT protocols to communicate with devices like motion sensors, temperature gauges, or even smart lights.'",
+                                choices: [
+                                    { text: "SHOW ME HOW TO INTEGRATE WITH IOT!", next: "fraps1A132" }
+                                ],
+                                background: "Assets/images/iot-example.jpg",
+                                sound: "Assets/sounds/iot-example.mp3"
+                            },
+                            fraps1A132: {
+                                text: "'To integrate IoT devices, you need to use WebSockets or MQTT to establish a connection between your A-Frame scene and the device. Here’s an example: `const socket = new WebSocket('ws://iot-device.local')`. Once connected, you can use data from your device to control A-Frame objects in real time, like changing their position or color based on sensor input.'",
+                                choices: [
+                                    { text: "READY TO INTEGRATE THIRD-PARTY SERVICES?", next: "fraps1A133" }
+                                ],
+                                background: "Assets/images/integrate-services.jpg",
+                                sound: "Assets/sounds/integrate-services.mp3"
+                            },
+                            fraps1A133: {
+                                text: "'Now you’re ready to integrate a variety of third-party services and libraries into your A-Frame world. By connecting to APIs, using physics engines, adding 3D libraries, and integrating IoT devices, the possibilities are endless. Start building your immersive experience today!'",
+                                choices: [
+                                    { text: "LET'S GET STARTED WITH THIRD-PARTY INTEGRATIONS!", next: "fraps1A134" }
+                                ],
+                                background: "Assets/images/third-party-integration-ready.jpg",
+                                sound: "Assets/sounds/third-party-integration-ready.mp3"
+                            },
+                        
+                            fraps1A134: {
+                                text: "'Now that you've mastered third-party integrations, let’s dive into **customization**. Customizing your A-Frame world allows you to personalize the user experience and make your virtual environment truly unique. Whether it's adjusting the size, shape, colors, or even creating your own components, customization brings your world to life. Ready to customize your VR experience?'",
+                                choices: [
+                                    { text: "YES, LET'S CUSTOMIZE MY A-FRAME WORLD!", next: "fraps1A135" }
+                                ],
+                                background: "Assets/images/customization-intro.jpg",
+                                sound: "Assets/sounds/customization-intro.mp3"
+                            },
+                            fraps1A135: {
+                                text: "'Customization starts with adjusting the basic properties of entities. For example, changing the **color** or **material** of objects in your scene is one of the easiest customizations. Let me show you how to change the color of an object.'",
+                                choices: [
+                                    { text: "SHOW ME HOW TO CHANGE OBJECT COLORS!", next: "fraps1A136" }
+                                ],
+                                background: "Assets/images/change-color.jpg",
+                                sound: "Assets/sounds/change-color.mp3"
+                            },
+                            fraps1A136: {
+                                text: "'In A-Frame, you can change the color of an entity by modifying its `material` component. For example: `<a-box color=\"red\"></a-box>`. This will make the box appear red in your scene. You can also use hex values or RGB values to customize the color further.'",
+                                choices: [
+                                    { text: "CAN I USE TEXTURES FOR CUSTOMIZATION?", next: "fraps1A137" }
+                                ],
+                                background: "Assets/images/color-change.jpg",
+                                sound: "Assets/sounds/color-change.mp3"
+                            },
+                            fraps1A137: {
+                                text: "'Yes, A-Frame allows you to add **textures** to your objects, making your world even more dynamic. You can apply an image texture to a surface using the `src` attribute in the material component. For example: `<a-box material=\"src: url('Assets/textures/wood.jpg')\"></a-box>`. This will wrap your box with the wood texture image.'",
+                                choices: [
+                                    { text: "HOW ABOUT CREATING MY OWN COMPONENT?", next: "fraps1A138" }
+                                ],
+                                background: "Assets/images/texture-example.jpg",
+                                sound: "Assets/sounds/texture-example.mp3"
+                            },
+                            fraps1A138: {
+                                text: "'You can also create your own **custom components** in A-Frame! Components allow you to add specific behaviors and interactions to your entities. For example, you could create a component that makes an object rotate when clicked. Here's a simple custom component:'",
+                                choices: [
+                                    { text: "SHOW ME HOW TO CREATE A CUSTOM COMPONENT!", next: "fraps1A139" }
+                                ],
+                                background: "Assets/images/custom-component.jpg",
+                                sound: "Assets/sounds/custom-component.mp3"
+                            },
+                            fraps1A139: {
+                                text: "'To create a custom component, you need to define it using JavaScript. Here’s a simple example that makes a box rotate when clicked: `AFRAME.registerComponent('rotate-on-click', { schema: {}, init: function() { this.el.addEventListener('click', () => { this.el.setAttribute('rotation', {x: 0, y: 90, z: 0}); }); } });`. Now you can add `rotate-on-click` to any entity, and it will rotate when clicked.'",
+                                choices: [
+                                    { text: "CAN I CUSTOMIZE THE LIGHTING IN MY SCENE?", next: "fraps1A140" }
+                                ],
+                                background: "Assets/images/lighting-customization.jpg",
+                                sound: "Assets/sounds/lighting-customization.mp3"
+                            },
+                            fraps1A140: {
+                                text: "'Lighting is a critical aspect of any scene, and A-Frame offers a lot of customization options for lighting. You can adjust the **intensity**, **color**, and **position** of lights in your scene. For example, to add a directional light with a custom color, you can use: `<a-light type=\"directional\" color=\"#ff0000\" intensity=\"0.8\"></a-light>`. This will create a red light with moderate intensity.'",
+                                choices: [
+                                    { text: "HOW CAN I ADD MY OWN 3D MODELS?", next: "fraps1A141" }
+                                ],
+                                background: "Assets/images/lighting-example.jpg",
+                                sound: "Assets/sounds/lighting-example.mp3"
+                            },
+                        fraps1A141: {
+                                  text: "'Adding custom 3D models is another powerful form of customization. A-Frame allows you to import **3D models** created in external software like Blender or Maya. You can import models in formats like **OBJ**, **GLTF**, or **FBX**. Here’s how you can import a GLTF model: `<a-entity gltf-model=\"url('Assets/models/custom_model.glb')\"></a-entity>`. This will display your custom 3D model in the scene.'",
+                                  choices: [
+                                      { text: "CAN I CUSTOMIZE ANIMATIONS AND MOVEMENTS?", next: "fraps1A142" }
+                                  ],
+                                  background: "Assets/images/custom-model.jpg",
+                                  sound: "Assets/sounds/custom-model.mp3"
+                              },
+                              fraps1A142: {
+                                  text: "'A-Frame supports custom animations, allowing you to animate properties such as position, rotation, and scale. You can animate an object over time using A-Frame's built-in **animation** component. For example, to animate an object to move up and down: `<a-box animation=\"property: position; to: 0 2 0; dir: alternate; dur: 1000; loop: true\"></a-box>`. This will animate the box vertically.'",
+                                  choices: [
+                                      { text: "CAN I CUSTOMIZE SOUND IN MY SCENE?", next: "fraps1A143" }
+                                  ],
+                                  background: "Assets/images/animation-example.jpg",
+                                  sound: "Assets/sounds/animation-example.mp3"
+                              },
+                              fraps1A143: {
+                                  text: "'You can also **customize the audio** in your scene by adding sound effects or background music. A-Frame allows you to add audio sources and control their properties, like volume and playback rate. To add an ambient sound, use: `<a-sound src=\"url('Assets/sounds/ambient-sound.mp3')\" autoplay=\"true\" loop=\"true\"></a-sound>`. This will play the sound continuously in your scene.'",
+                                  choices: [
+                                      { text: "LET'S FINALIZE MY CUSTOMIZED SCENE!", next: "fraps1A144" }
+                                  ],
+                                  background: "Assets/images/sound-customization.jpg",
+                                  sound: "Assets/sounds/sound-customization.mp3"
+                              },
+                              fraps1A144: {
+                                  text: "'Now you’ve learned how to customize various aspects of your A-Frame scene, from colors and textures to animations and sound. By combining these customizations, you can create unique and engaging virtual worlds. It’s time to take everything you’ve learned and finalize your custom A-Frame scene!'",
+                                  choices: [
+                                      { text: "I'M READY TO FINALIZE MY SCENE!", next: "fraps1A145" }
+                                  ],
+                                  background: "Assets/images/finalized-scene.jpg",
+                                  sound: "Assets/sounds/finalized-scene.mp3"
+                              },
+                         
+                              fraps1A145: {
+                                  text: "'Congratulations on customizing your A-Frame scene! Now, it’s time to focus on an essential aspect of development: **debugging and tools**. Debugging helps you identify and fix issues in your code, ensuring a smooth and bug-free experience for users. Let’s explore the tools available to help you debug and improve your A-Frame scenes.'",
+                                  choices: [
+                                      { text: "I'M READY TO LEARN ABOUT DEBUGGING!", next: "fraps1A146" }
+                                  ],
+                                  background: "Assets/images/debugging-intro.jpg",
+                                  sound: "Assets/sounds/debugging-intro.mp3"
+                              },
+                              fraps1A146: {
+                                  text: "'In A-Frame, you can use the **built-in debugger** to inspect and troubleshoot your scenes. The A-Frame Inspector is an interactive tool that allows you to see and modify the components of your scene in real time. To activate it, press `ctrl + alt + i` while your scene is open in a browser. You’ll be able to view all entities and components in your scene and adjust them directly.'",
+                                  choices: [
+                                      { text: "SHOW ME THE INSPECTOR TOOL!", next: "fraps1A147" }
+                                  ],
+                                  background: "Assets/images/inspector-tool.jpg",
+                                  sound: "Assets/sounds/inspector-tool.mp3"
+                              },
+                              fraps1A147: {
+                                  text: "'The Inspector tool provides a graphical interface where you can select any object in your scene. Once you select an object, you can view and change its properties like position, rotation, and scale, or modify its components like materials and animations. This is a great way to test and debug different elements of your scene in real-time.'",
+                                  choices: [
+                                      { text: "CAN I DEBUG SCRIPTS TOO?", next: "fraps1A148" }
+                                  ],
+                                  background: "Assets/images/debugging-scripts.jpg",
+                                  sound: "Assets/sounds/debugging-scripts.mp3"
+                              },
+                              fraps1A148: {
+                                  text: "'Yes! You can also debug **JavaScript scripts** by using the **browser’s developer tools**. Most modern browsers like Chrome, Firefox, and Edge have built-in developer tools that let you inspect your code, set breakpoints, and log errors. You can open the developer tools by pressing `F12` or right-clicking on your page and selecting `Inspect`.'",
+                                  choices: [
+                                      { text: "SHOW ME HOW TO USE THE DEV TOOLS!", next: "fraps1A149" }
+                                  ],
+                                  background: "Assets/images/dev-tools.jpg",
+                                  sound: "Assets/sounds/dev-tools.mp3"
+                              },
+                              fraps1A149: {
+                                  text: "'Once the developer tools are open, navigate to the **Console** tab. This will display any errors or logs that have occurred in your JavaScript code. You can also set breakpoints in the **Sources** tab, which will pause the execution of your code at a specific line, allowing you to inspect variables and understand what’s going wrong.'",
+                                  choices: [
+                                      { text: "WHAT ABOUT PERFORMANCE DEBUGGING?", next: "fraps1A150" }
+                                  ],
+                                  background: "Assets/images/performance-debugging.jpg",
+                                  sound: "Assets/sounds/performance-debugging.mp3"
+                              },
+                              fraps1A150: {
+                                  text: "'Performance debugging is another key aspect of optimizing your A-Frame scenes. A-Frame provides tools like **WebVR** and **WebGL** debugging to track performance issues like low frame rates or high memory usage. The **Performance Monitor** tool in the A-Frame Inspector helps you track the frame rate and performance statistics in real time.'",
+                                  choices: [
+                                      { text: "HOW DO I USE THE PERFORMANCE MONITOR?", next: "fraps1A151" }
+                                  ],
+                                  background: "Assets/images/performance-monitor.jpg",
+                                  sound: "Assets/sounds/performance-monitor.mp3"
+                              },
+                          fraps1A151: {
+                                    text: "'To activate the Performance Monitor, open the A-Frame Inspector and navigate to the **Performance** tab. This will show you real-time metrics like the frame rate, memory usage, and number of draw calls in your scene. Use this information to identify bottlenecks and optimize your scene for better performance.'",
+                                    choices: [
+                                        { text: "CAN I DEBUG NETWORK ISSUES TOO?", next: "fraps1A152" }
+                                    ],
+                                    background: "Assets/images/network-debugging.jpg",
+                                    sound: "Assets/sounds/network-debugging.mp3"
+                                },
+                                fraps1A152: {
+                                    text: "'Yes, debugging network issues is possible in A-Frame, especially for multiplayer or networked scenes. Tools like **WebSocket debugging** and **network performance monitoring** can help you track data transmission and identify network-related problems. The **Network Debugger** in A-Frame allows you to see network connections and troubleshoot connectivity issues.'",
+                                    choices: [
+                                        { text: "SHOW ME NETWORK DEBUGGING TOOLS!", next: "fraps1A153" }
+                                    ],
+                                    background: "Assets/images/network-debugging-tools.jpg",
+                                    sound: "Assets/sounds/network-debugging-tools.mp3"
+                                },
+                                fraps1A153: {
+                                    text: "'The Network Debugger is built into the A-Frame Inspector. Once you open the Inspector, navigate to the **Network** tab. This will show you a list of connected clients and allow you to monitor network traffic in real time. It can help you troubleshoot issues like lag, disconnections, or data synchronization problems.'",
+                                    choices: [
+                                        { text: "ANY OTHER DEBUGGING TOOLS?", next: "fraps1A154" }
+                                    ],
+                                    background: "Assets/images/other-debugging-tools.jpg",
+                                    sound: "Assets/sounds/other-debugging-tools.mp3"
+                                },
+                                fraps1A154: {
+                                    text: "'In addition to these built-in tools, there are many **third-party tools** available that can help with debugging and optimizing your A-Frame scene. For example, tools like **three.js inspector** and **WebVR Emulator** can provide deeper insights into your 3D scene’s performance and behavior. Don’t forget to regularly check for **errors in the console** and test your code thoroughly in different browsers.'",
+                                    choices: [
+                                        { text: "I'M READY TO DEBUG MY SCENE!", next: "fraps1A155" }
+                                    ],
+                                    background: "Assets/images/debugging-final.jpg",
+                                    sound: "Assets/sounds/debugging-final.mp3"
+                                },
+                                fraps1A155: {
+                                    text: "'Now that you know the essential debugging tools and techniques, it’s time to put them into practice. Regular debugging is essential for maintaining a stable, high-performance A-Frame scene. By using the A-Frame Inspector, developer tools, and performance monitoring, you’ll be able to optimize your scenes and fix any issues that arise.'",
+                                    choices: [
+                                        { text: "I'M READY TO FINALIZE MY SCENE AND DEBUG!", next: "fraps1A156" }
+                                    ],
+                                    background: "Assets/images/final-debugging.jpg",
+                                    sound: "Assets/sounds/final-debugging.mp3"
+                                },
+                           
+                                fraps1A156: {
+                                    text: "'You’ve learned how to debug and optimize your A-Frame scenes, but now it’s time to dive into something exciting: **Networking and Multiplayer**. Multiplayer experiences are becoming a significant part of virtual reality and interactive scenes. A-Frame provides built-in tools for creating real-time multiplayer experiences with ease. Let’s explore how you can integrate multiplayer into your A-Frame projects.'",
+                                    choices: [
+                                        { text: "I'M EXCITED TO LEARN ABOUT NETWORKING!", next: "fraps1A157" }
+                                    ],
+                                    background: "Assets/images/multiplayer-intro.jpg",
+                                    sound: "Assets/sounds/multiplayer-intro.mp3"
+                                },
+                                fraps1A157: {
+                                    text: "'To get started with networking in A-Frame, you’ll need to use the **networked-aframe** component. This component allows you to create multiplayer experiences by syncing your A-Frame scene across different devices in real-time. It uses **WebSockets** to enable seamless communication between clients, ensuring all players see the same scene.'",
+                                    choices: [
+                                        { text: "TELL ME MORE ABOUT THE NETWORKED-AFRAME COMPONENT!", next: "fraps1A158" }
+                                    ],
+                                    background: "Assets/images/networked-aframe.jpg",
+                                    sound: "Assets/sounds/networked-aframe.mp3"
+                                },
+                                fraps1A158: {
+                                    text: "'The **networked-aframe** component is a JavaScript-based framework for multiplayer experiences. It enables entities to be synchronized across multiple users’ browsers. When one user moves an object or interacts with the scene, the changes are reflected in real time for all other users. This component is essential for creating multiplayer environments in A-Frame.'",
+                                    choices: [
+                                        { text: "HOW DO I SET UP A NETWORKED SCENE?", next: "fraps1A159" }
+                                    ],
+                                    background: "Assets/images/networked-scene.jpg",
+                                    sound: "Assets/sounds/networked-scene.mp3"
+                                },
+                                fraps1A159: {
+                                    text: "'To set up a basic networked scene, you’ll need to import the **networked-aframe** library and create a networked entity for the players. This entity will be synced across all clients. You can also set up a server using **A-Frame's networking server** or a third-party server like **PeerJS** to manage connections. Here’s a basic setup:'",
+                                    choices: [
+                                        { text: "SHOW ME THE CODE FOR A BASIC NETWORKED SCENE!", next: "fraps1A160" }
+                                    ],
+                                    background: "Assets/images/code-setup.jpg",
+                                    sound: "Assets/sounds/code-setup.mp3"
+                                },
+                                fraps1A160: {
+                                    text: "'Here’s a basic example of setting up a networked scene in A-Frame. First, include the networked-aframe script in your HTML file and set up a networked entity:'" +
+                                    "<pre>" +
+                                    "&lt;script src='https://unpkg.com/networked-aframe/dist/networked-aframe.min.js'&gt;&lt;/script&gt;" +
+                                    "&lt;a-scene networked-scene='room: room1'&gt;" +
+                                    "    &lt;a-box networked='template: #box-template' position='0 1.5 -3'&gt;&lt;/a-box&gt;" +
+                                    "&lt;/a-scene&gt;" +
+                                    "</pre>",
+                                    choices: [
+                                        { text: "WHAT IF I WANT TO ADD PLAYER AVATARS?", next: "fraps1A161" }
+                                    ],
+                                    background: "Assets/images/player-avatars.jpg",
+                                    sound: "Assets/sounds/player-avatars.mp3"
+                                },
+                            fraps1A161: {
+                                      text: "'In multiplayer environments, avatars are essential to represent the players. To add avatars, you can create a networked **avatar** component that updates the player’s position, rotation, and actions across all clients. Here’s an example of how you might set up a basic avatar component:'" +
+                                      "<pre>" +
+                                      "&lt;a-entity networked='template: #avatar-template' position='0 1.5 -3'&gt;&lt;/a-entity&gt;" +
+                                      "</pre>",
+                                      choices: [
+                                          { text: "CAN I ADD MULTIPLE PLAYERS?", next: "fraps1A162" }
+                                      ],
+                                      background: "Assets/images/multiple-players.jpg",
+                                      sound: "Assets/sounds/multiple-players.mp3"
+                                  },
+                                  fraps1A162: {
+                                      text: "'Yes! A-Frame’s **networked-aframe** component supports multiple players by syncing each player’s avatar and actions. As each player enters the scene, their avatar and actions are synchronized across all clients. You can easily add multiple players by replicating the player setup and managing their actions through the **networked** component.'",
+                                      choices: [
+                                          { text: "HOW DO I MANAGE PLAYER INTERACTIONS?", next: "fraps1A63" }
+                                      ],
+                                      background: "Assets/images/player-interactions.jpg",
+                                      sound: "Assets/sounds/player-interactions.mp3"
+                                  },
+                                  fraps1A163: {
+                                      text: "'You can manage player interactions through the **networked-events** system. This allows you to trigger events such as **grabbing an object**, **picking up items**, or **shooting projectiles** that are synchronized across all clients. By emitting events from one player’s client and listening for those events on all other clients, you can create complex interactions.'",
+                                      choices: [
+                                          { text: "SHOW ME HOW TO HANDLE EVENTS!", next: "fraps1A164" }
+                                      ],
+                                      background: "Assets/images/handle-events.jpg",
+                                      sound: "Assets/sounds/handle-events.mp3"
+                                  },
+                                  fraps1A164: {
+                                      text: "'Here’s an example of how to emit and listen for networked events:'" +
+                                      "<pre>" +
+                                      "AFRAME.registerComponent('event-example', {" +
+                                      "  init: function () {" +
+                                      "    this.el.addEventListener('click', () => {" +
+                                      "      this.el.emit('interact', {});" +
+                                      "    });" +
+                                      "  }" +
+                                      "});" +
+                                      "</pre>",
+                                      choices: [
+                                          { text: "WHAT ABOUT SERVER SETUP?", next: "fraps1A165" }
+                                      ],
+                                      background: "Assets/images/server-setup.jpg",
+                                      sound: "Assets/sounds/server-setup.mp3"
+                                  },
+                                  fraps1A165: {
+                                      text: "'To manage the networked connections, you’ll need a **server** that handles multiple clients. You can set up a simple WebSocket server with **Node.js** and **socket.io** to manage client connections. A-Frame’s **networked-aframe** allows you to easily connect your client-side code with a server for real-time multiplayer experiences.'",
+                                      choices: [
+                                          { text: "SHOW ME HOW TO SET UP THE SERVER!", next: "fraps1A166" }
+                                      ],
+                                      background: "Assets/images/websocket-server.jpg",
+                                      sound: "Assets/sounds/websocket-server.mp3"
+                                  },
+                                  fraps1A166: {
+                                      text: "'To set up the server, you’ll first need to install **socket.io** in your Node.js project. Then, create a WebSocket server that listens for connections and broadcasts events to all clients. Here’s a basic server setup:'" +
+                                      "<pre>" +
+                                      "const express = require('express');" +
+                                      "const http = require('http');" +
+                                      "const socketIo = require('socket.io');" +
+                                      "const app = express();" +
+                                      "const server = http.createServer(app);" +
+                                      "const io = socketIo(server);" +
+                                      "io.on('connection', socket => {" +
+                                      "  console.log('A user connected');" +
+                                      "  socket.on('disconnect', () => {" +
+                                      "    console.log('User disconnected');" +
+                                      "  });" +
+                                      "});" +
+                                      "server.listen(3000, () => console.log('Server running on port 3000'));"+
+                                      "</pre>",
+                                      choices: [
+                                          { text: "I'M READY TO IMPLEMENT MULTIPLAYER!", next: "fraps1A167" }
+                                      ],
+                                      background: "Assets/images/ready-to-implement.jpg",
+                                      sound: "Assets/sounds/ready-to-implement.mp3"
+                                  },
+                                  fraps1A167: {
+                                      text: "'Great! Now that you know the basics of multiplayer setup with A-Frame, it’s time to get your hands dirty and start building your own networked scenes. Experiment with syncing avatars, handling player interactions, and managing server connections. The possibilities are endless when it comes to creating multiplayer A-Frame experiences.'",
+                                      choices: [
+                                          { text: "FINISH THE STORY AND START BUILDING!", next: "fraps1A168" }
+                                      ],
+                                      background: "Assets/images/final-multiplayer.jpg",
+                                      sound: "Assets/sounds/final-multiplayer.mp3"
+                                  }
               };
   
 
