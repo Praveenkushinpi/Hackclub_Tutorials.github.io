@@ -6100,65 +6100,590 @@ fraps1A1: {
                                       sound: "Assets/sounds/final-multiplayer.mp3"
                                   },
 sprig1game1: {
-    text: "WELCOME TO NEO GRID CITY, WHERE REALITY IS CODED, AND EVERY STREET HOLDS DIGITAL SECRETS. YOU'RE A ROOKIE HACKER IN THE CODERS’ UNDERGROUND, A SECRET SOCIETY WORKING TO REBUILD THE CITY. YOUR FIRST MISSION: LEARN HOW TO SET **LEGENDS** TO SHAPE THE CITY'S FOUNDATION.",
-      choices: [
-          { text: "TELL ME MORE ABOUT LEGENDS.", next: "sprig1game2" },
-              { text: "I’M READY TO CODE LEGENDS NOW!", next: "sprig1game3" }
-                ],
-                  background: "src=images/neogridcity.jpeg",
-                    sound: "sounds/neogrid_theme.mp3"
-                    },
-
-                    sprig1game2: {
-                      text: "LEGENDS ARE THE BUILDING BLOCKS OF NEO GRID. THEY DEFINE THE LOOK AND PURPOSE OF OBJECTS IN THE GAME. FOR EXAMPLE, YOU MIGHT HAVE A **PLAYER** (P) AND A **WALL** (W). EACH LEGEND NEEDS A VISUAL REPRESENTATION, WHICH IS WHERE **BITMAPS** COME IN.",
-                        choices: [
-                            { text: "SHOW ME AN EXAMPLE.", next: "sprig1game4" },
-                                { text: "I WANT TO TRY IT OUT!", next: "sprig1game3" }
-                                  ],
-                                    background: "src=images/legends.jpeg",
-                                      sound: "sounds/legends_theme.mp3"
+      text: "'Welcome to NeoGrid City, where reality is coded, and every street holds digital secrets. You’re a rookie hacker in the Coders’ Underground, a secret society working to rebuild the city. Your first mission: learn how to set **legends** to shape the city’s foundation.'",
+          choices: [
+                  { text: "TELL ME MORE ABOUT LEGENDS.", next: "sprig1game2" },
+                          { text: "I’M READY TO CODE LEGENDS NOW!", next: "sprig1game3" }
+                              ],
+                                  background: "src=images/neoGridCity.jpg",
+                                      sound: "sounds/introTheme.mp3"
                                       },
 
-                                      sprig1game3: {
-                                        text: "ALRIGHT, LET’S DIVE IN. HERE’S HOW YOU DEFINE LEGENDS USING SPRIG’S `setLegend` FUNCTION.\n\n```javascript\nconst player = \"p\";\nconst wall = \"w\";\n\nsetLegend(\n  [player, bitmap`\n  .......\n  .XXXXX.\n  .X...X.\n  .XXXXX.\n  .......\n  `],\n  [wall, bitmap`\n  .......\n  .XXXXX.\n  .XXXXX.\n  .XXXXX.\n  .......\n  `]\n);\n```\n\nTHIS SETS UP A **PLAYER** AND A **WALL**.",
-                                          choices: [
-                                              { text: "WHAT DOES THIS CODE DO?", next: "sprig1game5" },
-                                                  { text: "SHOW ME HOW TO PLACE LEGENDS ON A MAP!", next: "sprig1game6" }
+                                      sprig1game2: {
+                                          text: "'Legends are the building blocks of NeoGrid. They define the look and purpose of objects in the game. For example, you might have a **player** (p) and a **wall** (w). Each legend needs a visual representation, which is where **bitmaps** come in.'",
+                                              choices: [
+                                                      { text: "SHOW ME AN EXAMPLE.", next: "sprig1game4" },
+                                                              { text: "I WANT TO TRY IT OUT!", next: "sprig1game3" }
+                                                                  ],
+                                                                      background: "src=images/legendsBackground.jpg",
+                                                                          sound: "sounds/bitmapsTutorial.mp3"
+                                                                          },
+
+                                                                          sprig1game3: {
+                                                                              text: "'Alright, let’s dive in. Here’s how you define legends using Sprig’s `setLegend` function.'\n\n```javascript\nconst player = \"p\";\nconst wall = \"w\";\n\nsetLegend(\n  [player, bitmap`\n  .......\n  .XXXXX.\n  .X...X.\n  .XXXXX.\n  .......\n  `],\n  [wall, bitmap`\n  .......\n  .XXXXX.\n  .XXXXX.\n  .XXXXX.\n  .......\n  `]\n);\n```\n\n'This sets up a **player** and a **wall**.'",
+                                                                                  choices: [
+                                                                                          { text: "WHAT DOES THIS CODE DO?", next: "sprig1game5" },
+                                                                                                  { text: "SHOW ME HOW TO PLACE LEGENDS ON A MAP!", next: "sprig1game6" }
+                                                                                                      ],
+                                                                                                          background: "src=images/codeBackground.jpg",
+                                                                                                              sound: "sounds/codeExplained.mp3"
+                                                                                                              },
+
+                                                                                                              sprig1game4: {
+                                                                                                                  text: "'Here’s an example legend setup:\n\n```javascript\nconst player = \"p\";\nconst wall = \"w\";\nsetLegend(\n  [player, bitmap`...\n`],\n  [wall, bitmap`...\n`]\n);\n```\n\n'Each object is defined by a **letter** and a **bitmap**.'",
+                                                                                                                      choices: [
+                                                                                                                              { text: "GOT IT! WHAT’S NEXT?", next: "sprig1game3" }
+                                                                                                                                  ],
+                                                                                                                                      background: "src=images/exampleBackground.jpg",
+                                                                                                                                          sound: "sounds/exampleCode.mp3"
+                                                                                                                                          },
+
+                                                                                                                                          sprig1game5: {
+                                                                                                                                              text: "'The `setLegend` function does two things:\n\n1. It defines your objects (like player and wall).\n2. It gives them a visual representation using **bitmaps**.'",
+                                                                                                                                                  choices: [
+                                                                                                                                                          { text: "UNDERSTOOD! LET’S BUILD A MAP.", next: "sprig1game6" }
+                                                                                                                                                              ],
+                                                                                                                                                                  background: "src=images/setLegendExplained.jpg",
+                                                                                                                                                                      sound: "sounds/legendExplanation.mp3"
+                                                                                                                                                                      },
+
+                                                                                                                                                                      sprig1game6: {
+                                                                                                                                                                          text: "'Now that you’ve defined legends, it’s time to place them in a map using the `setMap` function. Here’s an example:'\n\n```javascript\nsetMap(map`\n  wwwww\n  w...w\n  w.p.w\n  w...w\n  wwwww\n`);\n```\n\n'Here, `w` is the wall, and `p` is the player.'",
+                                                                                                                                                                              choices: [
+                                                                                                                                                                                      { text: "SHOW ME A CHALLENGE!", next: "sprig1game7" },
+                                                                                                                                                                                              { text: "I WANT TO LEARN MORE FIRST.", next: "sprig1game8" }
+                                                                                                                                                                                                  ],
+                                                                                                                                                                                                      background: "src=images/mapBackground.jpg",
+                                                                                                                                                                                                          sound: "sounds/setMapTutorial.mp3"
+                                                                                                                                                                                                          },
+
+                                                                                                                                                                                                          sprig1game7: {
+                                                                                                                                                                                                              text: "'Your first challenge: Build a simple map with walls surrounding a player in the center. Try this code:'\n\n```javascript\nconst player = \"p\";\nconst wall = \"w\";\nsetLegend(\n  [player, bitmap`...\n`],\n  [wall, bitmap`...\n`]\n);\nsetMap(map`\n  ?????\n  ?.p.?\n  ?????\n`);\n```\n\n'Replace the `?` symbols with `w` to create the walls!'",
+                                                                                                                                                                                                                  choices: [
+                                                                                                                                                                                                                          { text: "CHALLENGE COMPLETED! WHAT’S NEXT?", next: "sprig1game9" },
+                                                                                                                                                                                                                                  { text: "I NEED HELP!", next: "sprig1game8" }
+                                                                                                                                                                                                                                      ],
+                                                                                                                                                                                                                                          background: "src=images/challengeBackground.jpg",
+                                                                                                                                                                                                                                              sound: "sounds/challengeSound.mp3"
+                                                                                                                                                                                                                                              },
+
+                                                                                                                                                                                                                                              sprig1game8: {
+                                                                                                                                                                                                                                                  text: "'No worries, coder. Let’s review:\n\n1. Use `setLegend` to define objects.\n2. Use `setMap` to place objects on the map.\n\n'Now, try this example to practice:'\n\n```javascript\nsetMap(map`\n  wwwww\n  w...w\n  w.p.w\n  w...w\n  wwwww\n`);\n```",
+                                                                                                                                                                                                                                                      choices: [
+                                                                                                                                                                                                                                                              { text: "GOT IT! BACK TO THE CHALLENGE.", next: "sprig1game7" }
+                                                                                                                                                                                                                                                                  ],
+                                                                                                                                                                                                                                                                      background: "src=images/reviewBackground.jpg",
+                                                                                                                                                                                                                                                                          sound: "sounds/reviewCode.mp3"
+                                                                                                                                                                                                                                                                          },
+
+                                                                                                                                                                                                                                                                          sprig1game9: {
+                                                                                                                                                                                                                                                                              text: "'Great job, coder! You’ve mastered the basics of setting legends and building maps. NeoGrid City awaits your creativity. What will you create next?'",
+                                                                                                                                                                                                                                                                                  choices: [
+                                                                                                                                                                                                                                                                                          { text: "mainmenu", next: "mainPage" },
+                                                                                                                                                                                                                                                                                                  { text: "EXPLORE SPRIG FUNCTIONS", next: "sprig2game1 " }
+                                                                                                                                                                                                                                                                                                      ],
+                                                                                                                                                                                                                                                                                                          background: "src=images/neoGridCityEnd.jpg",
+                                                                                                                                                                                                                                                                                                              sound: "sounds/celebration.mp3"
+                                                                                                                                                                                                                                                                                                              },
+  sprig2game1: {
+      text: "'You’ve mastered backgrounds, now it’s time to add some life to them with animations! With the power of dynamic visuals, you can make your world come alive. Ready to animate your backgrounds?'",
+        choices: [
+            { text: "YES, LET’S ANIMATE!", next: "sprig2game2" },
+                { text: "I NEED MORE INFO FIRST.", next: "sprig2game3" }
+                  ],
+                    background: "src=images/background_animate_start.jpg",
+                      sound: "sounds/animate_intro.mp3"
+                      },
+
+                      sprig2game2: {
+                        text: "'In Sprig, you can use the `setInterval` function to change the background every few milliseconds. This creates the illusion of movement. Let’s see an example of how to animate the background.'\n\n```javascript\nsetInterval(() => {\n  setBackground(bitmap`\n    .#####.\n    .#####.\n    ......\n  `);\n}, 1000);`\n`This will change the background every second, creating movement.'",
+                          choices: [
+                              { text: "I WANT TO TRY IT MYSELF!", next: "sprig2game4" },
+                                  { text: "SHOW ME AN EXAMPLE!", next: "sprig2game5" }
+                                    ],
+                                      background: "src=images/animation_example.jpg",
+                                        sound: "sounds/animate_example.mp3"
+                                        },
+
+                                        sprig2game3: {
+                                          text: "'Animations make your world feel more alive. By changing visual elements over time, you can create movement, flowing objects, or even simulate changing environments.'",
+                                            choices: [
+                                                { text: "SHOW ME HOW TO CODE IT.", next: "sprig2game2" }
+                                                  ],
+                                                    background: "src=images/animation_info.jpg",
+                                                      sound: "sounds/animate_info.mp3"
+                                                      },
+
+                                                      sprig2game4: {
+                                                        text: "'Here’s an example of a simple animation where the background changes every second. Try running this code in your game to see it in action.'\n\n```javascript\nsetInterval(() => {\n  setBackground(bitmap`\n    .#####.\n    .#####.\n    ......\n  `);\n}, 1000);`\n`This creates a dynamic animation every second.'",
+                                                          choices: [
+                                                              { text: "I’VE GOT IT! LET’S MOVE ON.", next: "sprig2game6" }
+                                                                ],
+                                                                  background: "src=images/animation_code.jpg",
+                                                                    sound: "sounds/animation_run.mp3"
+                                                                    },
+
+                                                                    sprig2game5: {
+                                                                      text: "'Here’s a more complex background animation, with multiple layers of visuals:\n\n```javascript\nsetInterval(() => {\n  setBackground(bitmap`\n    .#####.\n    .###.#.\n    .......\n  `);\n}, 500);`\n`This creates a more varied animated effect every half second.'",
+                                                                        choices: [
+                                                                            { text: "I WANT TO TRY THIS ONE!", next: "sprig2game6" }
+                                                                              ],
+                                                                                background: "src=images/complex_animation.jpg",
+                                                                                  sound: "sounds/complex_animation.mp3"
+                                                                                  },
+
+                                                                                  sprig2game6: {
+                                                                                    text: "'Now that you know how to animate, let’s add more complex layers to the background. You can combine static and dynamic elements to create more immersive worlds. Check out this multi-layered animation example.'\n\n```javascript\nsetInterval(() => {\n  setBackground(bitmap`\n    .####..\n    .#####.\n    .######\n  `);\n}, 1000);`\n`This layers multiple backgrounds together for a richer effect.'",
+                                                                                      choices: [
+                                                                                          { text: "I’M READY TO ADD INTERACTIONS!", next: "sprig2game7" },
+                                                                                              { text: "I WANT TO ADD A SCENE BACKGROUND!", next: "sprig2game8" }
+                                                                                                ],
+                                                                                                  background: "src=images/multilayer_animation.jpg",
+                                                                                                    sound: "sounds/multilayer_animate.mp3"
+                                                                                                    },
+
+                                                                                                    sprig2game7: {
+                                                                                                      text: "'It’s time to add interactivity to your backgrounds! You can tie animations to player actions or events in the game. Let’s look at an example where the background changes when the player presses a key.'\n\n```javascript\nsetInterval(() => {\n  if (keyIsPressed) {\n    setBackground(bitmap`\n      .#####.\n      .#####.\n      ......\n    `);\n  }\n}, 1000);`\n`This code makes the background change whenever a key is pressed.'",
+                                                                                                        choices: [
+                                                                                                            { text: "INTERACTIVE ANIMATION COMPLETED!", next: "sprig2game8" },
+                                                                                                                { text: "SHOW ME MORE ADVANCED STUFF!", next: "sprig3game1" }
+                                                                                                                  ],
+                                                                                                                    background: "src=images/interactive_background.jpg",
+                                                                                                                      sound: "sounds/interactive_animate.mp3"
+                                                                                                                      },
+
+                                                                                                                      sprig2game8: {
+                                                                                                                        text: "'Great job, you’ve learned how to add background animations and interactivity to NeoGrid City. Now your world can come alive with vibrant, ever-changing visuals. Ready to explore new possibilities?'",
+                                                                                                                          choices: [
+                                                                                                                              { text: "LEARN ABOUT PLAYER MOVEMENT", next: "sprig3game1" },
+                                                                                                                                  { text: "EXPLORE MORE SPRIG FEATURES", next: "sprig3game2" }
+                                                                                                                                    ],
+                                                                                                                                      background: "src=images/neo_grid_city.jpg",
+                                                                                                                                        sound: "sounds/city_vibes.mp3"
+                                                                                                                                        },
+
+                                                                                                                                        sprig3game1: {
+                                                                                                                                          text: "'Let’s take things to the next level! You’ve built the visual foundation of NeoGrid, now it’s time to control movement. Learn how to move your player across the map and bring your game to life.'",
+                                                                                                                                            choices: [
+                                                                                                                                                { text: "YES, LET’S LEARN PLAYER MOVEMENT!", next: "sprig3game2" },
+                                                                                                                                                    { text: "I NEED MORE INFO FIRST.", next: "sprig3game3" }
+                                                                                                                                                      ],
+                                                                                                                                                        background: "src=images/movement_intro.jpg",
+                                                                                                                                                          sound: "sounds/movement_intro.mp3"
+                                                                                                                                                          },
+
+                                                                                                                                                          sprig3game2: {
+                                                                                                                                                            text: "'In Sprig, player movement is done using the `move` function. You can make the player move in any direction by specifying the amount of steps. Let’s start with moving the player up by one step.'\n\n```javascript\nmove(UP, 1);\n```",
+                                                                                                                                                              choices: [
+                                                                                                                                                                  { text: "SHOW ME MORE MOVEMENT EXAMPLES.", next: "mainPage " },
+                                                                                                                                                                      { text: "I’M READY TO TRY IT MYSELF!", next: "sprig3game1" }
+                                                                                                                                                                        ],
+                                                                                                                                                                          background: "src=images/player_movement.jpg",
+                                                                                                                                                                            sound: "sounds/movement_example.mp3"
+                                                                                                                                                                            },
+    
+  
+     sprig3game1: {
+        text: "'Welcome to NeoGrid City, young developer! Setting the map is a crucial step in your game world. With the `setMap` function, you can define the areas, roads, and buildings that make up the game world. Are you ready to start setting up your map?'",
+          choices: [
+              { text: "YES, LET’S SET UP THE MAP!", next: "sprig3game2" },
+                  { text: "I NEED TO KNOW MORE FIRST.", next: "sprig3game3" }
+                    ],
+                      background: "src=images/map_background.jpeg",
+                        sound: "sounds/map_intro.mp3"
+                        },
+
+                        sprig3game2: {
+                          text: "'The `setMap` function in Sprig is used to define the layout of your game world. You’ll use tiles to represent different types of terrain, buildings, and objects. Let's start simple with a grid-based map where `.` represents empty spaces and `#` represents walls or buildings.'\n\n```javascript\nsetMap(`\n  ######\n  #....#\n  #....#\n  ######\n`);\n`' This will create a small map with walls on the edges and an open area inside.'",
+                            choices: [
+                                { text: "WHAT DOES THIS CODE DO?", next: "sprig3game4" },
+                                    { text: "LET’S TRY A MAP WITH MORE DETAIL.", next: "sprig3game5" }
+                                      ],
+                                        background: "src=images/simple_map.jpeg",
+                                          sound: "sounds/simple_map.mp3"
+                                          },
+
+                                          sprig3game3: {
+                                            text: "'The map is the foundation of your game world. It consists of a grid where each character (`#`, `.`, or others) represents an element in the world. With `setMap`, you can create a grid-based layout, defining open spaces, roads, and walls.'",
+                                              choices: [
+                                                  { text: "SHOW ME HOW TO CODE IT.", next: "sprig3game2" }
                                                     ],
-                                                      background: "src=images/code_start.jpeg",
-                                                        sound: "sounds/code_theme.mp3"
+                                                      background: "src=images/foundation_map.jpeg",
+                                                        sound: "sounds/foundation_map.mp3"
                                                         },
 
-                                                        sprig1game4: {
-                                                          text: "HERE’S AN EXAMPLE LEGEND SETUP:\n\n```javascript\nconst player = \"p\";\nconst wall = \"w\";\nsetLegend(\n  [player, bitmap`...\n`],\n  [wall, bitmap`...\n`]\n);\n```\n\nEACH OBJECT IS DEFINED BY A **LETTER** AND A **BITMAP**.",
+                                                        sprig3game4: {
+                                                          text: "'The code sets a simple grid-based map. The `#` characters represent solid elements, like walls or obstacles, while `.` represents open spaces where characters can move freely. This map is a foundation, and you can add complexity to it.'",
                                                             choices: [
-                                                                { text: "GOT IT! WHAT’S NEXT?", next: "sprig1game3" }
+                                                                { text: "LET'S ADD SOME STRUCTURES TO THE MAP.", next: "sprig3game5" }
                                                                   ],
-                                                                    background: "src=images/example_legend.jpeg",
-                                                                      sound: "sounds/example_theme.mp3"
+                                                                    background: "src=images/grid_map.jpeg",
+                                                                      sound: "sounds/grid_map.mp3"
                                                                       },
 
-                                                                      sprig1game5: {
-                                                                        text: "THE `setLegend` FUNCTION DOES TWO THINGS:\n\n1. IT DEFINES YOUR OBJECTS (LIKE PLAYER AND WALL).\n2. IT GIVES THEM A VISUAL REPRESENTATION USING **BITMAPS**.",
+                                                                      sprig3game5: {
+                                                                        text: "'Now, let’s add more complexity! Let’s place buildings (`B`), roads (`R`), and grass (`G`) on the map to create a more detailed NeoGrid City layout.\n\n```javascript\nsetMap(`\n  ######\n  #BB..#\n  #RR..#\n  ######\n`);\n`This code defines a layout with two buildings (`B`), a road (`R`), and open space.'",
                                                                           choices: [
-                                                                              { text: "UNDERSTOOD! LET’S BUILD A MAP.", next: "sprig1game6" }
-                                                                                ],
-                                                                                  background: "src=images/legend_function.jpeg",
-                                                                                    sound: "sounds/legend_theme.mp3"
-                                                                                    },
+                                                                              { text: "IT LOOKS COOL! WHAT’S NEXT?", next: "sprig3game6" },
+                                                                                  { text: "LET’S MAKE A MORE COMPLEX MAP.", next: "sprig3game7" }
+                                                                                    ],
+                                                                                      background: "src=images/complex_map.jpeg",
+                                                                                        sound: "sounds/complex_map.mp3"
+                                                                                        },
 
-                                                                                    sprig1game6: {
-                                                                                      text: "NOW THAT YOU’VE DEFINED LEGENDS, IT’S TIME TO PLACE THEM IN A MAP USING THE `setMap` FUNCTION. HERE’S AN EXAMPLE:\n\n```javascript\nsetMap(map`\n  wwwww\n  w...w\n  w.p.w\n  w...w\n  wwwww\n`);\n```\n\nHERE, `w` IS THE WALL, AND `p` IS THE PLAYER.",
-                                                                                        choices: [
-                                                                                            { text: "SHOW ME A CHALLENGE!", next: "sprig1game7" },
-                                                                                                { text: "I WANT TO LEARN MORE FIRST.", next: "sprig1game8" }
+                                                                                        sprig3game6: {
+                                                                                          text: "'Nice work! You’ve now added some structures to the map. Next, let’s look at how to add paths that players can follow, creating interactive routes through the map.'",
+                                                                                            choices: [
+                                                                                                { text: "HOW CAN I MAKE INTERACTIVE PATHS?", next: "sprig4game1" },
+                                                                                                    { text: "LET'S ADD A DYNAMIC ELEMENT TO THE MAP.", next: "sprig4game2" }
+                                                                                                      ],
+                                                                                                        background: "src=images/interactive_map.jpeg",
+                                                                                                          sound: "sounds/interactive_map.mp3"
+                                                                                                          },
+
+                                                                                                          sprig3game7: {
+                                                                                                            text: "'Let's get more creative with our map! We can define roads, water bodies, and buildings on a larger scale.\n\nHere's a new map layout with diverse features:\n\n```javascript\nsetMap(`\n  #######\n  #...R.#\n  #BB..#.#\n  #R..R.#\n  #...G.#\n`);\n`\nThis one includes roads (`R`), buildings (`B`), and grass (`G`). Try adding more elements!'",
+                                                                                                              choices: [
+                                                                                                                  { text: "MAP COMPLETED! SHOW ME MORE.", next: "sprig3game8" },
+                                                                                                                      { text: "I WANT TO ADD A MOVABLE OBJECT TO THE MAP.", next: "sprig3game9" }
+                                                                                                                        ],
+                                                                                                                          background: "src=images/creative_map.jpeg",
+                                                                                                                            sound: "sounds/creative_map.mp3"
+                                                                                                                            },
+
+                                                                                                                            sprig3game8: {
+                                                                                                                              text: "'Nice work! You’ve set up a solid map for NeoGrid City. Now that the map is ready, it’s time to add characters or objects that can move through it, interact with it, or even be part of a larger story.'",
+                                                                                                                                choices: [
+                                                                                                                                    { text: "LET’S ADD MOVABLE OBJECTS.", next: "sprig4game1" },
+                                                                                                                                        { text: "WHAT’S NEXT IN CREATING A DYNAMIC WORLD?", next: "sprig4game2" }
+                                                                                                                                          ],
+                                                                                                                                            background: "src=images/solid_map.jpeg",
+                                                                                                                                              sound: "sounds/solid_map.mp3"
+                                                                                                                                              },
+
+                                                                                                                                              sprig3game9: {
+                                                                                                                                                text: "'Great idea! To add movable objects on the map, you can place entities like players or NPCs. For example, a player character that moves through the map could look like this:\n\n```javascript\nsetEntity({x: 2, y: 2, sprite: 'player.png'});\n`\nThis will place a player at coordinates (2, 2) on the map. You can move them around using keyboard events or other controls.'",
+                                                                                                                                                  choices: [
+                                                                                                                                                      { text: "mainPage ",  next: "mainPage " },
+                                                                                                                                                          { text: "MAP COMPLETED! WHAT'S NEXT?", next: "sprig4game1 " }
+                                                                                                                                                            ],
+                                                                                                                                                              background: "src=images/movable_objects.jpeg",
+                                                                                                                                                                sound: "sounds/movable_objects.mp3"
+                                                                                                                                                                },
+        sprig4game1: {
+            text: "'Welcome back to NeoGrid City, developer! Now that you’ve set up your map, it’s time to add solid elements to your world. Solids are objects that players cannot pass through—like buildings, walls, or barriers. They define the boundaries of your environment.'",
+              choices: [
+                  { text: "LET’S ADD SOME SOLID WALLS!", next: "sprig4game2" },
+                      { text: "I NEED TO UNDERSTAND SOLIDS BETTER FIRST.", next: "sprig4game3" }
+                        ],
+                          background: "src=images/neoGridCity.jpeg",
+                            sound: "sounds/tutorialMusic.mp3"
+                            },
+
+                            sprig4game2: {
+                              text: "'In Sprig, solids are typically defined using the `setSolid` function. This function marks an object as something the player can’t walk through. Let’s start by adding some walls around our map.\n\n```javascript\nsetSolid(0, 0, 5, 1); // Creates a solid wall from (0, 0) to (5, 1)\nsetSolid(5, 0, 5, 5); // Creates a vertical wall from (5, 0) to (5, 5)\n`\nThis will create walls around our map, blocking the player from passing through them.'",
+                                choices: [
+                                    { text: "WHAT DOES THE CODE DO?", next: "sprig4game4" },
+                                        { text: "LET’S ADD MORE SOLID OBJECTS TO THE MAP.", next: "sprig4game5" }
+                                          ],
+                                            background: "src=images/wallsMap.jpeg",
+                                              sound: "sounds/codeExplanation.mp3"
+                                              },
+
+                                              sprig4game3: {
+                                                text: "'Solids are objects that act as physical barriers in the world. They prevent players from walking through them. Using `setSolid`, you can mark areas, walls, or even buildings that should be unpassable.'",
+                                                  choices: [
+                                                      { text: "SHOW ME HOW TO CODE IT.", next: "sprig4game2" }
+                                                        ],
+                                                          background: "src=images/barriers.jpeg",
+                                                            sound: "sounds/understandingSolids.mp3"
+                                                            },
+
+                                                            sprig4game4: {
+                                                              text: "'The first line of code, `setSolid(0, 0, 5, 1)`, creates a horizontal wall from (0, 0) to (5, 1). This means it starts at position (0, 0) and stretches to (5, 1), forming a solid barrier. The second line, `setSolid(5, 0, 5, 5)`, creates a vertical wall from (5, 0) to (5, 5). Now, your player will be blocked by these walls as they try to move.'",
+                                                                choices: [
+                                                                    { text: "LET’S ADD SOME MORE COMPLEX SOLIDS!", next: "sprig4game5" }
+                                                                      ],
+                                                                        background: "src=images/solidCodeExplained.jpeg",
+                                                                          sound: "sounds/solidCoding.mp3"
+                                                                          },
+
+                                                                          sprig4game5: {
+                                                                            text: "'Now, let’s add more solid objects to our map. Instead of just walls, we can add obstacles like benches, cars, or fountains. Each of these objects can be marked as solid using the same `setSolid` function.\n\nExample:\n\n```javascript\nsetSolid(2, 2, 2, 3); // Bench\nsetSolid(3, 3, 4, 4); // Fountain\n`\nThis marks specific positions on the map as solid, creating objects that players can’t pass through.'",
+                                                                              choices: [
+                                                                                  { text: "HOW CAN I MAKE A SOLID AREA LARGER?", next: "sprig4game6" },
+                                                                                      { text: "I WANT TO CREATE A CHARACTER TO INTERACT WITH SOLIDS.", next: "sprig4game7" }
+                                                                                        ],
+                                                                                          background: "src=images/obstacles.jpeg",
+                                                                                            sound: "sounds/creatingObjects.mp3"
+                                                                                            },
+
+                                                                                            sprig4game6: {
+                                                                                              text: "'To make a solid area larger, simply extend the coordinates. For example:\n\n```javascript\nsetSolid(0, 0, 10, 1); // A longer horizontal wall\n`\nThis creates a larger solid area stretching from (0, 0) to (10, 1). The larger the range of coordinates, the larger the solid object.'",
+                                                                                                choices: [
+                                                                                                    { text: "LET’S ADD A COMPLEX STRUCTURE.", next: "sprig4game8" },
+                                                                                                        { text: "I WANT TO TEST SOLIDS WITH A CHARACTER.", next: "sprig4game7" }
+                                                                                                          ],
+                                                                                                            background: "src=images/extendedWalls.jpeg",
+                                                                                                              sound: "sounds/largeSolids.mp3"
+                                                                                                              },
+
+                                                                                                              sprig4game7: {
+                                                                                                                text: "'Now that we’ve created some solid objects, let’s create a character that interacts with them. We can use `setEntity` to place a character on the map and use controls to make sure they can’t walk through solids.\n\nExample:\n\n```javascript\nsetEntity({x: 1, y: 1, sprite: 'player.png'}); // Places a player at (1, 1)\n`\nIf the player tries to walk into a solid object, the game will prevent them from moving.'",
+                                                                                                                  choices: [
+                                                                                                                      { text: "LET’S MAKE THE PLAYER MOVE!", next: "sprig5game1" },
+                                                                                                                          { text: "LET'S ADD MORE INTERACTIVE SOLID OBJECTS.", next: "sprig5game2" }
+                                                                                                                            ],
+                                                                                                                              background: "src=images/characterInteraction.jpeg",
+                                                                                                                                sound: "sounds/playerMovement.mp3"
+                                                                                                                                },
+
+                                                                                                                                sprig4game8: {
+                                                                                                                                  text: "'Let’s make things more interesting by adding larger solid structures. Perhaps a building with multiple floors? You can use `setSolid` to mark walls in a building layout or create larger, more complex structures for players to navigate around.'\n\nExample:\n\n```javascript\nsetSolid(0, 0, 10, 10); // Large building wall\n`\nThis will create a large building or structure on the map.'",
+                                                                                                                                    choices: [
+                                                                                                                                        { text: "next .", next: "sprig5game1" },
+                                                                                                                                            { text: "mainmenu ", next: "mainPage " }
+                                                                                                                                              ],
+                                                                                                                                                background: "src=images/largeStructures.jpeg",
+                                                                                                                                                  sound: "sounds/creatingBuildings.mp3"
+                                                                                                                                                  },
+    sprig5game1: {
+        text: "'Ah, you’ve made it to NeoGrid City’s industrial district. Here, developers like you can set pushable objects—things the player can move around. Pushables are useful for creating interactive puzzles, challenges, or just adding a touch of realism to your game world.'",
+          choices: [
+              { text: "LET’S MAKE A PUSHABLE BOX!", next: "sprig5game2" },
+                  { text: "WHAT ARE PUSHABLES?", next: "sprig5game3" }
+                    ],
+                      background: "src=images/industrial_district.jpeg",
+                        sound: "sounds/industrial_district_theme.mp3"
+                        },
+
+                        sprig5game2: {
+                          text: "'In Sprig, setting an object as pushable is as easy as calling `setPushable` on it. Let’s start by creating a simple pushable box. Here's how you do it:\n\n```javascript\nsetPushable(2, 2, 1, 1); // Creates a pushable box at (2, 2)\n`\nThis will create a box that players can push around the map. Give it a try in your game!'",
+                            choices: [
+                                { text: "WHAT DOES `setPushable` DO?", next: "sprig5game4" },
+                                    { text: "LET’S MAKE THE BOX MOVABLE!", next: "sprig5game5" }
+                                      ],
+                                        background: "src=images/pushable_box.jpeg",
+                                          sound: "sounds/pushable_box_create.mp3"
+                                          },
+
+                                          sprig5game3: {
+                                            text: "'Pushables are objects that the player can interact with by pushing them. You can use `setPushable` to make any object movable by the player. These are useful for making objects that players need to move to solve puzzles or navigate through areas.'",
+                                              choices: [
+                                                  { text: "SHOW ME HOW TO CODE IT.", next: "sprig5game2" }
+                                                    ],
+                                                      background: "src=images/overview_pushables.jpeg",
+                                                        sound: "sounds/pushable_overview.mp3"
+                                                        },
+
+                                                        sprig5game4: {
+                                                          text: "'The function `setPushable(x, y, width, height)` marks an object as pushable. For example, `setPushable(2, 2, 1, 1)` creates a pushable box at coordinates (2, 2) with a width and height of 1 unit. Once an object is pushable, players can push it in any direction as long as there’s space.'",
+                                                            choices: [
+                                                                { text: "LET’S MOVE THE PUSHABLE BOX!", next: "sprig5game5" }
+                                                                  ],
+                                                                    background: "src=images/moving_pushable.jpeg",
+                                                                      sound: "sounds/set_pushable_function.mp3"
+                                                                      },
+
+                                                                      sprig5game5: {
+                                                                        text: "'To make the box movable, you need to set up controls that allow the player to push it. You can use simple controls like arrow keys or WASD to move the box around. Here's how you can add movement to the pushable box:\n\n```javascript\nif (keyIsDown(LEFT_ARROW)) {\n  movePushable(2, 2, -1, 0); // Moves the box left\n}\nif (keyIsDown(RIGHT_ARROW)) {\n  movePushable(2, 2, 1, 0); // Moves the box right\n}\n`\nNow, the player can push the box left and right using the arrow keys.'",
+                                                                          choices: [
+                                                                              { text: "CAN I PUSH THE BOX UP OR DOWN?", next: "sprig5game6" },
+                                                                                  { text: "LET’S ADD A PUSHABLE BUTTON!", next: "sprig5game7" }
+                                                                                    ],
+                                                                                      background: "src=images/movable_box.jpeg",
+                                                                                        sound: "sounds/move_pushable_box.mp3"
+                                                                                        },
+
+                                                                                        sprig5game6: {
+                                                                                          text: "'Yes, you can! To make the box move up or down, simply modify the `movePushable` function. For example:\n\n```javascript\nif (keyIsDown(UP_ARROW)) {\n  movePushable(2, 2, 0, -1); // Moves the box up\n}\nif (keyIsDown(DOWN_ARROW)) {\n  movePushable(2, 2, 0, 1); // Moves the box down\n}\n`\nNow the player can push the box in all four directions.'",
+                                                                                            choices: [
+                                                                                                { text: "LET’S ADD A PUSHABLE DOOR!", next: "sprig5game8" },
+                                                                                                    { text: "LET’S CREATE A COMPLEX MOVEMENT SYSTEM.", next: "sprig6game1" }
+                                                                                                      ],
+                                                                                                        background: "src=images/up_down_pushable.jpeg",
+                                                                                                          sound: "sounds/pushable_all_directions.mp3"
+                                                                                                          },
+
+                                                                                                          sprig5game7: {
+                                                                                                            text: "'Let’s take things a step further and add a pushable button. Imagine that pushing the button opens a door or activates a platform. You can set up a pushable button just like you did with the box:\n\n```javascript\nsetPushable(3, 3, 1, 1); // Places a pushable button at (3, 3)\n`\nNow, the player can push the button in the game.'",
+                                                                                                              choices: [
+                                                                                                                  { text: "WHAT DOES THE BUTTON DO?", next: "sprig5game8" },
+                                                                                                                      { text: "LET’S ADD A PUSHABLE PLATFORM.", next: "sprig6game2" }
+                                                                                                                        ],
+                                                                                                                          background: "src=images/pushable_button.jpeg",
+                                                                                                                            sound: "sounds/pushable_button.mp3"
+                                                                                                                            },
+
+                                                                                                                            sprig5game8: {
+                                                                                                                              text: "'Now that the button is pushable, you can create an action for it when pushed, such as opening a door. You could check if the button is pushed, then trigger a door animation. Here’s an example of how to trigger a door opening when the button is pushed:\n\n```javascript\nif (buttonPushed(3, 3)) {\n  openDoor(); // Opens the door when the button is pushed\n}\n`\nNow your player can push the button to open a door or activate another object in the game.'",
+                                                                                                                                choices: [
+                                                                                                                                    { text: "next ", next: "sprig6game1" },
+                                                                                                                                        { text: "mainmenu  ", next: "mainPage " }
+                                                                                                                                          ],
+                                                                                                                                            background: "src=images/button_activated_door.jpeg",
+                                                                                                                                              sound: "sounds/button_activation.mp3"
+                                                                                                                                              },
+     sprig6game1: {
+        text: "'To add animations to your pushable objects, you can use the `setAnimation` function. This allows you to animate the object when it’s pushed, adding a more immersive experience. For example, you could animate the box to shrink when it’s pushed, or make it bounce slightly.\n\nExample:\n\n```javascript\nsetAnimation(2, 2, 'shrink', 1); // Shrinks the box when pushed\n`\nThis creates a dynamic pushable experience.'",
+          choices: [
+              { text: "LET’S CREATE A COMBO PUZZLE WITH PUSHABLES.", next: "sprig6game2" },
+                  { text: "I WANT TO CREATE MORE COMPLEX PUSHABLE OBJECTS.", next: "sprig6game3" }
+                    ],
+                      background: "images/puzzleBackground.jpg",
+                        sound: "sounds/animationSound.mp3"
+                        },
+
+                        sprig6game2: {
+                          text: "'Let’s continue adding pushable objects! For instance, you can create a pushable crate or a boulder that blocks the path, and the player needs to push it to clear the way. To do this, simply use `setPushable` again and place them strategically on the map.'",
+                            choices: [
+                                { text: "CREATE A PUSHABLE BLOCKING OBJECT.", next: "sprig6game4" },
+                                    { text: "LET’S ADD MULTIPLE PUSHABLES IN A PUZZLE.", next: "sprig6game5" }
+                                      ],
+                                        background: "images/blockingObjectBackground.jpg",
+                                          sound: "sounds/blockSound.mp3"
+                                          },
+
+                                          sprig6game3: {
+                                            text: "'Let’s create a puzzle where the player needs to push a series of objects in the correct order to unlock a door. For example, you can create a sequence where the player needs to push a box onto a pressure plate to open a door, or move crates to create a path.'",
+                                              choices: [
+                                                  { text: "CREATE THE PUZZLE!", next: "sprig6game6" }
+                                                    ],
+                                                      background: "images/puzzleCreation.jpg",
+                                                        sound: "sounds/puzzleSolve.mp3"
+                                                        },
+
+                                                        sprig6game4: {
+                                                          text: "'To make pushable objects more interesting, you can make them interact with each other. For example, if a player pushes a box into a boulder, the boulder might roll away. You can set up these interactions by checking for collisions and applying forces when objects meet.'",
+                                                            choices: [
+                                                                { text: "LET’S ADD A PUSHABLE OBJECT COLLISION!", next: "sprig6game6" },
+                                                                    { text: "CREATE A PUSHABLE WITH A UNIQUE EFFECT.", next: "sprig6game7" }
+                                                                      ],
+                                                                        background: "images/collisionEffect.jpg",
+                                                                          sound: "sounds/collisionSound.mp3"
+                                                                          },
+
+                                                                          sprig6game5: {
+                                                                            text: "'Now, let’s finish the puzzle by adding some finishing touches! For example, when the player pushes the last object to the correct spot, they can unlock a door or open a gate to the next level.'",
+                                                                              choices: [
+                                                                                  { text: "LET’S TEST OUR PUSHABLE PUZZLE!", next: "sprig6game7" }
+                                                                                    ],
+                                                                                      background: "images/finalTouches.jpg",
+                                                                                        sound: "sounds/testPuzzle.mp3"
+                                                                                        },
+
+                                                                                        sprig6game6: {
+                                                                                          text: "'Creating pushable objects with unique effects can add depth to your game. For instance, you could make a pushable barrel explode when pushed, or a pushable crate release a surprise when moved. These effects can be triggered using the same `setPushable` method, but adding extra code for interactions and animations.'",
+                                                                                            choices: [
+                                                                                                { text: "LET’S ADD A SPECIAL PUSHABLE OBJECT.", next: "sprig6game7" }
                                                                                                   ],
-                                                                                                    background: "src=images/map_example.jpeg",
-                                                                                                      sound: "sounds/map_theme.mp3"
-                                                                                                      }
+                                                                                                    background: "images/specialPushable.jpg",
+                                                                                                      sound: "sounds/specialEffect.mp3"
+                                                                                                      },
+
+                                                                                                      sprig6game7: {
+                                                                                                        text: "'Congratulations! You’ve learned how to create pushable objects and even how to make them interact with each other. Now you can make dynamic puzzles and interactive challenges in your game!'",
+                                                                                                          choices: [
+                                                                                                              { text: "next ", next: "sprig7game1 " },
+                                                                                                                  { text: "mainmen.", next: "mainPage " }
+                                                                                                                    ],
+                                                                                                                      background: "images/congratulations.jpg",
+                                                                                                                        sound: "sounds/congratulationsSound.mp3"
+                                                                                                                        },
 
 
-                            };
+        sprig7game1: {
+            text: "'To add animations to your pushable objects, you can use the `setAnimation` function. This allows you to animate the object when it’s pushed, adding a more immersive experience. For example, you could animate the box to shrink when it’s pushed, or make it bounce slightly.\n\nExample:\n\n```javascript\nsetAnimation(2, 2, 'shrink', 1); // Shrinks the box when pushed\n`\nThis creates a dynamic pushable experience.'",
+              choices: [
+                  { text: "LET’S CREATE A COMBO PUZZLE WITH PUSHABLES.", next: "sprig7game3" },
+                      { text: "I WANT TO CREATE MORE COMPLEX PUSHABLE OBJECTS.", next: "sprig7game4" }
+                        ],
+                          background: "src=images/pushable1.jpg",
+                            sound: "sounds/animation.mp3"
+                            },
+
+                            sprig7game2: {
+                              text: "'Let’s continue adding pushable objects! For instance, you can create a pushable crate or a boulder that blocks the path, and the player needs to push it to clear the way. To do this, simply use `setPushable` again and place them strategically on the map.'",
+                                choices: [
+                                    { text: "CREATE A PUSHABLE BLOCKING OBJECT.", next: "sprig7game4" },
+                                        { text: "LET’S ADD MULTIPLE PUSHABLES IN A PUZZLE.", next: "sprig7game3" }
+                                          ],
+                                            background: "src=images/blocking_object.jpg",
+                                              sound: "sounds/pushable_block.mp3"
+                                              },
+
+                                              sprig7game3: {
+                                                text: "'Let’s create a puzzle where the player needs to push a series of objects in the correct order to unlock a door. For example, you can create a sequence where the player needs to push a box onto a pressure plate to open a door, or move crates to create a path.'",
+                                                  choices: [
+                                                      { text: "CREATE THE PUZZLE!", next: "sprig7game5" }
+                                                        ],
+                                                          background: "src=images/puzzle_scene.jpg",
+                                                            sound: "sounds/puzzle.mp3"
+                                                            },
+
+                                                            sprig7game4: {
+                                                              text: "'To make pushable objects more interesting, you can make them interact with each other. For example, if a player pushes a box into a boulder, the boulder might roll away. You can set up these interactions by checking for collisions and applying forces when objects meet.'",
+                                                                choices: [
+                                                                    { text: "LET’S ADD A PUSHABLE OBJECT COLLISION!", next: "sprig7game5" },
+                                                                        { text: "CREATE A PUSHABLE WITH A UNIQUE EFFECT.", next: "sprig7game6" }
+                                                                          ],
+                                                                            background: "src=images/interaction.jpg",
+                                                                              sound: "sounds/collision.mp3"
+                                                                              },
+
+                                                                              sprig7game5: {
+                                                                                text: "'Now, let’s finish the puzzle by adding some finishing touches! For example, when the player pushes the last object to the correct spot, they can unlock a door or open a gate to the next level.'",
+                                                                                  choices: [
+                                                                                      { text: "LET’S TEST OUR PUSHABLE PUZZLE!", next: "sprig7game7" }
+                                                                                        ],
+                                                                                          background: "src=images/final_touches.jpg",
+                                                                                            sound: "sounds/finish.mp3"
+                                                                                            },
+
+                                                                                            sprig7game6: {
+                                                                                              text: "'Creating pushable objects with unique effects can add depth to your game. For instance, you could make a pushable barrel explode when pushed, or a pushable crate release a surprise when moved. These effects can be triggered using the same `setPushable` method, but adding extra code for interactions and animations.'",
+                                                                                                choices: [
+                                                                                                    { text: "LET’S ADD A SPECIAL PUSHABLE OBJECT.", next: "sprig7game7" }
+                                                                                                      ],
+                                                                                                        background: "src=images/special_effect.jpg",
+                                                                                                          sound: "sounds/special_effect.mp3"
+                                                                                                          },
+
+                                                                                                          sprig7game7: {
+                                                                                                            text: "'Congratulations! You’ve learned how to create pushable objects and even how to make them interact with each other. Now you can make dynamic puzzles and interactive challenges in your game!'",
+                                                                                                              choices: [
+                                                                                                                  { text: "CREATE A NEW LEVEL WITH PUSHABLE OBJECTS.", next: "sprig7game8" },
+                                                                                                                      { text: "LET’S GO BACK AND TWEAK THE CURRENT LEVEL.", next: "sprig6game1" }
+                                                                                                                        ],
+                                                                                                                          background: "src=images/congratulations.jpg",
+                                                                                                                            sound: "sounds/congratulations.mp3"
+                                                                                                                            },
+
+                                                                                                                            sprig7game8: {
+                                                                                                                              text: "'You have completed the tutorial. Now, let's create a new level that uses everything you've learned about pushable objects, animations, and interactions.'",
+                                                                                                                                choices: [
+                                                                                                                                    { text: "CREATE A NEW LEVEL!", next: "sprig7game9" }
+                                                                                                                                      ],
+                                                                                                                                        background: "src=images/new_level.jpg",
+                                                                                                                                          sound: "sounds/new_level.mp3"
+                                                                                                                                          },
+
+                                                                                                                                          mainPage: {
+                                                                                                                                            text: "THIS IS A TUTORIAL MADE BY A MEMBER OF A HACKCLUB",
+                                                                                                                                              choices: [
+                                                                                                                                                  { text: "BOBA", next: "boba1.1" },
+                                                                                                                                                      { text: "FRAPS", next: "fraps1.1" },
+                                                                                                                                                          { text: "SPRIG", next: "sprig7game1" },
+                                                                                                                                                              { text: "BLOT", next: "blot1.1" },
+                                                                                                                                                                  { text: "100$ GRANT FOR PCB", next: "circuit1.1" },
+                                                                                                                                                                    ],
+                                                                                                                                                                      background: "src=images/welcome.jpeg",
+                                                                                                                                                                        sound: "sounds/maintheme.mp3"
+                                                                                                                                                                        }
+        }                                                                           
+
+                                                                                                                                            
+  ;
   
 
 
