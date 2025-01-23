@@ -6098,7 +6098,7 @@ fraps1A1: {
                                       background: "Assets/images/final-multiplayer.jpg",
                                       sound: "Assets/sounds/final-multiplayer.mp3"
                                   }
-              };
+                            };
   
 
 
