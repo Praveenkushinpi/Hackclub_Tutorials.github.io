@@ -6093,11 +6093,71 @@ fraps1A1: {
                                   fraps1A167: {
                                       text: "'Great! Now that you know the basics of multiplayer setup with A-Frame, it’s time to get your hands dirty and start building your own networked scenes. Experiment with syncing avatars, handling player interactions, and managing server connections. The possibilities are endless when it comes to creating multiplayer A-Frame experiences.'",
                                       choices: [
-                                          { text: "FINISH THE STORY AND START BUILDING!", next: "fraps1A168" }
-                                      ],
+                                          { text: "FINISH THE STORY AND START BUILDING!", next: "mainPage" },
+                                  {text:"now learn how to make a sprig game using sprig editor by hackclub ",next :"sprig1game1"}
+                              ],
                                       background: "Assets/images/final-multiplayer.jpg",
                                       sound: "Assets/sounds/final-multiplayer.mp3"
-                                  }
+                                  },
+sprig1game1: {
+    text: "WELCOME TO NEO GRID CITY, WHERE REALITY IS CODED, AND EVERY STREET HOLDS DIGITAL SECRETS. YOU'RE A ROOKIE HACKER IN THE CODERS’ UNDERGROUND, A SECRET SOCIETY WORKING TO REBUILD THE CITY. YOUR FIRST MISSION: LEARN HOW TO SET **LEGENDS** TO SHAPE THE CITY'S FOUNDATION.",
+      choices: [
+          { text: "TELL ME MORE ABOUT LEGENDS.", next: "sprig1game2" },
+              { text: "I’M READY TO CODE LEGENDS NOW!", next: "sprig1game3" }
+                ],
+                  background: "src=images/neogridcity.jpeg",
+                    sound: "sounds/neogrid_theme.mp3"
+                    },
+
+                    sprig1game2: {
+                      text: "LEGENDS ARE THE BUILDING BLOCKS OF NEO GRID. THEY DEFINE THE LOOK AND PURPOSE OF OBJECTS IN THE GAME. FOR EXAMPLE, YOU MIGHT HAVE A **PLAYER** (P) AND A **WALL** (W). EACH LEGEND NEEDS A VISUAL REPRESENTATION, WHICH IS WHERE **BITMAPS** COME IN.",
+                        choices: [
+                            { text: "SHOW ME AN EXAMPLE.", next: "sprig1game4" },
+                                { text: "I WANT TO TRY IT OUT!", next: "sprig1game3" }
+                                  ],
+                                    background: "src=images/legends.jpeg",
+                                      sound: "sounds/legends_theme.mp3"
+                                      },
+
+                                      sprig1game3: {
+                                        text: "ALRIGHT, LET’S DIVE IN. HERE’S HOW YOU DEFINE LEGENDS USING SPRIG’S `setLegend` FUNCTION.\n\n```javascript\nconst player = \"p\";\nconst wall = \"w\";\n\nsetLegend(\n  [player, bitmap`\n  .......\n  .XXXXX.\n  .X...X.\n  .XXXXX.\n  .......\n  `],\n  [wall, bitmap`\n  .......\n  .XXXXX.\n  .XXXXX.\n  .XXXXX.\n  .......\n  `]\n);\n```\n\nTHIS SETS UP A **PLAYER** AND A **WALL**.",
+                                          choices: [
+                                              { text: "WHAT DOES THIS CODE DO?", next: "sprig1game5" },
+                                                  { text: "SHOW ME HOW TO PLACE LEGENDS ON A MAP!", next: "sprig1game6" }
+                                                    ],
+                                                      background: "src=images/code_start.jpeg",
+                                                        sound: "sounds/code_theme.mp3"
+                                                        },
+
+                                                        sprig1game4: {
+                                                          text: "HERE’S AN EXAMPLE LEGEND SETUP:\n\n```javascript\nconst player = \"p\";\nconst wall = \"w\";\nsetLegend(\n  [player, bitmap`...\n`],\n  [wall, bitmap`...\n`]\n);\n```\n\nEACH OBJECT IS DEFINED BY A **LETTER** AND A **BITMAP**.",
+                                                            choices: [
+                                                                { text: "GOT IT! WHAT’S NEXT?", next: "sprig1game3" }
+                                                                  ],
+                                                                    background: "src=images/example_legend.jpeg",
+                                                                      sound: "sounds/example_theme.mp3"
+                                                                      },
+
+                                                                      sprig1game5: {
+                                                                        text: "THE `setLegend` FUNCTION DOES TWO THINGS:\n\n1. IT DEFINES YOUR OBJECTS (LIKE PLAYER AND WALL).\n2. IT GIVES THEM A VISUAL REPRESENTATION USING **BITMAPS**.",
+                                                                          choices: [
+                                                                              { text: "UNDERSTOOD! LET’S BUILD A MAP.", next: "sprig1game6" }
+                                                                                ],
+                                                                                  background: "src=images/legend_function.jpeg",
+                                                                                    sound: "sounds/legend_theme.mp3"
+                                                                                    },
+
+                                                                                    sprig1game6: {
+                                                                                      text: "NOW THAT YOU’VE DEFINED LEGENDS, IT’S TIME TO PLACE THEM IN A MAP USING THE `setMap` FUNCTION. HERE’S AN EXAMPLE:\n\n```javascript\nsetMap(map`\n  wwwww\n  w...w\n  w.p.w\n  w...w\n  wwwww\n`);\n```\n\nHERE, `w` IS THE WALL, AND `p` IS THE PLAYER.",
+                                                                                        choices: [
+                                                                                            { text: "SHOW ME A CHALLENGE!", next: "sprig1game7" },
+                                                                                                { text: "I WANT TO LEARN MORE FIRST.", next: "sprig1game8" }
+                                                                                                  ],
+                                                                                                    background: "src=images/map_example.jpeg",
+                                                                                                      sound: "sounds/map_theme.mp3"
+                                                                                                      }
+
+
                             };
   
 
