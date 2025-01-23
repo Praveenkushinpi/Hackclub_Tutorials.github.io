@@ -3,7 +3,7 @@ const tutorials = {
     text: "WELCOME TO THE HACKCLUB TUTORIALS! SELECT A TUTORIAL TO BEGIN.",
     choices: [
       { text: "BOBA", next: "boba1html1" },
-      { text: "FRAPS", next: "frapss1.1" },
+      { text: "FRAPS", next: "frapss1A1" },
       { text: "SPRIG", next: "sprig1game1" },
       { text: "BLOT", next: "blot1.1" },
       { text: "100$ GRANT FOR PCB", next: "circuit1.1"},
@@ -691,7 +691,6 @@ Boba7js1: {
     background: "Assets/images",
     sound: "Assets/sounds/name_updated.mp3"
   },
-// data types in js with captai9n Synatx //
 
     Boba8js1: {
       text: "You step into the CyberCafe, where the atmosphere is buzezing with the glow of holographic screens. Captain Syntax appears, her Holographic avatar flieckering. 'Welcome, eager learner! Today, we dive into JavaScript data types.'",
