@@ -2,11 +2,11 @@ const tutorials = {
   mainPage: {
     text: "WELCOME TO THE HACKCLUB TUTORIALS! SELECT A TUTORIAL TO BEGIN.",
     choices: [
-      { text: "BOBA", next: "boba1html1", script: "boba.js" },
-      { text: "FRAPS", next: "frapss1.1", script: "Hackaccino.js" },
-      { text: "SPRIG", next: "sprig1.1", script: "sprig.js" },
-      { text: "BLOT", next: "blot1.1", script: "blot.js" },
-      { text: "100$ GRANT FOR PCB", next: "circuit1.1", script: "circuit.js" },
+      { text: "BOBA", next: "boba1html1" },
+      { text: "FRAPS", next: "frapss1.1" },
+      { text: "SPRIG", next: "sprig1game1" },
+      { text: "BLOT", next: "blot1.1" },
+      { text: "100$ GRANT FOR PCB", next: "circuit1.1"},
     ],
     background: "images/welcome.jpeg",
     sound: "sounds/maintheme.mp3",
@@ -128,7 +128,7 @@ const tutorials = {
     boba2_html1: {
         text: "welocme to the page",
         choices: [
-            { text: "MAIN MENU", next: "mainpage" },
+            { text: "example", link: "https://codepen.io/Praveenkushinpi/pen/GgKYXKb" },
             { text: "LETS GO", next: "boba2_html2" }
         ],
         background: "Assets/images",
@@ -287,7 +287,8 @@ boba3_html7: {
 boba3_html8: {
     text: "You decide not to take on the challenge, but you carry the knowledge you've gained so far. The journey ahead remains mysterious, filled with promises of greater challenges and discoveries. You leave the Valley of Knowledge, your skills sharper than ever.",
     choices: [
-        { text: "CONTINUE TO THE NEXT CHAPTER", next: "boba4_html1" }
+        { text: "CONTINUE TO THE NEXT CHAPTER", next: "boba4_html1" },
+        {text:"example",link:"https://codepen.io/Praveenkushinpi/pen/yyBRxYb"}
     ],
     background: "Assets/images",
     sound: "Assets/Sounds/adventure-theme.mp3"
